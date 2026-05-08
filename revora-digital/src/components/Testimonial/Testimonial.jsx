@@ -78,7 +78,7 @@ const StarRating = ({ rating, max = 5 }) => (
 const Testimonial = () => {
   const [current, setCurrent]   = useState(0);
   const [cardState, setCardState] = useState("entering"); // entering | exiting | enterFromLeft
-  const [direction, setDirection] = useState("right");    // right | left
+  // const [direction, setDirection] = useState("right");    // right | left
   const timerRef = useRef(null);
 
   const total = TESTIMONIALS.length;
@@ -91,7 +91,7 @@ const Testimonial = () => {
 
   const navigate = (dir) => {
     clearInterval(timerRef.current);
-    setDirection(dir);
+    // setDirection(dir);
     // exit current card
     setCardState("exiting");
     setTimeout(() => {
