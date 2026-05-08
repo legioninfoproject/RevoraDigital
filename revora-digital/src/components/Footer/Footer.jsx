@@ -69,7 +69,7 @@ const Footer = ({ variant = "dark" }) => {
             {links.map((link) => (
               <a
                 key={link}
-                href="#"
+                href="/"
                 className={styles.link}
               >
                 {link}
