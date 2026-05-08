@@ -1,0 +1,365 @@
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;700;800&family=DM+Sans:wght@300;400;500&display=swap');
+
+/* ─── BASE FOOTER ─────────────────────────────────────── */
+.footer {
+  --green-btn: #0a6e70;
+  --white: #ffffff;
+
+  font-family: 'DM Sans', sans-serif;
+  padding: 72px 60px 0;
+  box-sizing: border-box;
+}
+
+/* ─── DARK VARIANT ────────────────────────────────────── */
+.dark {
+  background: #0e1e19;
+  color: rgba(255,255,255,0.65);
+}
+
+.dark .heading {
+  color: var(--white);
+}
+
+.dark .desc {
+  color: rgba(255,255,255,0.5);
+}
+
+.dark .colTitle {
+  color: var(--white);
+}
+
+.dark .link {
+  color: rgba(255,255,255,0.55);
+}
+
+.dark .link:hover {
+  color: var(--white);
+}
+
+.dark .divider {
+  border-color: rgba(255,255,255,0.08);
+}
+
+.dark .copy {
+  color: rgba(255,255,255,0.35);
+}
+
+.dark .newsInput {
+  background: rgba(255,255,255,0.07);
+  border-color: rgba(255,255,255,0.12);
+  color: white;
+}
+
+.dark .newsInput::placeholder {
+  color: rgba(255,255,255,0.35);
+}
+
+.dark .newsInput:focus {
+  border-color: var(--green-btn);
+}
+
+/* ─── LIGHT VARIANT ───────────────────────────────────── */
+.light {
+  background: #ffffff;
+  color: #5a7065;
+}
+
+.light .heading {
+  color: #0b1612;
+}
+
+.light .desc {
+  color: #6b7e76;
+}
+
+.light .colTitle {
+  color: #0b1612;
+}
+
+.light .link {
+  color: #6b7e76;
+}
+
+.light .link:hover {
+  color: #0b1612;
+}
+
+.light .divider {
+  border-color: #e5ece8;
+}
+
+.light .copy {
+  color: #9eada7;
+}
+
+.light .newsInput {
+  background: #f5f7f6;
+  border-color: #e2e8e5;
+  color: #0b1612;
+}
+
+.light .newsInput::placeholder {
+  color: #9eada7;
+}
+
+.light .newsInput:focus {
+  border-color: var(--green-btn);
+}
+
+/* ─── INNER GRID ──────────────────────────────────────── */
+.inner {
+  display: grid;
+  grid-template-columns: 1.6fr 1fr 1fr 1fr 1.4fr;
+  gap: 40px;
+  max-width: 1240px;
+  margin: 0 auto;
+}
+
+/* ─── BRAND COL ───────────────────────────────────────── */
+.brand {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.logoRow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+}
+
+.logoIcon {
+  width: 42px;
+  height: 42px;
+  /* background: var(--green-btn); */
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  overflow: hidden;
+}
+
+.logoImage {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+
+.heading {
+  font-family: 'Bricolage Grotesque', sans-serif;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.desc {
+  font-size: 14px;
+  line-height: 1.7;
+  max-width: 230px;
+}
+
+/* ─── NAV COLUMNS ─────────────────────────────────────── */
+.col {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.colTitle {
+  font-family: 'Bricolage Grotesque', sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.link {
+  font-size: 14px;
+  text-decoration: none;
+  transition: color 0.18s ease, padding-left 0.18s ease;
+  display: inline-block;
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 0;
+  font-family: 'DM Sans', sans-serif;
+  text-align: left;
+}
+
+.link:hover {
+  padding-left: 4px;
+}
+
+/* ─── NEWSLETTER ──────────────────────────────────────── */
+.newsCol {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.newsTitle {
+  font-family: 'Bricolage Grotesque', sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+.newsInputRow {
+  display: flex;
+  align-items: center;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1.5px solid transparent;
+  transition: border-color 0.22s;
+  position: relative;
+}
+
+.newsInput {
+  flex: 1;
+  padding: 12px 16px;
+  border: 1.5px solid;
+  border-right: none;
+  border-radius: 10px 0 0 10px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 14px;
+  outline: none;
+  transition: border-color 0.22s, background 0.22s;
+  width: 100%;
+}
+
+.newsBtn {
+  width: 44px;
+  height: 44px;
+  background: var(--green-btn);
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: white;
+  font-size: 16px;
+  flex-shrink: 0;
+  border-radius: 0 8px 8px 0;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.newsBtn:hover {
+  background: #eab308;
+  transform: scale(1.05);
+}
+
+.newsDesc {
+  font-size: 13px;
+  line-height: 1.65;
+}
+
+/* ─── SUCCESS ─────────────────────────────────────────── */
+.successBox {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.tickIcon {
+  width: 18px;
+  height: 18px;
+  color: #0a6e70;
+  flex-shrink: 0;
+}
+
+.successText {
+  font-size: 14px;
+  font-weight: 600;
+  color: #0a6e70;
+  margin: 0;
+}
+
+/* ─── BOTTOM BAR ──────────────────────────────────────── */
+.bottom {
+  max-width: 1240px;
+  margin: 40px auto 0;
+  padding-bottom: 32px;
+}
+
+.divider {
+  border: none;
+  border-top: 1px solid;
+  margin-bottom: 24px;
+}
+
+.bottomInner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.copy {
+  font-size: 13px;
+}
+
+.socialRow {
+  display: flex;
+  gap: 10px;
+}
+
+.socialBtn {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 1.5px solid currentColor;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 15px;
+  cursor: pointer;
+  background: none;
+  color: inherit;
+  transition: background 0.2s, color 0.2s, transform 0.2s;
+  opacity: 0.5;
+}
+
+.socialBtn:hover {
+  background: var(--green-btn);
+  color: white;
+  border-color: var(--green-btn);
+  opacity: 1;
+  transform: translateY(-2px);
+}
+
+/* ─── RESPONSIVE ──────────────────────────────────────── */
+@media (max-width: 1024px) {
+  .inner {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .footer {
+    padding: 56px 36px 0;
+  }
+}
+
+@media (max-width: 640px) {
+  .inner {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .footer {
+    padding: 44px 20px 0;
+  }
+
+  .brand {
+    grid-column: 1 / -1;
+  }
+
+  .bottomInner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 400px) {
+  .inner {
+    grid-template-columns: 1fr;
+  }
+}

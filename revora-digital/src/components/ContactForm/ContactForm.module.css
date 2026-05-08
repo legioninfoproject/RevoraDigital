@@ -1,0 +1,424 @@
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;600;700;800&family=DM+Sans:wght@300;400;500;600&display=swap');
+
+/* ─── SECTION ─────────────────────────────────────────── */
+.section {
+  --green-btn: #0a6e70;
+  --teal: #0a6e70;
+  --teal-dark: #0a6e70;
+  --accent: #eab308;
+  --dark: #0b1612;
+  --body: rgba(255,255,255,0.72);
+  --white: #ffffff;
+  --input-bg: #f5f7f6;
+  --input-border: #e2e8e5;
+  --input-focus: #0a6e70;
+
+  font-family: 'DM Sans', sans-serif;
+  background: var(--teal);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 80px 60px;
+  box-sizing: border-box;
+  position: relative;
+  overflow: hidden;
+}
+
+/* animated dashed pattern background */
+.section::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    repeating-linear-gradient(
+      45deg,
+      transparent,
+      transparent 28px,
+      rgba(255,255,255,0.04) 28px,
+      rgba(255,255,255,0.04) 29px
+    );
+  pointer-events: none;
+}
+
+/* floating arrow decoration */
+.arrowDeco {
+  position: absolute;
+  bottom: 120px;
+  left: 60px;
+  opacity: 0.18;
+  pointer-events: none;
+}
+
+.arrowDeco svg {
+  width: 90px;
+  height: 90px;
+  stroke: white;
+  fill: none;
+  stroke-width: 1.5;
+  stroke-dasharray: 6 6;
+}
+
+/* ─── INNER GRID ──────────────────────────────────────── */
+.inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 72px;
+  max-width: 1220px;
+  margin: 0 auto;
+  width: 100%;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+
+/* ─── LEFT ────────────────────────────────────────────── */
+.left {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.eyebrow {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  color: rgba(255,255,255,0.55);
+  text-transform: lowercase;
+  opacity: 0;
+  transform: translateY(18px);
+  animation: fadeUp 0.55s cubic-bezier(0.16,1,0.3,1) 0.05s forwards;
+}
+
+.heading {
+  /* font-family: 'Bricolage Grotesque', sans-serif; */
+  font-size: clamp(36px, 4.2vw, 64px);
+  font-weight: 800;
+  color: var(--white);
+  line-height: 1.06;
+  margin: 0;
+  opacity: 0;
+  transform: translateY(22px);
+  animation: fadeUp 0.6s cubic-bezier(0.16,1,0.3,1) 0.15s forwards;
+}
+
+.headingAccent {
+  color: var(--accent);
+  position: relative;
+  display: inline-block;
+}
+
+.desc {
+  font-size: 15px;
+  color: var(--body);
+  line-height: 1.75;
+  max-width: 400px;
+  margin: 0;
+  opacity: 0;
+  transform: translateY(18px);
+  animation: fadeUp 0.6s cubic-bezier(0.16,1,0.3,1) 0.25s forwards;
+}
+
+/* ─── BUTTON ROW ──────────────────────────────────────── */
+.btnRow {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  flex-wrap: wrap;
+  opacity: 0;
+  transform: translateY(18px);
+  animation: fadeUp 0.6s cubic-bezier(0.16,1,0.3,1) 0.35s forwards;
+}
+
+.btnPrimary {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: white;
+  color: #0a6e70;
+  border: none;
+  border-radius: 99px;
+  padding: 14px 28px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.btnPrimary::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(255,255,255,0.1);
+  opacity: 0;
+  transition: opacity 0.2s;
+  border-radius: inherit;
+}
+
+.btnPrimary:hover::after {
+  opacity: 1;
+}
+
+.btnPrimary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 28px rgba(10,110,112,0.45);
+}
+
+.btnIcon {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  transition: transform 0.2s;
+}
+
+.btnPrimary:hover .btnIcon {
+  transform: translateX(3px);
+}
+
+.btnLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: rgba(255,255,255,0.72);
+  font-size: 14.5px;
+  font-weight: 500;
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: color 0.2s, gap 0.2s;
+  padding: 0;
+}
+
+.btnLink:hover {
+  color: white;
+  gap: 10px;
+}
+
+/* ─── RIGHT — FORM CARD ───────────────────────────────── */
+.formCard {
+  background: var(--white);
+  border-radius: 24px;
+  padding: 44px 40px 40px;
+  box-shadow: 0 32px 80px rgba(10,110,112,0.25);
+
+  opacity: 0;
+  transform: translateY(28px) scale(0.97);
+  animation: cardIn 0.7s cubic-bezier(0.16,1,0.3,1) 0.2s forwards;
+}
+
+.formTitle {
+  /* font-family: 'Bricolage Grotesque', sans-serif; */
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--dark);
+  text-align: center;
+  line-height: 1.3;
+  margin-bottom: 30px;
+}
+
+/* ─── FORM ────────────────────────────────────────────── */
+.formBody {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.fieldFull {
+  width: 100%;
+}
+
+.fieldRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+
+.input,
+.textarea {
+  width: 100%;
+  padding: 13px 16px;
+  border: 1.5px solid var(--input-border);
+  border-radius: 10px;
+  background: var(--input-bg);
+  /* font-family: 'DM Sans', sans-serif; */
+  font-size: 14px;
+  color: var(--dark);
+  outline: none;
+  box-sizing: border-box;
+  transition:
+    border-color 0.22s ease,
+    box-shadow 0.22s ease,
+    background 0.22s ease;
+}
+
+.input::placeholder,
+.textarea::placeholder {
+  color: #9eada7;
+}
+
+.input:focus,
+.textarea:focus {
+  border-color: var(--input-focus);
+  background: white;
+  box-shadow: 0 0 0 3px rgba(10,110,112,0.18);
+}
+
+.textarea {
+  resize: vertical;
+  min-height: 110px;
+  line-height: 1.55;
+}
+
+.submitBtn {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background: var(--green-btn);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  padding: 15px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 4px;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    background 0.2s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.submitBtn::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(255,255,255,0.1);
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+.submitBtn:hover::after {
+  opacity: 1;
+}
+
+.submitBtn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 28px rgba(10,110,112,0.45);
+}
+
+.submitBtn:active {
+  transform: translateY(0);
+}
+
+/* .submitIcon {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+} */
+
+/* ─── SUCCESS STATE ───────────────────────────────────── */
+.success {
+  text-align: center;
+  padding: 28px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.successIcon {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: rgba(10,110,112,0.12);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 26px;
+  color: var(--green-btn);
+  animation: popIn 0.4s cubic-bezier(0.16,1,0.3,1) forwards;
+}
+
+.successTitle {
+  font-family: 'Bricolage Grotesque', sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--dark);
+}
+
+.successMsg {
+  font-size: 14px;
+  color: #6b7e76;
+  max-width: 260px;
+  line-height: 1.6;
+}
+
+/* ─── KEYFRAMES ───────────────────────────────────────── */
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes cardIn {
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes popIn {
+  from {
+    transform: scale(0.6);
+    opacity: 0;
+  }
+
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* ─── RESPONSIVE ──────────────────────────────────────── */
+@media (max-width: 960px) {
+  .section {
+    padding: 60px 30px;
+  }
+
+  .inner {
+    grid-template-columns: 1fr;
+    gap: 44px;
+  }
+}
+
+@media (max-width: 560px) {
+  .section {
+    padding: 48px 16px;
+  }
+
+  .fieldRow {
+    grid-template-columns: 1fr;
+  }
+
+  .formCard {
+    padding: 28px 20px 24px;
+  }
+}

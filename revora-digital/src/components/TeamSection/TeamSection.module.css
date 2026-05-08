@@ -1,0 +1,715 @@
+@import url('https://fonts.googleapis.com/css2?family=Clash+Display:wght@400;500;600;700&family=Satoshi:wght@300;400;500;700&display=swap');
+
+/* ───────────────── ROOT ───────────────── */
+.wrapper {
+  --green: #0a6e70;
+  --green-light: #0a6e70;
+  --green-pale: #dff5f5;
+  --yellow: #f5c518;
+  --dark: #0d1b13;
+  --gray: #6b7280;
+  --card-bg: #f4f6f4;
+  --white: #ffffff;
+
+  background: #f9fafb;
+  min-height: 100vh;
+  /* font-family: 'Satoshi', sans-serif; */
+  overflow: hidden;
+  padding: 80px 20px;
+}
+
+/* ───────────────── HEADER ───────────────── */
+.header {
+  text-align: center;
+  margin-bottom: 64px;
+  opacity: 0;
+  transform: translateY(40px);
+  transition:
+    opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.headerVisible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.eyebrow {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--green);
+  margin-bottom: 14px;
+  display: inline-block;
+  position: relative;
+}
+
+.eyebrow::before,
+.eyebrow::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 28px;
+  height: 1.5px;
+  background: var(--green);
+  transform: translateY(-50%);
+}
+
+.eyebrow::before {
+  right: calc(100% + 10px);
+}
+
+.eyebrow::after {
+  left: calc(100% + 10px);
+}
+
+.title {
+  /* font-family: "Clash Display", sans-serif; */
+  font-size: clamp(38px, 5.5vw, 68px);
+  font-weight: 700;
+  color: var(--dark);
+  line-height: 1.08;
+  margin-bottom: 18px;
+}
+
+.highlight {
+  position: relative;
+  display: inline-block;
+}
+
+.highlight::after {
+  content: "";
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  width: 100%;
+  height: 14px;
+  background: #f5c518;
+  z-index: -1;
+  border-radius: 2px;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1) 0.4s;
+}
+
+.headerVisible .highlight::after {
+  transform: scaleX(1);
+}
+
+.subtitle {
+  font-size: 16px;
+  color: var(--gray);
+  max-width: 520px;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+
+/* ───────────────── CAROUSEL ───────────────── */
+
+
+.carouselOuter {
+  position: relative;
+  max-width: 1250px;
+  margin: 0 auto;
+}
+
+.trackWrapper {
+  overflow: hidden;
+  border-radius: 24px;
+  width: 100%;
+}
+
+.track {
+  display: flex;
+  gap: 24px;
+  padding: 12px 0 24px;
+  transition: transform 0.65s cubic-bezier(0.77, 0, 0.175, 1);
+  will-change: transform;
+  justify-content: center;
+}
+/* ───────────────── CARD ───────────────── */
+
+.card {
+  flex: 0 0 calc((100% - 72px) / 4);
+  width: 100%;
+  max-width: unset;
+
+  background: var(--white);
+
+  border-radius: 22px;
+  overflow: hidden;
+
+  position: relative;
+  cursor: pointer;
+
+  opacity: 0;
+  transform: translateY(50px) scale(0.95);
+
+  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.06);
+
+  transition:
+    opacity 0.55s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.55s cubic-bezier(0.16, 1, 0.3, 1),
+    box-shadow 0.3s ease;
+}
+
+.cardVisible {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+.card:hover {
+  transform: translateY(-8px) scale(1.01);
+  box-shadow: 0 16px 48px rgba(10, 110, 112, 0.18);
+}
+/* ───────────────── CARD ───────────────── */
+.card {
+  flex: 0 0 calc((100% - 72px) / 4);
+  min-width: 0;
+
+  background: var(--white);
+
+  border-radius: 22px;
+  overflow: hidden;
+
+  position: relative;
+  cursor: pointer;
+
+  opacity: 0;
+  transform: translateY(50px) scale(0.95);
+
+  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.06);
+
+  transition:
+    opacity 0.55s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.55s cubic-bezier(0.16, 1, 0.3, 1),
+    box-shadow 0.3s ease;
+}
+
+.cardVisible {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+.card:hover {
+  transform: translateY(-8px) scale(1.01);
+  box-shadow: 0 16px 48px rgba(10, 110, 112, 0.18);
+}
+
+
+/* ───────────────── IMAGE ───────────────── */
+.imageWrap {
+  position: relative;
+  width: 100%;
+  padding-top: 110%;
+  background: var(--card-bg);
+  overflow: hidden;
+}
+
+.imageWrap img {
+  position: absolute;
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+  object-position: top center;
+
+  filter: grayscale(100%);
+
+  transition:
+    filter 0.5s ease,
+    transform 0.5s ease;
+}
+
+.card:hover .imageWrap img,
+.cardActive .imageWrap img {
+  filter: grayscale(0%);
+  transform: scale(1.05);
+}
+
+/* ───────────────── OVERLAY ───────────────── */
+.overlay {
+  position: absolute;
+  inset: 0;
+
+  background: linear-gradient(
+    to top,
+    rgba(13, 27, 19, 0.82) 0%,
+    transparent 55%
+  );
+
+  opacity: 0;
+
+  display: flex;
+  align-items: flex-end;
+
+  padding: 20px;
+
+  transition: opacity 0.4s ease;
+}
+
+.card:hover .overlay,
+.cardActive .overlay {
+  opacity: 1;
+}
+
+.socialPills {
+  display: flex;
+  gap: 10px;
+
+  transform: translateY(12px);
+
+  transition:
+    transform 0.35s cubic-bezier(0.16, 1, 0.3, 1) 0.05s;
+}
+
+.card:hover .socialPills,
+.cardActive .socialPills {
+  transform: translateY(0);
+}
+
+.pill {
+  width: 38px;
+  height: 38px;
+
+  border-radius: 50%;
+
+  background: rgba(255, 255, 255, 0.14);
+
+  backdrop-filter: blur(6px);
+
+  border: 1px solid rgba(255, 255, 255, 0.2);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: white;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.pill svg {
+  font-size: 14px;
+}
+
+.pill:hover {
+  background: var(--green);
+  border-color: var(--green);
+  transform: scale(1.12);
+}
+
+/* ───────────────── BADGE ───────────────── */
+.badge {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+
+  background: var(--green);
+  color: white;
+
+  font-size: 9px;
+  font-weight: 700;
+
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+
+  padding: 5px 11px;
+
+  border-radius: 99px;
+
+  opacity: 0;
+  transform: scale(0.8) translateY(-6px);
+
+  transition:
+    opacity 0.3s ease,
+    transform 0.3s ease;
+}
+
+.cardActive .badge,
+.card:hover .badge {
+  opacity: 1;
+  transform: scale(1) translateY(0);
+}
+
+/* ───────────────── CARD BODY ───────────────── */
+.cardBody {
+  padding: 22px;
+  background: white;
+}
+
+.cardName {
+  /* font-family: "Clash Display", sans-serif; */
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--dark);
+  margin-bottom: 6px;
+}
+
+.cardRole {
+  font-size: 13px;
+  color: var(--gray);
+}
+
+/* ───────────────── ACCENT LINE ───────────────── */
+.accentLine {
+  height: 4px;
+
+  background: linear-gradient(
+    90deg,
+    var(--green),
+    #19b6ba
+  );
+
+  transform: scaleX(0);
+  transform-origin: left;
+
+  transition:
+    transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.card:hover .accentLine,
+.cardActive .accentLine {
+  transform: scaleX(1);
+}
+
+/* ───────────────── NAVIGATION ───────────────── */
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+
+  margin-top: 40px;
+}
+
+.navBtn {
+  width: 48px;
+  height: 48px;
+
+  border-radius: 50%;
+
+  border: 1.5px solid #d1d5db;
+
+  background: white;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+
+  font-size: 17px;
+  color: var(--dark);
+
+  transition: all 0.25s ease;
+
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+.navBtn:hover:not(:disabled) {
+  background: var(--green);
+  border-color: var(--green);
+  color: white;
+  transform: scale(1.08);
+  box-shadow: 0 6px 20px rgba(10, 110, 112, 0.3);
+}
+
+.navBtn:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+
+.dots {
+  display: flex;
+  gap: 8px;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+
+  border-radius: 50%;
+
+  background: #d1d5db;
+
+  cursor: pointer;
+
+  transition: all 0.3s ease;
+}
+
+.dotActive {
+  width: 24px;
+  border-radius: 99px;
+  background: var(--green);
+}
+
+/* ───────────────── MODAL ───────────────── */
+.backdrop {
+  position: fixed;
+  inset: 0;
+
+  background: rgba(13, 27, 19, 0.6);
+
+  backdrop-filter: blur(8px);
+
+  z-index: 1000;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 20px;
+
+  opacity: 0;
+  pointer-events: none;
+
+  transition: opacity 0.35s ease;
+}
+
+.backdropOpen {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.modal {
+  background: white;
+
+  border-radius: 28px;
+
+  width: 100%;
+  max-width: 650px;
+
+  max-height: 90vh;
+
+  overflow-y: auto;
+
+  position: relative;
+
+  box-shadow: 0 40px 100px rgba(0, 0, 0, 0.3);
+
+  transform: scale(0.88) translateY(30px);
+
+  transition:
+    transform 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+
+  scrollbar-width: none;
+}
+
+.modal::-webkit-scrollbar {
+  display: none;
+}
+
+.backdropOpen .modal {
+  transform: scale(1) translateY(0);
+}
+
+.modalHero {
+  width: 100%;
+  height: 420px;
+
+  object-fit: contain;
+  object-position: center;
+
+  display: block;
+
+  background: #f4f6f4;
+}
+
+.modalClose {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+
+  width: 42px;
+  height: 42px;
+
+  border-radius: 50%;
+
+  border: none;
+
+  background: rgba(255, 255, 255, 0.92);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+
+  font-size: 20px;
+  color: var(--dark);
+
+  z-index: 20;
+
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+.modalClose:hover {
+  background: white;
+  transform: rotate(90deg) scale(1.08);
+}
+
+.modalBody {
+  padding: 32px;
+}
+
+.modalTag {
+  display: inline-block;
+
+  background: var(--green-pale);
+  color: var(--green);
+
+  font-size: 10px;
+  font-weight: 700;
+
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+
+  padding: 5px 12px;
+
+  border-radius: 99px;
+
+  margin-bottom: 14px;
+}
+
+.modalName {
+  font-family: "Clash Display", sans-serif;
+  font-size: 42px;
+  font-weight: 700;
+
+  color: var(--dark);
+
+  margin-bottom: 8px;
+}
+
+.modalRole {
+  font-size: 16px;
+  color: var(--gray);
+
+  margin-bottom: 22px;
+}
+
+.modalBio {
+  font-size: 17px;
+  line-height: 1.9;
+
+  color: #374151;
+
+  margin-bottom: 28px;
+}
+
+.modalSocials {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.modalSocialBtn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  padding: 12px 18px;
+
+  border-radius: 999px;
+
+  border: 1.5px solid #e5e7eb;
+
+  background: white;
+
+  cursor: pointer;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  color: var(--dark);
+
+  transition: all 0.22s ease;
+}
+
+.modalSocialBtn:hover {
+  background: var(--green);
+  border-color: var(--green);
+  color: white;
+
+  transform: translateY(-2px);
+}
+
+
+/* ───────────────── RESPONSIVE ───────────────── */
+
+@media (max-width: 992px) {
+  .track {
+    gap: 20px;
+     justify-content: flex-start;
+
+  }
+
+  .card {
+    flex: 0 0 calc((100% - 20px) / 2);
+    max-width: unset;
+  }
+}
+
+@media (max-width: 560px) {
+  .wrapper {
+    padding: 60px 16px;
+  }
+
+  .title {
+    font-size: 36px;
+  }
+
+  .subtitle {
+    font-size: 14px;
+  }
+
+  .track {
+    gap: 16px;
+    justify-content: flex-start;
+  }
+
+  .card {
+    flex: 0 0 100%;
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .imageWrap {
+    padding-top: 115%;
+  }
+
+  .cardBody {
+    padding: 20px;
+  }
+
+  .cardName {
+    font-size: 24px;
+  }
+
+  .cardRole {
+    font-size: 14px;
+  }
+
+  .modalBody {
+    padding: 24px 20px 26px;
+  }
+
+  .modalName {
+    font-size: 28px;
+  }
+
+  .modalHero {
+    height: 280px;
+  }
+}
