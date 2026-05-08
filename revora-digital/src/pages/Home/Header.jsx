@@ -42,11 +42,11 @@ const Header = () => {
 
           {/* CTA row */}
           <div className={styles.heroCtas}>
-            <a href="#" className={styles.btnPrimary}>
+            <a href="/" className={styles.btnPrimary}>
               Try it Now
               <HiArrowRight className={styles.btnIcon} />
             </a>
-            <a href="#" className={styles.btnSecondary}>
+            <a href="/" className={styles.btnSecondary}>
               Explore More
               <HiArrowUpRight className={styles.btnSecIcon} />
             </a>
