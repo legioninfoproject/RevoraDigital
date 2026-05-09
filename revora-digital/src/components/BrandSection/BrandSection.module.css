@@ -46,15 +46,16 @@
 .heading {
   width: 100%;
 
-  font-size: clamp(38px, 4.5vw, 58px);
+ font-size: clamp(42px, 5.5vw, 72px);
   font-weight: 800;
 
-  line-height: 1.02;
+  line-height: 1.08;
   letter-spacing: -0.05em;
 
   color: #0f172a;
 
   margin-bottom: 20px;
+   font-family: Sora, Poppins, sans-serif;
 }
 
 /* Highlight */
@@ -92,15 +93,17 @@
 /* Description */
 
 .description {
+  font-family: "Poppins", sans-serif;
   width: 100%;
 
   max-width: 900px;
 
-  font-size: 18px;
-  line-height: 1.7;
+  font-size: 16px;
+  line-height: 1.75;
 
-  color: #64748b;
+  color: #4b5563
 }
+
 
 /* ───────────────── GRID ───────────────── */
 
