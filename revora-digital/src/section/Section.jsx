@@ -1,4 +1,3 @@
-import Navbar from "../components/Navbar/Navbar";
 import Header from "../pages/Home/Header";
 import React from "react";
 import Logostrips from "../pages/Home/Logostrips";
@@ -13,7 +12,6 @@ import Footer from "../components/Footer/Footer";
 const Section = () => {
     return (
         <div>
-            <Navbar />
             <Header />
             <Logostrips />
             <AboutUs />

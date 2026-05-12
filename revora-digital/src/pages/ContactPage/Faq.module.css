@@ -1,0 +1,333 @@
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Sans:wght@400;500;600&display=swap');
+
+/* ══════════════════════════
+   TOKENS
+══════════════════════════ */
+:root {
+  --green:        #075456;
+  --green-mid:    #040505;
+  --green-accent: #22c55e;
+  --yellow:       #f5d020;
+  --text:         #0d1b12;
+  --muted:        #6b7c72;
+  --surface:      #ffffff;
+  --border:       rgba(13, 27, 18, 0.09);
+  --radius:       14px;
+  --radius-pill:  999px;
+}
+
+/* ══════════════════════════
+   SECTION
+══════════════════════════ */
+.section {
+  position: relative;
+  /* font-family: 'DM Sans', sans-serif; */
+  /* background: #f7faf8; */
+  padding: 88px 56px;
+  overflow: hidden;
+}
+
+/* Subtle mesh / dot pattern */
+.mesh {
+  position: absolute;
+  inset: 0;
+  /* background-image:
+    radial-gradient(circle at 15% 50%, rgba(34,197,94,0.07) 0%, transparent 50%),
+    radial-gradient(circle at 85% 20%, rgba(26,92,74,0.06) 0%, transparent 45%); */
+  pointer-events: none;
+}
+
+/* ══════════════════════════
+   HEADER ROW
+══════════════════════════ */
+.header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 32px;
+  margin-bottom: 56px;
+  flex-wrap: wrap;
+
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.65s ease 0.05s, transform 0.65s ease 0.05s;
+}
+.section.visible .header {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.headerLeft {
+  flex: 1;
+  min-width: 260px;
+}
+
+.eyebrow {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 3.5px;
+  text-transform: uppercase;
+  /* color: var(--green-mid); */
+  color: var(--green);
+  margin: 0 0 12px;
+}
+
+.heading {
+  /* font-family: 'Syne', sans-serif; */
+  font-size: clamp(32px, 4.5vw, 58px);
+  font-weight: 800;
+  /* color: var(--text); */
+  line-height: 1.08;
+  margin: 0;
+}
+
+/* Yellow highlight bar under "Answer" */
+.highlight {
+  position: relative;
+  display: inline-block;
+  color: #075456;
+  z-index: 0;
+}
+.highlight::after {
+  content: '';
+  position: absolute;
+  bottom: 4px;
+  left: -2px;
+  right: -2px;
+  height: 14px;
+  background: var(--yellow);
+  z-index: -1;
+  border-radius: 3px;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.55s cubic-bezier(0.22, 1, 0.36, 1) 0.55s;
+}
+.section.visible .highlight::after {
+  transform: scaleX(1);
+}
+
+/* ══════════════════════════
+   TABS
+══════════════════════════ */
+.tabs {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(13, 27, 18, 0.05);
+  padding: 6px;
+  border-radius: var(--radius-pill);
+  flex-shrink: 0;
+}
+
+.tab {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--muted);
+  background: transparent;
+  border: none;
+  border-radius: var(--radius-pill);
+  padding: 10px 28px;
+  cursor: pointer;
+  transition: color 0.22s ease, background 0.22s ease, box-shadow 0.22s ease;
+  white-space: nowrap;
+}
+
+.tab:hover {
+  color: var(--text);
+}
+
+.tabActive {
+  background: var(--green);
+  color: #ffffff !important;
+  box-shadow: 0 4px 14px rgba(26, 92, 74, 0.30);
+}
+
+/* ══════════════════════════
+   FAQ GRID
+══════════════════════════ */
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0 56px;
+}
+
+.col {
+  display: flex;
+  flex-direction: column;
+}
+
+/* ══════════════════════════
+   ACCORDION ITEM
+══════════════════════════ */
+.item {
+  border-bottom: 1.5px solid var(--border);
+  padding: 28px 0;
+
+  opacity: 0;
+  transform: translateY(20px);
+}
+.section.visible .item {
+  animation: fadeUp 0.5s ease calc(0.2s + var(--i, 0) * 0.1s) forwards;
+}
+
+@keyframes fadeUp {
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.item:first-child {
+  border-top: 1.5px solid var(--border);
+}
+
+/* Open state — green left border flash */
+.itemOpen {
+  position: relative;
+}
+.itemOpen::before {
+  content: '';
+  position: absolute;
+  left: -56px;   /* bleeds to section edge */
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  /* background: linear-gradient(to bottom, var(--green-accent), transparent); */
+  border-radius: 0 3px 3px 0;
+  animation: barSlide 0.35s ease forwards;
+}
+
+@keyframes barSlide {
+  from { opacity: 0; transform: scaleY(0); }
+  to   { opacity: 1; transform: scaleY(1); }
+}
+
+/* ── Question button ── */
+.question {
+  width: 100%;
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 0;
+  text-align: left;
+}
+
+.qText {
+  font-family: "Poppins", sans-serif;
+  font-size: clamp(15px, 1.5vw, 17px);
+  font-weight: 700;
+  color: var(--text);
+  line-height: 1.35;
+  transition: color 0.2s ease;
+}
+.itemOpen .qText {
+  color: var(--green);
+}
+
+/* Plus/minus icon */
+.icon {
+  position: relative;
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+  margin-top: 2px;
+  border-radius: 50%;
+  background: rgba(13, 27, 18, 0.06);
+  transition: background 0.25s ease, transform 0.35s ease;
+}
+.itemOpen .icon {
+  background: var(--green);
+  transform: rotate(45deg);
+}
+
+.iconBar {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 10px;
+  height: 2px;
+  background: var(--text);
+  border-radius: 2px;
+  transition: background 0.25s ease;
+}
+.itemOpen .iconBar {
+  background: #fff;
+}
+
+.iconBarV {
+  transform: translate(-50%, -50%) rotate(90deg);
+  transition: opacity 0.25s ease, background 0.25s ease;
+}
+.itemOpen .iconBarV {
+  opacity: 0;
+}
+
+/* ── Answer ── */
+.answerWrap {
+  overflow: hidden;
+  transition: max-height 0.42s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.answer {
+  font-size: 14.5px;
+  line-height: 1.75;
+  color: var(--muted);
+  margin: 16px 0 0;
+  padding-right: 40px;
+  animation: answerFade 0.35s ease forwards;
+}
+
+@keyframes answerFade {
+  from { opacity: 0; transform: translateY(6px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ══════════════════════════
+   RESPONSIVE
+══════════════════════════ */
+@media (max-width: 960px) {
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+  .col:last-child .item:first-child {
+    border-top: none;
+  }
+  .itemOpen::before {
+    left: -56px;
+  }
+}
+
+@media (max-width: 700px) {
+  .section {
+    padding: 64px 24px;
+  }
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 40px;
+  }
+  .item {
+    padding: 22px 0;
+  }
+  .itemOpen::before {
+    left: -24px;
+  }
+  .answer {
+    padding-right: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .tabs {
+    gap: 4px;
+    padding: 4px;
+  }
+  .tab {
+    padding: 8px 18px;
+    font-size: 13px;
+  }
+}
