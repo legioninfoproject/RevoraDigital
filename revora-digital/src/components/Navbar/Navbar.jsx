@@ -80,7 +80,7 @@ const Navbar = () => {
               </a>
 
               <a
-                href="/brand-marketing"
+                href="/brandmarketing"
                 className={styles.dropdownItem}
               >
                 Brand Marketing
@@ -109,7 +109,7 @@ const Navbar = () => {
         </ul>
 
         {/* CTA BUTTON */}
-        <a href="/contact" className={styles.ctaButton}>
+        <a href="/revoraform" className={styles.ctaButton}>
           Get in Touch
           <IoIosArrowRoundForward className={styles.ctaArrow} />
         </a>
@@ -192,7 +192,7 @@ const Navbar = () => {
                 </a>
 
                 <a
-                  href="/brand-marketing"
+                  href="/brandmarketing"
                   className={styles.mobileDropdownItem}
                 >
                   Brand Marketing
@@ -229,7 +229,7 @@ const Navbar = () => {
           </li>
 
           <li>
-            <a href="/contact" className={styles.mobileCtaButton}>
+            <a href="/revoraform" className={styles.mobileCtaButton}>
               Get in Touch
               <IoIosArrowRoundForward />
             </a>

@@ -1,0 +1,661 @@
+/* ── BlogHero.module.css ──────────────────────────────────────────────────── */
+
+/* Section */
+.section {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(
+    135deg,
+    #edf8f8 0%,
+    #f7fbfb 50%,
+    #e6f4f4 100%
+  );
+
+  min-height: 520px;
+  display: flex;
+  align-items: center;
+  /* DOWN FROM NAVBAR */
+  padding: 140px 5% 80px;
+  opacity: 0;
+  transform: translateY(32px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+.section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Decorative blobs */
+.blob1,
+.blob2,
+.blob3 {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(70px);
+  pointer-events: none;
+  z-index: 0;
+}
+.blob1 {
+  width: 380px;
+  height: 380px;
+  background: rgba(10, 110, 112, 0.14);
+  top: -80px;
+  right: 30%;
+}
+.blob2 {
+  width: 280px;
+  height: 280px;
+ background: rgba(10, 110, 112, 0.08);
+  bottom: -60px;
+  left: -60px;
+}
+.blob3 {
+  width: 220px;
+  height: 220px;
+  background: rgba(10, 110, 112, 0.06);
+  bottom: 0;
+  right: 5%;
+}
+
+/* Inner layout */
+.inner {
+  position: relative;
+  z-index: 2;
+
+  width: 100%;
+  max-width: 1250px;
+
+  margin: 0 auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 60px;
+}
+
+/* ── LEFT ── */
+.left {
+  flex: 1 1 0;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.eyebrow {
+  font-family: "DM Sans", "Segoe UI", sans-serif;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #0a6e70;
+  margin: 0;
+}
+
+.heading {
+  font-family: "Sora", "DM Sans", sans-serif;
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 800;
+  line-height: 1.15;
+  color: #0d1b2a;
+  margin: 0;
+}
+
+.accentLine {
+  position: relative;
+  display: inline-block;
+  color: #0a6e70;
+}
+
+/* Yellow underline like screenshot */
+.underlineBar {
+  display: block;
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 100%;
+  height: 6px;
+  background: #f5c518;
+  border-radius: 3px;
+  transform: scaleX(0);
+  transform-origin: left;
+  animation: growBar 0.7s 0.5s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+@keyframes growBar {
+  to { transform: scaleX(1); }
+}
+
+.body {
+  font-family: "DM Sans", "Segoe UI", sans-serif;
+  font-size: 0.97rem;
+  color: #4a5a6a;
+  line-height: 1.75;
+  margin: 0;
+}
+
+/* Search bar */
+.searchBar {
+  display: flex;
+  align-items: center;
+  background: #fff;
+  border-radius: 50px;
+  box-shadow: 0 4px 24px rgba(14, 165, 197, 0.1), 0 1px 4px rgba(0,0,0,0.06);
+  padding: 6px 6px 6px 18px;
+  max-width: 420px;
+  border: 1.5px solid rgba(14, 165, 197, 0.15);
+  transition: box-shadow 0.2s;
+}
+.searchBar:focus-within {
+  box-shadow:
+    0 10px 35px rgba(10, 110, 112, 0.22);
+
+  border-color: rgba(10, 110, 112, 0.4);
+}
+
+.searchIcon {
+  display: flex;
+  align-items: center;
+  color: #9ab0be;
+  flex-shrink: 0;
+}
+.searchIcon svg {
+  width: 18px;
+  height: 18px;
+}
+
+.searchInput {
+  flex: 1;
+  border: none;
+  outline: none;
+  background: transparent;
+  font-family: "DM Sans", sans-serif;
+  font-size: 0.9rem;
+  color: #1a2b3c;
+  padding: 8px 12px;
+}
+.searchInput::placeholder {
+  color: #a0b3be;
+}
+
+.searchBtn {
+  width: 46px;
+  height: 46px;
+
+  border-radius: 50%;
+
+  border: none;
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #fff;
+
+  background: linear-gradient(
+    135deg,
+    #0a6e70,
+    #12898c
+  );
+
+  transition: 0.3s ease;
+}
+
+.searchBtn:hover {
+  transform: scale(1.08);
+
+  background: linear-gradient(
+    135deg,
+    #08585a,
+    #0a6e70
+  );
+}
+.searchBtn svg {
+  width: 18px;
+  height: 18px;
+}
+
+/* ── RIGHT ── */
+.right {
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ── Illustration ── */
+.illustrationWrap {
+  position: relative;
+  width: 500px;
+  height: 360px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/* Background soft circle */
+.circleBg {
+  position: absolute;
+  width: 360px;
+  height: 360px;
+  border-radius: 50%;
+  background: linear-gradient(
+    135deg,
+    rgba(14, 165, 197, 0.12),
+    rgba(139, 92, 246, 0.08)
+  );
+
+  z-index: 0;
+}
+
+
+/* Laptop */
+
+/* Laptop card */
+.imageCard {
+  position: relative;
+  z-index: 2;
+
+  width: 330px;
+  border-radius: 24px;
+
+  overflow: hidden;
+
+  background: #fff;
+
+  padding: 10px;
+
+  box-shadow:
+    0 20px 50px rgba(0, 0, 0, 0.08),
+    0 8px 25px rgba(14, 165, 197, 0.12);
+
+  transform: rotate(-2deg);
+
+  transition: 0.4s ease;
+}
+.imageCard:hover {
+  transform: rotate(0deg) translateY(-6px);
+}
+/* Laptop image */
+.blogLaptop {
+  width: 100%;
+  display: block;
+  border-radius: 18px;
+  object-fit: cover;
+}
+.laptop {
+  position: relative;
+  z-index: 2;
+}
+.laptopScreen {
+  width: 240px;
+  height: 155px;
+  background: #fff;
+  border-radius: 10px 10px 0 0;
+  border: 2.5px solid #cde0ea;
+  overflow: hidden;
+  box-shadow: 0 8px 32px rgba(14, 165, 197, 0.13);
+}
+.screenContent {
+  padding: 14px 14px 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  height: 100%;
+  box-sizing: border-box;
+}
+.screenBlogTag {
+  font-family: "Sora", sans-serif;
+  font-size: 0.65rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  color: #0ea5c5;
+  background: #eaf7fb;
+  border-radius: 4px;
+  padding: 2px 7px;
+  display: inline-block;
+  width: fit-content;
+}
+.screenLine {
+  height: 7px;
+  background: #e4eef3;
+  border-radius: 4px;
+  width: 90%;
+}
+.screenImg {
+  flex: 1;
+  background: linear-gradient(120deg, #dff0f7 0%, #e8f4fb 100%);
+  border-radius: 5px;
+  margin-top: 4px;
+}
+.laptopBase {
+  width: 240px;
+  height: 10px;
+  background: linear-gradient(180deg, #dce8f0 0%, #c8d8e4 100%);
+  border-radius: 0 0 4px 4px;
+}
+.laptopBottom {
+  width: 280px;
+  height: 8px;
+  background: #b8ccd8;
+  border-radius: 0 0 8px 8px;
+  margin: 0 auto;
+}
+
+/* Plant */
+.plant {
+  position: absolute;
+  right: 30px;
+  bottom: 18px;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.plantPot {
+  width: 30px;
+  height: 22px;
+  background: linear-gradient(180deg, #c9844a 0%, #a8612e 100%);
+  border-radius: 3px 3px 7px 7px;
+  position: relative;
+  z-index: 2;
+}
+.plantPot::before {
+  content: "";
+  display: block;
+  width: 36px;
+  height: 7px;
+  background: #b0703a;
+  border-radius: 4px;
+  position: absolute;
+  top: -4px;
+  left: -3px;
+}
+.plantStem {
+  position: relative;
+  width: 4px;
+  height: 45px;
+  background: #5aac60;
+  border-radius: 2px;
+  bottom: 0;
+  z-index: 1;
+}
+.plantLeaf,
+.plantLeafR,
+.plantLeafTop {
+  position: absolute;
+  background: #4caf50;
+  border-radius: 50% 0 50% 0;
+}
+.plantLeaf {
+  width: 22px;
+  height: 14px;
+  top: 18px;
+  left: -20px;
+  transform: rotate(-25deg);
+}
+.plantLeafR {
+  width: 22px;
+  height: 14px;
+  top: 10px;
+  left: 4px;
+  transform: rotate(25deg);
+  border-radius: 0 50% 0 50%;
+  background: #43a047;
+}
+.plantLeafTop {
+  width: 16px;
+  height: 26px;
+  top: -20px;
+  left: -6px;
+  border-radius: 50% 50% 0 0;
+  background: #388e3c;
+}
+
+/* Floating icon cards */
+.floatingCard {
+  position: absolute;
+  width: 62px;
+  height: 62px;
+  border-radius: 18px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #fff;
+
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.12);
+
+  backdrop-filter: blur(10px);
+
+  animation: floatCard 4s ease-in-out infinite alternate;
+
+  z-index: 5;
+}
+.floatingCard svg {
+  width: 28px;
+  height: 28px;
+}
+
+@keyframes floatCard {
+  from {
+    transform: translateY(0px);
+  }
+  to {
+    transform: translateY(-14px);
+  }
+}
+
+.cardTeal {
+  top: 20px;
+  left: 40px;
+
+  background: linear-gradient(
+    135deg,
+    #0ea5c5,
+    #0891b2
+  );
+}
+.cardPurple {
+  left: 10px;
+  bottom: 70px;
+
+  background: linear-gradient(
+    135deg,
+    #9333ea,
+    #7e22ce
+  );
+}
+.cardOrange {
+  right: 20px;
+  bottom: 30px;
+
+  background: linear-gradient(
+    135deg,
+    #fb923c,
+    #f97316
+  );
+}
+
+.dotsTop,
+.dotsBottom {
+  position: absolute;
+  width: 70px;
+  height: 70px;
+
+  background-image: radial-gradient(
+    rgba(14, 165, 197, 0.3) 2px,
+    transparent 2px
+  );
+
+  background-size: 14px 14px;
+
+  z-index: 0;
+}
+
+.dotsTop {
+  top: 10px;
+  right: 40px;
+}
+
+.dotsBottom {
+  bottom: 20px;
+  left: 40px;
+}
+
+
+@media (max-width: 992px) {
+
+  .section {
+    padding: 120px 20px 70px;
+    min-height: auto;
+  }
+
+  .inner {
+    flex-direction: column;
+
+    text-align: center;
+
+    gap: 50px;
+  }
+
+  .left {
+    max-width: 100%;
+  }
+
+  .heading {
+    font-size: clamp(2.3rem, 8vw, 3.4rem);
+
+    line-height: 1.12;
+    letter-spacing: -1px;
+  }
+
+  .body {
+    font-size: 0.96rem;
+    line-height: 1.7;
+  }
+
+  .searchBar {
+    margin-inline: auto;
+  }
+
+  .illustrationWrap {
+    height: 320px;
+  }
+
+  .circleBg {
+    width: 280px;
+    height: 280px;
+  }
+
+  .imageCard {
+    width: 260px;
+    border-radius: 20px;
+  }
+
+  .floatingCard {
+    width: 52px;
+    height: 52px;
+    border-radius: 16px;
+  }
+
+  .floatingCard svg {
+    width: 24px;
+    height: 24px;
+  }
+
+  .cardTeal {
+    top: 15px;
+    left: 30px;
+  }
+
+  .cardPurple {
+    left: 0;
+    bottom: 60px;
+  }
+
+  .cardOrange {
+    right: 10px;
+    bottom: 20px;
+  }
+
+  .dotsTop {
+    right: 10px;
+  }
+
+  .dotsBottom {
+    left: 10px;
+  }
+}
+
+/* ===== SMALL MOBILE ===== */
+
+@media (max-width: 576px) {
+
+  .section {
+    padding: 110px 16px 60px;
+  }
+
+  .heading {
+    font-size: 2.2rem;
+  }
+
+  .body br {
+    display: none;
+  }
+
+  .searchBar {
+    height: 54px;
+    padding-left: 14px;
+  }
+
+  .searchInput {
+    font-size: 0.88rem;
+  }
+
+  .searchBtn {
+    width: 42px;
+    height: 42px;
+  }
+
+  .illustrationWrap {
+    height: 270px;
+  }
+
+  .circleBg {
+    width: 230px;
+    height: 230px;
+  }
+
+  .imageCard {
+    width: 220px;
+    padding: 8px;
+  }
+
+  .floatingCard {
+    width: 46px;
+    height: 46px;
+  }
+
+  .floatingCard svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  .cardTeal {
+    top: 10px;
+    left: 18px;
+  }
+
+  .cardPurple {
+    bottom: 50px;
+    left: -4px;
+  }
+
+  .cardOrange {
+    right: 0;
+    bottom: 10px;
+  }
+}
