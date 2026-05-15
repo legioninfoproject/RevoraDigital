@@ -1,0 +1,237 @@
+.mvv {
+  width: 100%;
+  background: #f8fafc;
+  overflow: hidden;
+}
+
+.mvvHero {
+  text-align: center;
+  padding: 100px 20px 70px;
+}
+
+.mvvHeroTag {
+  display: inline-block;
+  padding: 10px 22px;
+  /* border-radius: 50px; */
+  /* background: #facc15; */
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color:#0a6e70;
+   text-transform: uppercase;
+}
+
+.mvvHeroTitle {
+  font-size: 60px;
+  font-weight: 800;
+  line-height: 1.1;
+  color: #0f172a;
+}
+
+.mvvHeroTitle span {
+  color:#0a6e70;
+}
+
+.mvvHeroText {
+  max-width: 700px;
+  margin: 25px auto 0;
+  font-size: 18px;
+  line-height: 1.7;
+  color: #64748b;
+}
+
+.mvvSection {
+  padding: 30px 20px 100px;
+}
+
+.mvvGrid {
+  max-width: 1300px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.mvvCard {
+  background: white;
+  border-radius: 30px;
+  overflow: hidden;
+  transition: 0.4s;
+  transform: translateY(80px);
+  opacity: 0;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+}
+
+.showCard {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.mvvCard:hover {
+  transform: translateY(-10px);
+}
+
+.mvvCardImage {
+  position: relative;
+  height: 260px;
+}
+
+.mvvCardImage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.mvvOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(0,0,0,0.5),
+    transparent
+  );
+}
+
+.mvvCardContent {
+  padding: 35px;
+}
+
+.mvvTop {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.mvvIcon {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  /* background:#0a6e70; */
+  color:#0a6e70;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+}
+
+.mvvTag {
+  font-size: 14px;
+  font-weight: 700;
+  color: #0a6e70;
+}
+
+.mvvCardTitle {
+  font-size: 32px;
+  margin-top: 25px;
+  color: #0f172a;
+}
+
+.mvvCardText {
+  margin-top: 18px;
+  color: #64748b;
+  line-height: 1.8;
+}
+
+.mvvDivider {
+  width: 100%;
+  height: 1px;
+  background: #e2e8f0;
+  margin: 30px 0;
+}
+
+.mvvBottom {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.mvvStat {
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.mvvBar {
+  width: 100%;
+  height: 10px;
+  background: #e2e8f0;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+/* .mvvFill {
+  height: 100%;
+  background: #f59e0b;
+  transition: 1s;
+} */
+
+.mvvStats {
+  background: #0f172a;
+  padding: 80px 20px;
+}
+
+.mvvStatsContainer {
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.mvvStatsCard {
+  text-align: center;
+  color: white;
+  transform: translateY(50px);
+  opacity: 0;
+  transition: 0.6s;
+}
+
+.showStats {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.mvvStatsIcon {
+  font-size: 40px;
+  color: #facc15;
+  margin-bottom: 20px;
+}
+
+.mvvStatsValue {
+  font-size: 46px;
+  font-weight: 800;
+}
+
+.mvvStatsLabel {
+  margin-top: 10px;
+  color: #cbd5e1;
+}
+
+@media (max-width: 992px) {
+
+  .mvvGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .mvvStatsContainer {
+    grid-template-columns: 1fr;
+  }
+
+  .mvvHeroTitle {
+    font-size: 42px;
+  }
+}
+
+@media (max-width: 576px) {
+
+  .mvvHeroTitle {
+    font-size: 32px;
+  }
+
+  .mvvCardContent {
+    padding: 25px;
+  }
+
+  .mvvCardTitle {
+    font-size: 24px;
+  }
+}
