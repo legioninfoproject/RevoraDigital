@@ -1,60 +1,81 @@
 import React from "react";
 import styles from "./BrandHeader.module.css";
+import heroImage from "../../assets/brandMarketting.avif"
+import { IoIosArrowRoundForward } from "react-icons/io";
+
 
 const BrandHeader = () => {
   return (
-    <section className={styles.brandMarketing}>
-      <div className={styles.brandMarketingContainer}>
-        
-        {/* Left Content */}
-        <div className={styles.brandMarketingContent}>
-          <span className={styles.brandMarketingLabel}>
-            BRAND MARKETING
-          </span>
+    <header className={styles.brandHero}>
+      {/* Background Shapes */}
+      <div className={styles.circleOne}></div>
+      <div className={styles.circleTwo}></div>
 
-          <h1 className={styles.brandMarketingTitle}>
-            Build Your{" "}
-            <span className={styles.brandMarketingHighlight}>
-              Brand.
-            </span>
-            <br />
-            Grow Your{" "}
-            <span className={styles.brandMarketingHighlightTeal}>
-              Business.
-            </span>
-          </h1>
+      {/* Left Content */}
+      <div className={styles.leftContent}>
+        <span className={styles.tag}>
+          <span className={styles.tagDot}></span>
+          BRAND MARKETING
+        </span>
 
-          <p className={styles.brandMarketingDescription}>
-            We create powerful brand strategies and marketing campaigns
-            that connect, engage, and leave a lasting impression.
-          </p>
+       <h1 className={styles.title}>
+  Build Your <span className={styles.brandText}>Brand.</span>
+  <br />
+  Grow Your Business.
+</h1>
 
-          <div className={styles.brandMarketingButtons}>
-            <button className={styles.brandMarketingBtnPrimary}>
-              Let's Build Your Brand
-            </button>
+        <p className={styles.description}>
+          We create powerful branding and marketing strategies that help
+          businesses connect, engage, and grow faster in the digital world.
+        </p>
 
-            <button className={styles.brandMarketingBtnSecondary}>
-              <span className={styles.brandMarketingPlayIcon}>
-                ▶
-              </span>
-              Watch Our Story
-            </button>
-          </div>
+        <div className={styles.buttonGroup}>
+         <button className={styles.primaryBtn}>
+  Let’s Build Your Brand
+
+  <span className={styles.arrowIcon}>
+    <IoIosArrowRoundForward />
+  </span>
+</button>
+
+          {/* <button className={styles.secondaryBtn}>
+            Watch Story
+          </button> */}
         </div>
 
-        {/* Right Image Section */}
-        <div className={styles.brandMarketingVisual}>
-          <div className={styles.brandMarketingImagePlaceholder}>
-            <img
-              src="/placeholder-brand-image.png"
-              alt="Brand Marketing Visual"
-              className={styles.brandMarketingImage}
-            />
+        {/* Stats */}
+        {/* <div className={styles.statsWrapper}>
+          <div className={styles.statCard}>
+            <h3>500+</h3>
+            <p>Brands Built</p>
           </div>
-        </div>
+
+          <div className={styles.statCard}>
+            <h3>98%</h3>
+            <p>Client Satisfaction</p>
+          </div>
+
+          <div className={styles.statCard}>
+            <h3>12+</h3>
+            <p>Years Experience</p>
+          </div>
+        </div> */}
       </div>
-    </section>
+
+      {/* Right Image */}
+      <div className={styles.rightContent}>
+        <img
+          src={heroImage}
+          alt="Brand Marketing"
+          className={styles.heroImage}
+        />
+
+        {/* <div className={styles.floatingCard}>
+          <div className={styles.greenDot}></div>
+          Strategy First
+        </div> */}
+      </div>
+    </header>
   );
 };
 

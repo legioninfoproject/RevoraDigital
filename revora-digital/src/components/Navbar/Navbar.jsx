@@ -73,7 +73,7 @@ const Navbar = () => {
               }`}
             >
               <a
-                href="/digital-marketing"
+                href="/digital"
                 className={styles.dropdownItem}
               >
                 Digital Marketing
@@ -87,7 +87,7 @@ const Navbar = () => {
               </a>
 
               <a
-                href="/ecommerce-marketing"
+                href="/ecommerce"
                 className={styles.dropdownItem}
               >
                 Ecommerce Marketing
@@ -185,7 +185,7 @@ const Navbar = () => {
             {serviceOpen && (
               <div className={styles.mobileDropdown}>
                 <a
-                  href="/digital-marketing"
+                  href="/digital"
                   className={styles.mobileDropdownItem}
                 >
                   Digital Marketing
@@ -199,7 +199,7 @@ const Navbar = () => {
                 </a>
 
                 <a
-                  href="/ecommerce-marketing"
+                  href="/ecommerce"
                   className={styles.mobileDropdownItem}
                 >
                   Ecommerce Marketing

@@ -1,0 +1,307 @@
+.hero {
+  position: relative;
+  overflow: hidden;
+  padding: 80px 6%;
+  background: #f5fffd;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+.heroContainer {
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 60px;
+  align-items: center;
+}
+
+/* ================= LEFT CONTENT ================= */
+
+.heroContent {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.heroTag {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: #0a6e70;
+  padding: 10px 0;
+  font-size: 15px;
+  font-weight: 700;
+  width: fit-content;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.heroTagIcon {
+  font-size: 18px;
+}
+
+/* ================= TITLE ================= */
+
+.heroTitle {
+  font-size: 70px;
+  line-height: 1.1;
+  font-weight: 800;
+  color: #0a6e70;
+}
+
+.heroTitle span {
+  position: relative;
+  display: inline-block;
+  z-index: 1;
+}
+
+.heroTitle span::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 8px;
+  width: 100%;
+  height: 12px;
+  background: #facc15;
+  border-radius: 20px;
+  z-index: -1;
+}
+
+/* ================= SUBTITLE ================= */
+
+.heroSubtitle {
+  font-size: 20px;
+  color: #335b57;
+  line-height: 1.6;
+}
+
+.heroSubtitle strong {
+  color: #ff6b35;
+}
+
+/* ================= DESCRIPTION ================= */
+
+.heroDescription {
+  max-width: 550px;
+  line-height: 1.8;
+  color: #5d7c78;
+  font-size: 16px;
+}
+
+/* ================= BUTTONS ================= */
+
+.ctaRow {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+
+.btnPrimary {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: #0a6e70;
+  color: white;
+  border: none;
+  padding: 16px 30px;
+  border-radius: 999px;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btnPrimary:hover {
+  background: #08595b;
+  transform: translateY(-3px);
+}
+
+.btnSecondary {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: transparent;
+  border: none;
+  color: #0a6e70;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+/* ================= IMAGE SECTION ================= */
+
+.heroImageSection {
+  display: flex;
+  justify-content: center;
+}
+
+.imageWrapper {
+  position: relative;
+  width: 100%;
+  max-width: 520px;
+}
+
+.heroImage {
+  width: 100%;
+  border-radius: 24px;
+  display: block;
+  object-fit: cover;
+  box-shadow: 0 15px 50px rgba(0, 0, 0, 0.08);
+}
+
+/* ================= FLOATING CARDS ================= */
+
+.floatingCard {
+  position: absolute;
+  background: white;
+  padding: 14px 18px;
+  border-radius: 18px;
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.08);
+}
+
+.cardIcon {
+  font-size: 22px;
+  color: #0a6e70;
+}
+
+.floatingCard h4 {
+  font-size: 18px;
+  color: #092c28;
+}
+
+.floatingCard p {
+  font-size: 13px;
+  color: #6b8b87;
+}
+
+.salesCard {
+  top: 8%;
+  right: -30px;
+}
+
+.trafficCard {
+  left: -30px;
+  bottom: 24%;
+}
+
+.growthCard {
+  right: 10%;
+  bottom: -20px;
+}
+
+/* ================= BACKGROUND BLOBS ================= */
+
+.heroBlobOne {
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  background: rgba(10, 110, 112, 0.08);
+  border-radius: 50%;
+  top: -150px;
+  right: -100px;
+}
+
+.heroBlobTwo {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  background: rgba(10, 110, 112, 0.05);
+  border-radius: 50%;
+  bottom: -100px;
+  left: 30%;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 992px) {
+  .heroContainer {
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+
+  .heroImageSection {
+    order: -1;
+  }
+
+  .heroTitle {
+    font-size: 56px;
+  }
+
+  .imageWrapper {
+    max-width: 450px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    padding: 70px 5%;
+  }
+
+  .heroTitle {
+    font-size: 46px;
+  }
+
+  .heroSubtitle {
+    font-size: 18px;
+  }
+
+  .heroDescription {
+    font-size: 15px;
+  }
+
+  .btnPrimary {
+    width: fit-content;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero {
+    padding: 60px 5%;
+  }
+
+  .heroTitle {
+    font-size: 38px;
+  }
+
+  .heroTitle span::after {
+    height: 10px;
+    bottom: 4px;
+  }
+
+  .heroSubtitle {
+    font-size: 17px;
+  }
+
+  .heroDescription {
+    font-size: 14px;
+    line-height: 1.7;
+  }
+
+  .imageWrapper {
+    max-width: 100%;
+  }
+
+  .floatingCard {
+    transform: scale(0.9);
+  }
+
+  .salesCard {
+    right: 0;
+  }
+
+  .trafficCard {
+    left: 0;
+  }
+
+  .growthCard {
+    right: 5%;
+  }
+}

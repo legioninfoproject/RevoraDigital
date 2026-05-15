@@ -8,6 +8,8 @@ import ContactSection from "./section/ContactSection";
 import BlogSection from "./section/BlogSection";
 import RevoraFormSection from "./section/RevoraFormSection";
 import BrandMarketing from "./section/BrandMarketing";
+import DigitalSection from "./section/DigitalSection";
+import EcommerceMarketing from "./section/EcommerceMarketing";
 
 function App() {
   return (
@@ -21,6 +23,8 @@ function App() {
         <Route path="/blog" element={<BlogSection />} />
         <Route path="/revoraform" element={<RevoraFormSection />} />
         <Route path="/brandmarketing" element={<BrandMarketing />} />
+        <Route path="/digital" element={<DigitalSection />} />
+        <Route path="/ecommerce" element={<EcommerceMarketing />} />
       </Routes>
     </div>
   );

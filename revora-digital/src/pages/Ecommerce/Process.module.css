@@ -1,0 +1,374 @@
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Sans:wght@400;500;600&display=swap');
+
+:root {
+  --teal:       #1a9e8f;
+  --teal-dark:  #137a6e;
+  --teal-mid:   #25bfaf;
+  --teal-light: #e6f7f5;
+  --yellow:     #f5c518;
+  --yellow-dk:  #d4a800;
+  --white:      #ffffff;
+  --off-white:  #f7fffe;
+  --text-dark:  #0d2b27;
+  --text-mid:   #2d5e57;
+  --text-light: #5a8f88;
+  --dot-color:  rgba(26,158,143,0.28);
+}
+
+/* ─── SECTION ─── */
+.section {
+  padding: 90px 6vw 100px;
+  background: linear-gradient(160deg, #f4fbfa 0%, #ffffff 60%, #edfaf8 100%);
+  position: relative;
+  overflow: hidden;
+  /* font-family: 'DM Sans', sans-serif; */
+}
+
+.section::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 15% 80%, rgba(26,158,143,0.07) 0%, transparent 40%),
+    radial-gradient(circle at 85% 15%, rgba(245,197,24,0.06) 0%, transparent 40%);
+  pointer-events: none;
+}
+
+/* ─── HEADER ─── */
+.header {
+  text-align: center;
+  margin-bottom: 70px;
+  position: relative;
+  z-index: 1;
+}
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--teal);
+  margin-bottom: 14px;
+  animation: fadeUp 0.6s 0.1s both;
+}
+
+/* .eyebrow::before,
+.eyebrow::after {
+  content: '';
+  display: block;
+  width: 28px;
+  height: 2px;
+  background: var(--yellow);
+  border-radius: 2px;
+} */
+
+.heroTag {
+  animation: fadeUp 0.65s 0.2s both;
+}
+
+.heading {
+  /* font-family: 'Syne', sans-serif; */
+  font-size: clamp(1.9rem, 3.5vw, 2.8rem);
+  font-weight: 800;
+  color: var(--text-dark);
+  line-height: 1.12;
+  margin: 0 0 20px;
+}
+
+/* .tagHighlight {
+  color: var(--yellow);
+  position: relative;
+  display: inline-block;
+} */
+
+/* .tagHighlight::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(90deg, var(--yellow), var(--yellow-dk));
+  border-radius: 99px;
+  transform-origin: left;
+  animation: lineGrow 0.8s 0.95s cubic-bezier(0.22,1,0.36,1) both;
+} */
+
+@keyframes lineGrow {
+  from { transform: scaleX(0); opacity: 0; }
+  to   { transform: scaleX(1); opacity: 1; }
+}
+
+.divider {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+  animation: fadeUp 0.6s 0.38s both;
+}
+
+/* .dividerLine {
+  width: 48px;
+  height: 3px;
+  background: linear-gradient(90deg, var(--yellow), var(--yellow-dk));
+  border-radius: 99px;
+}
+
+.dividerDot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--yellow);
+  animation: dotPulse 2s ease-in-out infinite;
+} */
+
+@keyframes dotPulse {
+  0%,100% { transform: scale(1);    opacity: 1; }
+  50%      { transform: scale(1.5);  opacity: 0.6; }
+}
+
+/* ─── TRACK (horizontal scroll container) ─── */
+.track {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 0;
+  max-width: 1180px;
+  margin: 0 auto;
+}
+
+/* ─── CONNECTOR LINE ─── */
+.connector {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  padding-top: 46px; /* vertically align with icon centers */
+  min-width: 40px;
+}
+
+.connectorInner {
+  width: 100%;
+  height: 2px;
+  background: repeating-linear-gradient(
+    90deg,
+    var(--dot-color) 0px,
+    var(--dot-color) 7px,
+    transparent 7px,
+    transparent 14px
+  );
+  position: relative;
+  overflow: hidden;
+}
+
+/* animated travel light */
+.connectorInner::after {
+  content: '';
+  position: absolute;
+  top: -1px;
+  left: -40%;
+  width: 40%;
+  height: 4px;
+  border-radius: 2px;
+  background: linear-gradient(90deg, transparent, var(--teal-mid), transparent);
+  animation: travelLight 2.8s ease-in-out infinite;
+}
+
+.connector:nth-of-type(2)  .connectorInner::after { animation-delay: 0.5s; }
+.connector:nth-of-type(4)  .connectorInner::after { animation-delay: 1.0s; }
+.connector:nth-of-type(6)  .connectorInner::after { animation-delay: 1.5s; }
+.connector:nth-of-type(8)  .connectorInner::after { animation-delay: 2.0s; }
+
+@keyframes travelLight {
+  0%   { left: -40%; }
+  100% { left: 140%; }
+}
+
+/* arrow head at end of connector */
+.connectorArrow {
+  width: 0;
+  height: 0;
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+  border-left: 8px solid var(--dot-color);
+  flex-shrink: 0;
+}
+
+/* ─── STEP ─── */
+.step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 160px;
+  flex-shrink: 0;
+
+  opacity: 0;
+  animation: stepReveal 0.7s cubic-bezier(0.22,1,0.36,1) both;
+}
+
+.step:nth-child(1)  { animation-delay: 0.4s; }
+.step:nth-child(3)  { animation-delay: 0.62s; }
+.step:nth-child(5)  { animation-delay: 0.84s; }
+.step:nth-child(7)  { animation-delay: 1.06s; }
+.step:nth-child(9)  { animation-delay: 1.28s; }
+
+@keyframes stepReveal {
+  from { opacity: 0; transform: translateY(40px) scale(0.92); }
+  to   { opacity: 1; transform: translateY(0)   scale(1); }
+}
+
+/* ─── STEP NUMBER ─── */
+.stepNum {
+  /* font-family: 'Syne', sans-serif; */
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--teal);
+  letter-spacing: 0.12em;
+  margin-bottom: 10px;
+  opacity: 0.75;
+}
+
+/* ─── ICON RING ─── */
+.iconRing {
+  width: 82px;
+  height: 82px;
+  border-radius: 50%;
+  border: 2.5px solid var(--teal-light);
+  background: var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--teal-dark);
+  font-size: 1.9rem;
+  position: relative;
+  margin-bottom: 22px;
+  transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s, background 0.3s, color 0.3s;
+  box-shadow: 0 4px 18px rgba(26,158,143,0.10);
+}
+
+/* pulsing halo */
+.iconRing::before {
+  content: '';
+  position: absolute;
+  inset: -8px;
+  border-radius: 50%;
+  border: 2px solid rgba(26,158,143,0.15);
+  animation: haloSpin 6s linear infinite;
+  border-top-color: var(--teal-mid);
+}
+
+@keyframes haloSpin {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+/* yellow badge */
+.iconRing::after {
+  content: attr(data-num);
+  position: absolute;
+  top: -6px; right: -6px;
+  width: 22px; height: 22px;
+  border-radius: 50%;
+  background: var(--yellow);
+  color: var(--text-dark);
+  /* font-family: 'Syne', sans-serif; */
+  font-size: 0.65rem;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid var(--white);
+  line-height: 1;
+}
+
+.step:hover .iconRing {
+  transform: translateY(-8px) scale(1.08);
+  background: var(--teal);
+  color: var(--white);
+  border-color: var(--teal);
+  box-shadow: 0 16px 40px rgba(26,158,143,0.28);
+}
+
+/* ─── STEP CONTENT ─── */
+.stepTitle {
+  /* font-family: 'Syne', sans-serif; */
+  font-size: 0.96rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin-bottom: 8px;
+  transition: color 0.22s;
+}
+
+.step:hover .stepTitle { color: var(--teal-dark); }
+
+.stepDesc {
+  font-size: 0.8rem;
+  color: var(--text-light);
+  line-height: 1.65;
+  max-width: 130px;
+}
+
+/* ─── SHARED ANIMATIONS ─── */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ─── RESPONSIVE ─── */
+@media (max-width: 1000px) {
+  .track {
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+  }
+
+  .step { width: 100%; max-width: 320px; flex-direction: row; text-align: left; gap: 20px; }
+  .iconRing { flex-shrink: 0; margin-bottom: 0; }
+  .stepNum { display: none; }
+
+  .connector {
+    padding-top: 0;
+    padding-left: 41px; /* align under icon centre */
+    width: 100%;
+    max-width: 320px;
+    flex-direction: column;
+  }
+  .connectorInner {
+    width: 2px;
+    height: 36px;
+    background: repeating-linear-gradient(
+      180deg,
+      var(--dot-color) 0px,
+      var(--dot-color) 7px,
+      transparent 7px,
+      transparent 14px
+    );
+  }
+  .connectorInner::after {
+    width: 4px;
+    height: 40%;
+    top: -40%;
+    left: -1px;
+    animation: travelLightV 2.8s ease-in-out infinite;
+  }
+  @keyframes travelLightV {
+    0%   { top: -40%; }
+    100% { top: 140%; }
+  }
+  .connectorArrow {
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 8px solid var(--dot-color);
+    border-bottom: none;
+  }
+}
+
+@media (max-width: 520px) {
+  .section { padding: 60px 5vw 70px; }
+  .step { max-width: 100%; }
+}
