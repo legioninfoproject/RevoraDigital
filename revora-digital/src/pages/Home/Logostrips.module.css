@@ -2,8 +2,9 @@
   width: 100%;
   overflow: hidden;
   padding: 20px 0;
-  background-color: transparent; /* IMPORTANT */
-   margin: 40px 0; 
+  background-color: transparent;
+  margin: 60px 0 0px 0;
+  position: relative;
 }
 
 .header {
@@ -31,6 +32,7 @@
 
 .scrollMask {
   overflow: hidden;
+  position: relative;
 }
 
 .track {
@@ -38,7 +40,7 @@
   align-items: center;
   gap: 55px;
   width: max-content;
-  animation: scroll 18s linear infinite;
+  animation: scroll 20s linear infinite;
 }
 
 .logoItem {
@@ -46,15 +48,45 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  opacity: 0.55;
+  opacity: 0.7;
+  transition: 0.3s ease;
+}
+
+.logoItem:hover {
+  opacity: 1;
+  transform: scale(1.05);
 }
 
 .logoImage {
-  height: 42px; /* IMPORTANT use height not width */
+  height: 20vh;
   width: auto;
   object-fit: contain;
   display: block;
   filter: grayscale(100%);
+}
+
+/* PAGINATION DOTS */
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-top: 22px;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #c7c7c7;
+  transition: 0.3s ease;
+  cursor: pointer;
+}
+
+.activeDot {
+  width: 30px;
+  border-radius: 30px;
+  background: #111;
 }
 
 /* animation */
@@ -91,10 +123,23 @@
   }
 
   .logoImage {
-    height: 24px;
+    height: 34px;
   }
 
   .track {
     gap: 24px;
+  }
+
+  .pagination {
+    margin-top: 16px;
+  }
+
+  .dot {
+    width: 8px;
+    height: 8px;
+  }
+
+  .activeDot {
+    width: 24px;
   }
 }

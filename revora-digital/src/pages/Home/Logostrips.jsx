@@ -4,8 +4,8 @@ import styles from "./Logostrips.module.css";
 import brand1 from "../../assets/brand-image1.png";
 import brand2 from "../../assets/brand-image2.png";
 import brand3 from "../../assets/brand-image3.png";
-import brand4 from "../../assets/brand-image4.png";
-import brand5 from "../../assets/brand-image5.png";
+// import brand1 from "../../assets/brand-image4.png";
+// import brand1 from "../../assets/brand-image5.png";
 
 const logos = [
   {
@@ -25,12 +25,17 @@ const logos = [
   },
   {
     id: 4,
-    image: brand4,
+    image: brand1,
     alt: "Brand 4",
   },
   {
     id: 5,
-    image: brand5,
+    image: brand2,
+    alt: "Brand 5",
+  },
+    {
+    id: 5,
+    image: brand3,
     alt: "Brand 5",
   },
 ];
@@ -46,7 +51,7 @@ const Logostrips = () => {
     <section className={styles.wrapper}>
       <div className={styles.header}>
         <span className={styles.label}>
-          Used by world leading companies
+          Everything Your Brand Needs
         </span>
 
         <div className={styles.dividerLine}></div>

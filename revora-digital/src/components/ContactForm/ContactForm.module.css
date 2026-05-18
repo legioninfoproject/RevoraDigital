@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;600;700;800&family=DM+Sans:wght@300;400;500;600&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;600;700;800&family=DM+Sans:wght@300;400;500;600&display=swap'); */
 
 /* ─── SECTION ─────────────────────────────────────────── */
 .section {
@@ -13,7 +13,7 @@
   --input-border: #e2e8e5;
   --input-focus: #0a6e70;
 
-  font-family: 'DM Sans', sans-serif;
+  /* font-family: 'DM Sans', sans-serif; */
   background: var(--teal);
   min-height: 100vh;
   display: flex;
@@ -138,7 +138,7 @@
   border: none;
   border-radius: 99px;
   padding: 14px 28px;
-  font-family: 'DM Sans', sans-serif;
+  /* font-family: 'DM Sans', sans-serif; */
   font-size: 15px;
   font-weight: 600;
   cursor: pointer;
@@ -287,7 +287,7 @@
   border: none;
   border-radius: 12px;
   padding: 15px;
-  font-family: 'DM Sans', sans-serif;
+  /* font-family: 'DM Sans', sans-serif; */
   font-size: 16px;
   font-weight: 600;
   cursor: pointer;
@@ -357,7 +357,7 @@
 }
 
 .successTitle {
-  font-family: 'Bricolage Grotesque', sans-serif;
+  /* font-family: 'Bricolage Grotesque', sans-serif; */
   font-size: 20px;
   font-weight: 700;
   color: var(--dark);

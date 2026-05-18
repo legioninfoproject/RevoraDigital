@@ -55,7 +55,7 @@
   color: #0f172a;
 
   margin-bottom: 20px;
-   font-family: Sora, Poppins, sans-serif;
+   /* font-family: Sora, Poppins, sans-serif; */
 }
 
 /* Highlight */
@@ -93,7 +93,7 @@
 /* Description */
 
 .description {
-  font-family: "Poppins", sans-serif;
+  /* font-family: "Poppins", sans-serif; */
   width: 100%;
 
   max-width: 900px;

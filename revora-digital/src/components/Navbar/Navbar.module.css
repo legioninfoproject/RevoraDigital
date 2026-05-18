@@ -24,7 +24,7 @@
 
 .container {
   max-width: 1280px;
-  height: 78px;
+  height: 90px;
   margin: auto;
 
   display: flex;
@@ -45,7 +45,7 @@
 }
 
 .logoImg {
-  height: 52px;
+  height: 72px;
   width: auto;
   object-fit: contain;
 }
@@ -85,7 +85,7 @@
 
   transition: 0.3s ease;
 
-  font-family: "Poppins", sans-serif;
+  /* font-family: "Poppins", sans-serif; */
 }
 
 .navLink:hover {
@@ -176,8 +176,8 @@
   font-weight: 500;
 
   transition: 0.3s ease;
-
-  font-family: "Poppins", sans-serif;
+/* 
+  font-family: "Poppins", sans-serif; */
 }
 
 .dropdownItem:hover {
@@ -211,7 +211,7 @@
 
   white-space: nowrap;
 
-  font-family: "Poppins", sans-serif;
+  /* font-family: "Poppins", sans-serif; */
 }
 
 .ctaButton:hover {
@@ -318,7 +318,7 @@
 
   transition: 0.3s ease;
 
-  font-family: "Poppins", sans-serif;
+  /* font-family: "Poppins", sans-serif; */
 }
 
 .mobileNavLink:hover {
@@ -349,7 +349,7 @@
 
   border-radius: 10px;
 
-  font-family: "Poppins", sans-serif;
+  /* font-family: "Poppins", sans-serif; */
 }
 
 .mobileDropdownBtn:hover {
@@ -371,7 +371,7 @@
 
   transition: 0.3s ease;
 
-  font-family: "Poppins", sans-serif;
+  /* font-family: "Poppins", sans-serif; */
 }
 
 .mobileDropdownItem:hover {
@@ -403,7 +403,7 @@
 
   transition: 0.3s ease;
 
-  font-family: "Poppins", sans-serif;
+  /* font-family: "Poppins", sans-serif; */
 }
 
 .mobileCtaButton:hover {

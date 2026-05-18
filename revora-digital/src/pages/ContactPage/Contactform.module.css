@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Sans:wght@400;500;600&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Sans:wght@400;500;600&display=swap'); */
 
 :root {
   --green: #0a6e70;
@@ -397,7 +397,7 @@
 
 .btn {
   width: 100%;
- font-family: 'Bricolage Grotesque', sans-serif;
+ /* font-family: 'Bricolage Grotesque', sans-serif; */
   padding: 15px;
 
   border: none;
@@ -443,7 +443,7 @@
 }
 
 .btnSent {
-     font-family: 'Bricolage Grotesque', sans-serif;
+     /* font-family: 'Bricolage Grotesque', sans-serif; */
   background:
     linear-gradient(
       135deg,

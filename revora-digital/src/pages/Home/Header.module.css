@@ -15,13 +15,31 @@
 .heroSection {
   position: relative;
   min-height: 100vh;
-  background-color: var(--rv-bg);
+
+  /* Background image */
+  background-image:
+    linear-gradient(
+      rgba(10, 110, 112, 0.78),
+      rgba(10, 110, 112, 0.78)
+    ),
+    var(--bg-image);
+
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+
   overflow: hidden;
   display: flex;
   align-items: center;
-  padding-top: 72px; /* navbar height */
-}
 
+  padding-top: 72px;
+}
+.heroSection::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
 /* ── Background image ── */
 .heroBg {
   position: absolute;
@@ -65,8 +83,7 @@
 
 /* ── Title ── */
 .heroTitle {
-  font-family: "Sora", "Poppins", sans-serif;
-  font-size: clamp(42px, 5.5vw, 72px);
+  font-size: clamp(42px, 5.5vw, 62px);
   font-weight: 800;
   color: var(--rv-dark);
   line-height: 1.08;
@@ -101,8 +118,9 @@
 
 .titleHighlight {
   position: relative;
-  color: var(--rv-dark);
+  color: var(--rv-teal);
   display: inline-block;
+
 }
 
 .titleHighlight::after {
@@ -115,11 +133,12 @@
   background: var(--rv-yellow);
   z-index: -1;
   border-radius: 3px;
+ 
 }
 
 /* ── Description ── */
 .heroDesc {
-  font-family: "Poppins", sans-serif;
+  /* font-family: "Poppins", sans-serif; */
   font-size: 16px;
   color: var(--rv-muted);
   line-height: 1.75;
@@ -144,7 +163,7 @@
   padding: 14px 30px;
   background: var(--rv-teal);
   color: #fff;
-  font-family: "Poppins", sans-serif;
+  /* font-family: "Poppins", sans-serif; */
   font-size: 15px;
   font-weight: 600;
   border-radius: 50px;
@@ -172,7 +191,7 @@
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  font-family: "Poppins", sans-serif;
+  /* font-family: "Poppins", sans-serif; */
   font-size: 15px;
   font-weight: 600;
   color: var(--rv-dark);
@@ -211,7 +230,7 @@
 }
 
 .statNum {
-  font-family: "Sora", "Poppins", sans-serif;
+  /* font-family: "Sora", "Poppins", sans-serif; */
   font-size: 28px;
   font-weight: 800;
   color: var(--rv-teal);
@@ -219,7 +238,6 @@
 }
 
 .statLabel {
-  font-family: "Poppins", sans-serif;
   font-size: 13px;
   color: var(--rv-muted);
   font-weight: 500;
@@ -349,7 +367,7 @@
 }
 
 .badgeSub {
-  font-family: "Poppins", sans-serif;
+  /* font-family: "Poppins", sans-serif; */
   font-size: 12px;
   color: var(--rv-muted);
   margin-top: 2px;
@@ -403,22 +421,48 @@
     bottom: 20px;
   }
 }
+@media (max-width: 768px) {
+  .heroSection {
+    background-position: center;
+    padding-top: 90px;
+    min-height: auto;
+    padding-bottom: 80px;
+  }
 
-@media (max-width: 600px) {
+  .heroContainer {
+    padding: 40px 20px;
+  }
+
   .heroTitle {
-    font-size: 36px;
-    letter-spacing: -0.8px;
+    font-size: 42px;
+    line-height: 1.15;
   }
 
-  .heroStats {
-    gap: 16px;
+  .heroDesc {
+    font-size: 15px;
+    line-height: 1.7;
   }
 
-  .statNum {
-    font-size: 22px;
+  .heroCtas {
+    flex-direction: column;
+    width: 100%;
+    gap: 18px;
   }
 
-  .bannerInfo {
-    display: none;
+ 
+}
+
+@media (max-width: 480px) {
+  .heroTitle {
+    font-size: 32px;
+  }
+
+  .titleStar {
+    width: 34px;
+    height: 34px;
+  }
+
+  .heroDesc {
+    font-size: 14px;
   }
 }

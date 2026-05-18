@@ -1,5 +1,5 @@
 /* ─── Google Font ─────────────────────────────────────────────────────────── */
-@import url("https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Sans:wght@300;400;500&display=swap");
+/* @import url("https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Sans:wght@300;400;500&display=swap"); */
 
 /* ─── Variables ───────────────────────────────────────────────────────────── */
 :root {
@@ -175,7 +175,7 @@
   border: none;
  border-radius: 30px;
   /* font-family: "Syne", sans-serif; */
-    font-family: "Syne", sans-serif;
+    /* font-family: "Syne", sans-serif; */
   font-weight: 700;
   font-size: 0.86rem;
   cursor: pointer;
@@ -201,7 +201,7 @@
   color: #0d7a7a;
   border: 1.5px solid rgba(15,31,31,0.3);
   border-radius: 30px;
-  font-family: "Syne", sans-serif;
+  /* font-family: "Syne", sans-serif; */
   font-weight: 700;
   font-size: 0.86rem;
   cursor: pointer;

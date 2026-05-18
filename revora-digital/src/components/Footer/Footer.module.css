@@ -1,11 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;700;800&family=DM+Sans:wght@300;400;500&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;700;800&family=DM+Sans:wght@300;400;500&display=swap'); */
 
 /* ─── BASE FOOTER ─────────────────────────────────────── */
 .footer {
   --green-btn: #0a6e70;
   --white: #ffffff;
 
-  font-family: 'DM Sans', sans-serif;
+  /* font-family: 'DM Sans', sans-serif; */
   padding: 72px 60px 0;
   box-sizing: border-box;
 }
@@ -148,7 +148,7 @@ background: linear-gradient(135deg, #0a6e70, #33aeb1);
 }
 
 .heading {
-  font-family: 'Bricolage Grotesque', sans-serif;
+  /* font-family: 'Bricolage Grotesque', sans-serif; */
   font-size: 22px;
   font-weight: 700;
 }
@@ -167,7 +167,7 @@ background: linear-gradient(135deg, #0a6e70, #33aeb1);
 }
 
 .colTitle {
-  font-family: 'Bricolage Grotesque', sans-serif;
+  /* font-family: 'Bricolage Grotesque', sans-serif; */
   font-size: 16px;
   font-weight: 700;
   margin-bottom: 4px;
@@ -182,7 +182,7 @@ background: linear-gradient(135deg, #0a6e70, #33aeb1);
   background: none;
   border: none;
   padding: 0;
-  font-family: 'DM Sans', sans-serif;
+  /* font-family: 'DM Sans', sans-serif; */
   text-align: left;
 }
 
@@ -198,7 +198,7 @@ background: linear-gradient(135deg, #0a6e70, #33aeb1);
 }
 
 .newsTitle {
-  font-family: 'Bricolage Grotesque', sans-serif;
+  /* font-family: 'Bricolage Grotesque', sans-serif; */
   font-size: 18px;
   font-weight: 700;
   line-height: 1.3;
@@ -220,7 +220,7 @@ background: linear-gradient(135deg, #0a6e70, #33aeb1);
   border: 1.5px solid;
   border-right: none;
   border-radius: 10px 0 0 10px;
-  font-family: 'DM Sans', sans-serif;
+  /* font-family: 'DM Sans', sans-serif; */
   font-size: 14px;
   outline: none;
   transition: border-color 0.22s, background 0.22s;
