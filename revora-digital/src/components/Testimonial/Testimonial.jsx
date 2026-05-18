@@ -18,8 +18,7 @@ import image4 from "../../assets/testimonial-image4.png";
 const TESTIMONIALS = [
   {
     id: 1,
-    quote:
-      "Working with Marketi has been a right and good investment for our business. Their targeted campaigns and data-driven approach have not only increased our ROI but also provide valuable insights for future growth.",
+    quote:"“Working with Revora Digital has significantly improved our online presence and lead generation. Their digital marketing strategies delivered measurable growth and valuable business insights.”",
     name: "Kawser Ahmed",
     role: "Chief Executive Officer",
     avatar: image1,
@@ -126,21 +125,20 @@ const Testimonial = () => {
         {/* ── LEFT ── */}
         <div className={styles.left}>
           <span className={styles.eyebrow}>
-            <span className={styles.eyebrowDot} />
             Clients Testimonial
           </span>
 
           <h2 className={styles.heading}>
-            Client's{" "}
-            <span className={styles.underline}>Speeches</span>
-            <br />
-            About Marketi
+           what Clients
+           <br />
+            Say About{" "}
+            Our Marketing
+         <span className={styles.underline}>  Services</span>
           </h2>
 
           <p className={styles.desc}>
-            Our clients share their experiences with Marketi, expressing how our
-            digital marketing expertise has not only met but exceeded their
-            expectations, fostering success and growth for their businesses.
+            Our clients trust Revora Digital for transparent communication, 
+            measurable growth, and marketing strategies that generate real business results.
           </p>
 
           <button className={styles.ctaBtn}>
