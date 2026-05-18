@@ -8,31 +8,32 @@ import {
   HiOutlineCheckBadge,
   HiArrowLongRight,
 } from "react-icons/hi2";
+import { GiArchiveResearch } from "react-icons/gi";
 
 const steps = [
   {
     id: "01",
-    icon: HiOutlineClipboardDocument,
-    title: "Briefing",
-    desc: "We dive deep into your brand's goals, audience, and challenges to craft a strategy that's uniquely yours.",
+    icon: GiArchiveResearch,
+    title: "Research",
+    desc: "We analyze your business, target audience, competitors, industry trends, and current online presence to identify the best digital marketing opportunities for your brand.",
   },
   {
     id: "02",
     icon: HiOutlineLightBulb,
-    title: "Idea Generating",
-    desc: "Our creative minds collide to spark bold, data-backed concepts that cut through the noise.",
+    title: "Planning",
+    desc: "Our team creates a customized digital marketing strategy including SEO, social media marketing, paid advertising, and content planning tailored to your business goals.",
   },
   {
     id: "03",
     icon: HiOutlineCog6Tooth,
-    title: "Processing",
-    desc: "We execute with precision building, testing, and refining every asset with relentless attention to detail.",
+    title: "Implementation",
+    desc: "We execute result-driven marketing campaigns through SEO optimization, content marketing, Google Ads, social media management, and performance-focused strategies.",
   },
   {
     id: "04",
     icon: HiOutlineCheckBadge,
     title: "Finishing",
-    desc: "We launch, measure, and optimize ensuring your campaign delivers lasting impact.",
+    desc: "We continuously monitor campaign performance, track analytics, optimize strategies, and improve conversions to ensure sustainable growth and maximum return on investment.",
   },
 ];
 
@@ -97,8 +98,8 @@ export default function WorkProcess() {
         </div>
 
         <p className={styles.headerDesc}>
-          Discover a spectrum of cutting-edge digital marketing services
-          tailored to elevate your online presence.
+          We follow a strategic digital marketing process focused on improving brand visibility, increasing website traffic, 
+          generating quality leads, and delivering measurable business growth.
         </p>
       </div>
 
