@@ -2,7 +2,7 @@ import { useState, useEffect, useRef } from "react";
 import styles from "./Workprocess.module.css";
 
 import {
-  HiOutlineClipboardDocument,
+  // HiOutlineClipboardDocument,
   HiOutlineLightBulb,
   HiOutlineCog6Tooth,
   HiOutlineCheckBadge,

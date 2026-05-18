@@ -50,22 +50,22 @@ const TEAM = [
     bio: "Priya crafts go-to-market strategies that are precise, bold, and rooted in deep consumer insight. She's worked across 20+ industries.",
     socials: ["fb", "li", "tw"],
   },
-  // {
-  //   id: 5,
-  //   name: "Eli Voss",
-  //   role: "Performance Marketing Lead",
-  //   img: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=500&q=80",
-  //   bio: "Eli engineers ROI-focused campaigns across paid channels. His data-first mindset delivers consistent, measurable growth for every client.",
-  //   socials: ["ig", "li"],
-  // },
-  // {
-  //   id: 6,
-  //   name: "Amara Osei",
-  //   role: "Brand Strategist",
-  //   img: "https://images.unsplash.com/photo-1531123897727-8f129e1688ce?w=500&q=80",
-  //   bio: "Amara helps brands find their voice. Her frameworks have shaped identities for startups and Fortune 500 companies alike.",
-  //   socials: ["fb", "ig", "li"],
-  // },
+  {
+    id: 5,
+    name: "Eli Voss",
+    role: "Performance Marketing Lead",
+    img: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=500&q=80",
+    bio: "Eli engineers ROI-focused campaigns across paid channels. His data-first mindset delivers consistent, measurable growth for every client.",
+    socials: ["ig", "li"],
+  },
+  {
+    id: 6,
+    name: "Amara Osei",
+    role: "Brand Strategist",
+    img: "https://images.unsplash.com/photo-1531123897727-8f129e1688ce?w=500&q=80",
+    bio: "Amara helps brands find their voice. Her frameworks have shaped identities for startups and Fortune 500 companies alike.",
+    socials: ["fb", "ig", "li"],
+  },
 ];
 
 const SOCIAL_ICONS = {
@@ -173,9 +173,9 @@ const TeamSection = () => {
           </h2>
 
           <p className={styles.subtitle}>
-            Discover the driving force behind Marketi. Working collaboratively
-            to deliver innovative digital marketing solutions that elevate your
-            brand.
+            Our skilled team of digital marketing experts works together to deliver innovative,
+             performance-driven solutions for sustainable business growth.
+
           </p>
         </div>
 
