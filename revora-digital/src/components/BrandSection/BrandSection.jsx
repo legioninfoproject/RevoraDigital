@@ -88,12 +88,12 @@ const BrandSection = () => {
         </span>
 
         <h2 className={styles.heading}>
-          Services{" "}
+          Services {" "}
           <span className={styles.highlight}>
-            We Offering
+            We Offer
           </span>
           <br />
-          For Your Business
+         For Your Business
         </h2>
 
         <p className={styles.description}>

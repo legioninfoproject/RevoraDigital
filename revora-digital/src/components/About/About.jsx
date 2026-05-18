@@ -5,9 +5,9 @@ import aboutImage from "../../assets/about-image.png";
 import aboutShape2 from "../../assets/about-shape2.png";
 
 const stats = [
-  { value: "12+", label: "Years of experience" },
-  { value: "10K", label: "Completed Projects" },
-  { value: "5K", label: "Trusted Customers" },
+  { value: "SEO", label: "Driven Results" },
+  { value: "Brand", label: "Growth Focus" },
+  { value: "Ads", label: "Reach" },
 ];
 
 /* Intersection Animation Hook */
@@ -87,10 +87,17 @@ const About = () => {
         </h2>
 
         <p className={styles.body}>
-          Choose Revora Digital for unparalleled digital success — where
-          expertise, innovation, and strategic brilliance converge to elevate
-          your business to new heights.{" "}
-          <a href="/" className={styles.readMore}>
+         Revora Digital helps businesses improve online visibility, generate qualified leads,
+          strengthen brand authority, and achieve measurable growth through result-driven digital marketing strategies. 
+          From SEO services and branding to social media marketing, ecommerce marketing, and performance campaigns,
+           we create customized solutions designed to improve engagement, search rankings, and business growth.
+           <br></br>
+           Businesses often struggle with low website traffic, 
+           poor search visibility, inconsistent lead generation, 
+           and weak online engagement. Our team focuses on SEO-driven digital marketing,
+            audience-focused strategies, and conversion optimization to help businesses 
+            achieve sustainable growth and stronger ROI.{" "}
+          <a href="/about" className={styles.readMore}>
             Read More
           </a>
         </p>

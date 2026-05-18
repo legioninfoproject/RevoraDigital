@@ -7,7 +7,7 @@
 
 .section {
   width: 100%;
-  max-width: 1400px;
+  /* max-width: 1400px; */
   margin: auto;
 
   display: flex;
@@ -212,10 +212,10 @@
 /* ================= STATS ================= */
 
 .stats {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
 
-  gap: 40px;
+  gap: 20px;
 
   padding-top: 30px;
 
@@ -223,15 +223,29 @@
 }
 
 .statItem {
+  background: #f8fafc;
+
+  padding: 24px 18px;
+
+  border-radius: 18px;
+
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
 
-  gap: 8px;
+  text-align: center;
+
+  transition: 0.3s ease;
 
   opacity: 0;
   transform: translateY(20px);
 
   animation: statFadeUp 0.6s ease forwards;
+}
+.statItem:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 15px 40px rgba(0,0,0,0.08);
 }
 
 .statItem:nth-child(1) {
@@ -247,18 +261,23 @@
 }
 
 .statValue {
-  font-size: clamp(34px, 4vw, 50px);
+  font-size: clamp(24px, 3vw, 38px);
 
   font-weight: 800;
 
-  color: #111827;
+  color: #0a7a7c;
 
-  line-height: 1;
+  line-height: 1.1;
+
+  margin-bottom: 6px;
 }
 
 .statLabel {
-  font-size: 15px;
+  font-size: 14px;
+
   color: #6b7280;
+
+  font-weight: 500;
 }
 
 /* ================= ANIMATION ================= */
@@ -341,6 +360,7 @@
     width: 80px;
     height: 80px;
   }
+  
 }
 
 /* ================= MOBILE ================= */
@@ -361,15 +381,17 @@
     line-height: 1.8;
   }
 
-  .stats {
-    justify-content: space-between;
-    gap: 25px;
+   .stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .statItem {
+    padding: 20px 14px;
   }
 
   .statValue {
-    font-size: 38px;
+    font-size: 28px;
   }
-
   .squareTeal {
     width: 80px;
     height: 80px;
@@ -410,17 +432,20 @@
     font-size: 15px;
   }
 
-  .stats {
-    flex-direction: column;
-    gap: 24px;
+   .stats {
+    grid-template-columns: 1fr;
+  }
+
+  .statItem {
+    width: 100%;
   }
 
   .statValue {
-    font-size: 34px;
+    font-size: 26px;
   }
 
   .statLabel {
-    font-size: 14px;
+    font-size: 13px;
   }
 
   .squareTeal {

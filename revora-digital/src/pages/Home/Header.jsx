@@ -42,11 +42,11 @@ const Header = () => {
           {/* CTA row */}
           <div className={styles.heroCtas}>
             <a href="/revoraform" className={styles.btnPrimary}>
-              Try it Now
+              Get Started
               <HiArrowRight className={styles.btnIcon} />
             </a>
             <a href="/about" className={styles.btnSecondary}>
-              Explore More
+              Explore Services
               <HiArrowUpRight className={styles.btnSecIcon} />
             </a>
           </div>

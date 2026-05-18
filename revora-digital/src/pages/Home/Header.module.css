@@ -15,8 +15,8 @@
 .heroSection {
   position: relative;
   min-height: 100vh;
+  width: 100%;
 
-  /* Background image */
   background-image:
     linear-gradient(
       rgba(10, 110, 112, 0.78),
@@ -28,9 +28,9 @@
   background-position: center center;
   background-repeat: no-repeat;
 
-  overflow: hidden;
   display: flex;
   align-items: center;
+  overflow: hidden;
 
   padding-top: 72px;
 }
@@ -422,12 +422,7 @@
   }
 }
 @media (max-width: 768px) {
-  .heroSection {
-    background-position: center;
-    padding-top: 90px;
-    min-height: auto;
-    padding-bottom: 80px;
-  }
+    
 
   .heroContainer {
     padding: 40px 20px;
@@ -453,6 +448,14 @@
 }
 
 @media (max-width: 480px) {
+    .heroSection {
+    min-height: auto;
+    padding-top: 100px;
+    padding-bottom: 60px;
+
+    background-size: cover;
+    background-position: center;
+  }
   .heroTitle {
     font-size: 32px;
   }
