@@ -53,25 +53,26 @@ const services = [
   {
     icon: <FaBullhorn />,
     title: "Brand Marketing",
-    body:
-      "Build a powerful brand identity that resonates with your audience and creates a lasting emotional connection.",
+    body:"Build a strong and memorable brand identity through strategic positioning, content, and audience-focused marketing solutions.",
+    link: "/brandmarketing",
   },
 
   {
     icon: <RiAdvertisementLine />,
     title: "Digital Marketing",
     body:
-      "From SEO to paid campaigns, we create integrated strategies that drive traffic and maximize conversions.",
+      "Grow your online presence with SEO, Google Ads, social media marketing, content strategy, and lead generation campaigns.",
+    link: "/digital",
   },
 
   {
     icon: <HiShoppingCart />,
     title: "Ecommerce Marketing",
     body:
-      "Boost your online sales with conversion-focused ecommerce marketing strategies and funnel optimization.",
+      "Increase ecommerce sales through conversion-focused campaigns, SEO optimization, paid advertising, and retention strategies.",
+    link: "/ecommerce",
   },
 ];
-
 const BrandSection = () => {
   const [ref, inView] = useInView();
 
@@ -97,10 +98,9 @@ const BrandSection = () => {
         </h2>
 
         <p className={styles.description}>
-          We help brands grow faster through
-          strategic digital solutions, creative
-          campaigns, and performance-driven
-          marketing experiences.
+        We provide result-oriented digital marketing services
+         designed to improve online visibility, attract quality leads,
+          and increase conversions for long-term business success.
         </p>
       </div>
 
@@ -136,7 +136,10 @@ const BrandSection = () => {
             </p>
 
             {/* Link */}
-            <a href="/" className={styles.cardLink}>
+           <a
+  href={service.link}
+  className={styles.cardLink}
+>
               Explore More
               <ArrowRight />
             </a>
