@@ -469,3 +469,97 @@
     font-size: 14px;
   }
 }
+/* ===== LAPTOP RESPONSIVE ===== */
+
+@media (max-width: 1200px) {
+  .heroContainer {
+    max-width: 100%;
+    padding: 80px 40px 50px;
+    gap: 30px;
+  }
+
+  .heroLeft {
+    max-width: 560px;
+  }
+
+  .heroTitle {
+    font-size: 54px;
+    line-height: 1.1;
+  }
+
+  .heroDesc {
+    font-size: 15px;
+    line-height: 1.7;
+    max-width: 520px;
+  }
+
+  .heroRight {
+    min-height: 480px;
+  }
+
+  .heroImg {
+    max-width: 420px;
+  }
+
+  .bannerInfo {
+    width: 220px;
+  }
+
+  .badgeTopLeft {
+    top: 40px;
+    left: 0;
+  }
+
+  .badgeBottomRight {
+    right: 0;
+    bottom: 40px;
+  }
+}
+
+/* ===== SMALL LAPTOP ===== */
+
+@media (max-width: 1024px) {
+  .heroContainer {
+    padding: 90px 32px 50px;
+    gap: 24px;
+  }
+
+  .heroTitle {
+    font-size: 48px;
+  }
+
+  .heroDesc {
+    font-size: 15px;
+    max-width: 100%;
+  }
+
+  .heroCtas {
+    gap: 18px;
+  }
+
+  .btnPrimary {
+    padding: 12px 24px;
+    font-size: 14px;
+  }
+
+  .btnSecondary {
+    font-size: 14px;
+  }
+
+  .heroRight {
+    min-height: 420px;
+  }
+
+  .heroImg {
+    max-width: 360px;
+  }
+
+  .bannerInfo {
+    width: 190px;
+  }
+
+  .badgeTopLeft,
+  .badgeBottomRight {
+    transform: scale(0.9);
+  }
+}

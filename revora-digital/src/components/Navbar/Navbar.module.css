@@ -479,3 +479,96 @@
     height: 42px;
   }
 }
+/* =========================
+   LARGE LAPTOP
+========================= */
+
+@media (max-width: 1200px) {
+  .container {
+    max-width: 100%;
+    padding: 0 10px;
+  }
+
+  .navLinks {
+    gap: 0;
+  }
+
+  .navLink,
+  .dropdownBtn {
+    padding: 10px 12px;
+    font-size: 14px;
+  }
+
+  .ctaButton {
+    padding: 10px 18px;
+    font-size: 13px;
+  }
+
+  .logoImg {
+    height: 60px;
+  }
+}
+
+/* =========================
+   SMALL LAPTOP
+========================= */
+
+@media (max-width: 1024px) {
+  .container {
+    height: 80px;
+  }
+
+  .navLinks {
+    gap: 2px;
+  }
+
+  .navLink,
+  .dropdownBtn {
+    padding: 8px 10px;
+    font-size: 13px;
+  }
+
+  .ctaButton {
+    padding: 10px 16px;
+    font-size: 13px;
+  }
+
+  .logoImg {
+    height: 52px;
+  }
+
+  .dropdownMenu {
+    width: 220px;
+  }
+}
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 900px) {
+  .navLinks,
+  .ctaButton {
+    display: none;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .mobileMenu {
+    display: block;
+  }
+
+  .navbar {
+    padding: 0 16px;
+  }
+
+  .container {
+    height: 72px;
+  }
+
+  .logoImg {
+    height: 46px;
+  }
+}
