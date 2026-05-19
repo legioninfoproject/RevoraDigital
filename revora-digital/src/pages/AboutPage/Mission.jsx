@@ -3,11 +3,11 @@ import {
   FaBullseye,
   FaEye,
   FaGem,
-//   FaRocket,
-//   FaChartLine,
-//   FaUsers,
-} from "react-icons/fa";
 
+} from "react-icons/fa";
+import image1 from "../../assets/mission.jpg";
+import image2 from "../../assets/vission.jpg";
+import image3 from "../../assets/ourvalues.jpg";
 import styles from "./Mission.module.css";
 
 /* ───────── Hook ───────── */
@@ -41,10 +41,9 @@ const cards = [
     tag: "OUR MISSION",
     title: "Drive Growth",
     description:
-      "Empowering businesses with innovative digital marketing strategies that create measurable success.",
-    image:
-      "https://images.unsplash.com/photo-1533750349088-cd871a92f312?w=1000",
-    // stat: "10x ROI",
+      "Our mission is to help businesses grow through innovative digital marketing solutions that improve online visibility, generate quality leads, strengthen brand identity, and deliver measurable business results. We focus on creating strategies that support sustainable growth and long term success.",
+    image:image1,
+   
   },
 
   {
@@ -52,11 +51,10 @@ const cards = [
     icon: <FaEye />,
     tag: "OUR VISION",
     title: "Global Leadership",
-    description:
-      "To become a trusted digital marketing leader recognized for creativity and impactful results.",
-    image:
-      "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1000",
-    // stat: "50+ Countries",
+    description:"Our vision is to become a trusted digital marketing partner for businesses by delivering creative strategies, impactful campaigns, and performance driven solutions. We aim to help brands grow confidently and succeed in the evolving digital landscape.",
+    image:image2,
+      
+    
   },
 
   {
@@ -64,11 +62,9 @@ const cards = [
     icon: <FaGem />,
     tag: "OUR VALUES",
     title: "Transparency",
-    description:
-      "We believe in trust, collaboration, creativity, and long-term partnerships with every client.",
-    image:
-      "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=1000",
-    // stat: "100% Trust",
+    description:"At Revora Digital, we believe strong business relationships are built on transparency, innovation, and measurable results. Our team is committed to honest communication, creative thinking, client focused strategies, and long term business growth through effective digital marketing solutions.",
+     image:image3
+  
   },
 ];
 
@@ -105,16 +101,20 @@ const Mission = () => {
         <span className={styles.mvvHeroTag}>
           Who We Are
         </span>
-
         <h2 className={styles.mvvHeroTitle}>
-          Built on <span>Purpose</span>,
+          Built on <span className={styles.mvvHeroSpan}>Purpose</span>,
           <br />
-          Driven by Impact
+          Driven by Results
         </h2>
 
         <p className={styles.mvvHeroText}>
-          Our mission, vision, and values shape every strategy
-          and every result we deliver.
+          Our approach combines creativity, strategy, technology, and performance analytics to 
+          create campaigns that generate visibility, engagement, and conversions. 
+          We continuously adapt to changing digital trends and search engine updates to 
+          help businesses stay ahead in the competitive online market.
+        Unlike agencies that rely on generic marketing methods, Revora Digital 
+         focuses on innovation, transparency, and long term business growth. Every campaign is designed to create meaningful and measurable results.
+
         </p>
 
       </div>
@@ -155,9 +155,11 @@ const Mission = () => {
                     {card.icon}
                   </div>
 
-                  <span className={styles.mvvTag}>
+                  <h2>
+                    <span className={styles.mvvTag}>
                     {card.tag}
                   </span>
+                  </h2>
 
                 </div>
 
