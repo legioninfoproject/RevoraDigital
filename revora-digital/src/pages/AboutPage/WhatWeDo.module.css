@@ -1,0 +1,350 @@
+
+/* =========================
+   SECTION
+========================= */
+
+.section {
+  background: #f7fcfc;
+  padding: 120px 0;
+  overflow: hidden;
+  position: relative;
+
+  /* font-family: 'DM Sans', sans-serif; */
+}
+
+/* =========================
+   INNER
+========================= */
+
+.inner {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 40px;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+.header {
+  text-align: center;
+  margin-bottom: 90px;
+}
+
+/* =========================
+   LABEL
+========================= */
+
+.label {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+
+  color: #0a6e70;
+
+  margin-bottom: 18px;
+
+  opacity: 0;
+  transform: translateY(10px);
+
+  transition:
+    opacity 0.6s ease,
+    transform 0.6s ease;
+}
+
+/* =========================
+   COMMON VISIBLE
+========================= */
+
+.visible {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+}
+
+/* =========================
+   HEADING
+========================= */
+
+.heading {
+  margin: 0 auto 22px;
+
+  max-width: 760px;
+
+  /* font-family: 'DM Serif Display', serif; */
+  font-size: clamp(42px, 5vw, 74px);
+  line-height: 1.05;
+
+  color: #173839;
+
+  opacity: 0;
+  transform: translateY(20px);
+
+  transition:
+    opacity 0.7s ease 0.1s,
+    transform 0.7s ease 0.1s;
+}
+
+.heading em {
+  color: #0a6e70;
+  font-style: italic;
+}
+
+/* =========================
+   SUB TEXT
+========================= */
+
+.sub {
+  max-width: 620px;
+  margin: auto;
+
+  font-size: 15px;
+  line-height: 1.9;
+
+  color: #6a8889;
+
+  opacity: 0;
+  transform: translateY(12px);
+
+  transition:
+    opacity 0.7s ease 0.2s,
+    transform 0.7s ease 0.2s;
+}
+
+/* =========================
+   DIVIDER
+========================= */
+
+.divider {
+  width: 0;
+  height: 1px;
+
+  margin: 0 auto 70px;
+
+  background: linear-gradient(
+    90deg,
+    transparent,
+    #0a6e70,
+    transparent
+  );
+
+  transition: width 1s ease;
+}
+
+.divider.visible {
+  width: 220px;
+}
+
+/* =========================
+   GRID
+========================= */
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 50px;
+}
+
+/* =========================
+   SERVICE BLOCK
+========================= */
+
+.card {
+  position: relative;
+
+  opacity: 0;
+  transform: translateY(30px);
+
+  transition:
+    opacity 0.7s ease,
+    transform 0.7s ease;
+}
+
+.card.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* animation delay */
+
+.card:nth-child(1) {
+  transition-delay: 0.1s;
+}
+
+.card:nth-child(2) {
+  transition-delay: 0.2s;
+}
+
+.card:nth-child(3) {
+  transition-delay: 0.3s;
+}
+
+/* =========================
+   NUMBER
+========================= */
+
+.cardNum {
+  font-size: 70px;
+  font-weight: 700;
+  line-height: 1;
+
+  margin-bottom: 20px;
+
+  color: rgba(10, 110, 112, 0.12);
+}
+
+/* =========================
+   ICON
+========================= */
+
+.cardIcon {
+  width: 64px;
+  height: 64px;
+
+  border-radius: 20px;
+
+  background: #e7f5f5;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 30px;
+  color: #0a6e70;
+
+  margin-bottom: 26px;
+
+  transition:
+    transform 0.35s ease,
+    background 0.35s ease;
+}
+
+.card:hover .cardIcon {
+  transform: translateY(-6px);
+  background: #d9eeee;
+}
+
+/* =========================
+   TITLE
+========================= */
+
+.cardTitle {
+  margin: 0 0 14px;
+
+  /* font-family: 'DM Serif Display', serif; */
+  font-size: 32px;
+  line-height: 1.15;
+
+  color: #173839;
+}
+
+/* =========================
+   DESCRIPTION
+========================= */
+
+.cardDesc {
+  margin: 0;
+
+  font-size: 15px;
+  line-height: 1.9;
+
+  color: #6a8889;
+}
+
+/* hide unused */
+.cardGlow,
+.cardArrow {
+  display: none;
+}
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 992px) {
+  .section {
+    padding: 100px 0;
+  }
+
+  .inner {
+    padding: 0 28px;
+  }
+
+  .header {
+    margin-bottom: 70px;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 45px;
+  }
+
+  .heading {
+    font-size: 56px;
+  }
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 720px) {
+  .section {
+    padding: 80px 0;
+  }
+
+  .inner {
+    padding: 0 20px;
+  }
+
+  .header {
+    margin-bottom: 55px;
+  }
+
+  .label {
+    font-size: 11px;
+    margin-bottom: 14px;
+  }
+
+  .heading {
+    font-size: 42px;
+    line-height: 1.1;
+  }
+
+  .sub {
+    font-size: 14px;
+    line-height: 1.8;
+  }
+
+  .divider {
+    width: 140px !important;
+    margin-bottom: 50px;
+  }
+
+  .grid {
+    gap: 40px;
+  }
+
+  .cardNum {
+    font-size: 54px;
+    margin-bottom: 16px;
+  }
+
+  .cardIcon {
+    width: 56px;
+    height: 56px;
+
+    font-size: 26px;
+
+    margin-bottom: 20px;
+  }
+
+  .cardTitle {
+    font-size: 28px;
+  }
+
+  .cardDesc {
+    font-size: 14px;
+    line-height: 1.8;
+  }
+}

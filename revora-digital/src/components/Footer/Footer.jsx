@@ -1,4 +1,6 @@
-import { React } from "react";
+import React from "react";
+import { Link } from "react-router-dom";
+
 import {
   FaFacebookF,
   FaInstagram,
@@ -14,13 +16,56 @@ import styles from "./Footer.module.css";
 import image from "../../assets/logo.png";
 
 /* ─── NAV DATA ───────────────────────────────────────── */
+
 const NAV = {
-  Company: ["About Us", "Services", "Blog", "Contact"],
-  Support: ["Contact Us", "FAQ", "Customer Service", "Terms Conditions"],
-  Legal: ["Privacy Policy", "Cookie Policy", "Copyright"],
+  Company: [
+    { name: "About Us", path: "/about" },
+    { name: "Services", path: "/brandmarketing" },
+    { name: "Blog", path: "/blog" },
+    { name: "Contact", path: "/contact" },
+  ],
+
+  Support: [
+    { name: "Contact Us", path: "/revoraform" },
+    { name: "FAQ", path: "/contact" },
+    { name: "Customer Service", path: "/customer-service" },
+    { name: "Terms Conditions", path: "/terms-and-conditions" },
+  ],
+
+  Legal: [
+    { name: "Privacy Policy", path: "/privacy-policy" },
+    { name: "Cookie Policy", path: "/cookie-policy" },
+    { name: "Copyright", path: "/copyright" },
+  ],
 };
 
+/* ─── SOCIAL LINKS ───────────────────────────────────── */
+
+const SOCIAL_LINKS = [
+  {
+    icon: <FaFacebookF />,
+    label: "Facebook",
+    url: "https://facebook.com",
+  },
+  {
+    icon: <FaInstagram />,
+    label: "Instagram",
+    url: "https://instagram.com",
+  },
+  {
+    icon: <FaLinkedinIn />,
+    label: "LinkedIn",
+    url: "https://linkedin.com",
+  },
+  {
+    icon: <FaTwitter />,
+    label: "Twitter",
+    url: "https://twitter.com",
+  },
+];
+
 /* ─── COMPONENT ──────────────────────────────────────── */
+
 const Footer = ({ variant = "dark" }) => {
 
   const themeClass =
@@ -32,9 +77,9 @@ const Footer = ({ variant = "dark" }) => {
     <footer className={`${styles.footer} ${themeClass}`}>
       <div className={styles.inner}>
 
-        {/* ── BRAND ── */}
+        {/* ── BRAND ───────────────────────── */}
         <div className={styles.brand}>
-          <a className={styles.logoRow} href="/">
+          <Link className={styles.logoRow} to="/">
             <div className={styles.logoIcon}>
               <img
                 src={image}
@@ -46,7 +91,7 @@ const Footer = ({ variant = "dark" }) => {
             <span className={styles.heading}>
               Revora Digital
             </span>
-          </a>
+          </Link>
 
           <p className={styles.desc}>
             Revora Digital is a performance-focused digital
@@ -56,27 +101,29 @@ const Footer = ({ variant = "dark" }) => {
           </p>
         </div>
 
-        {/* ── NAVIGATION ── */}
+        {/* ── NAVIGATION ─────────────────── */}
         {Object.entries(NAV).map(([title, links]) => (
           <div key={title} className={styles.col}>
+
             <div className={styles.colTitle}>
               {title}
             </div>
 
             {links.map((link) => (
-              <a
-                key={link}
-                href="/"
+              <Link
+                key={link.name}
+                to={link.path}
                 className={styles.link}
               >
-                {link}
-              </a>
+                {link.name}
+              </Link>
             ))}
           </div>
         ))}
 
-        {/* ── ADDRESS ── */}
+        {/* ── CONTACT INFO ───────────────── */}
         <div className={styles.contactCol}>
+
           <div className={styles.colTitle}>
             Contact Info
           </div>
@@ -85,10 +132,10 @@ const Footer = ({ variant = "dark" }) => {
             <FaMapMarkerAlt className={styles.contactIcon} />
 
             <p>
-              Hanudev Info Tech Park, Regus, Unit No,
-              Block C, 6th Floor, SF No. 558/2,
-              Udayampalayam Road, Nava India,
-              Coimbatore – 641028
+              Hanudev Info Tech Park, Regus,
+              Unit No, Block C, 6th Floor,
+              SF No. 558/2, Udayampalayam Road,
+              Nava India, Coimbatore – 641028
             </p>
           </div>
 
@@ -123,47 +170,38 @@ const Footer = ({ variant = "dark" }) => {
               Closed on Weekends
             </p>
           </div>
+
         </div>
       </div>
 
-      {/* ── BOTTOM ── */}
+      {/* ── BOTTOM ─────────────────────── */}
       <div className={styles.bottom}>
+
         <hr className={styles.divider} />
 
         <div className={styles.bottomInner}>
+
           <span className={styles.copy}>
             &copy; {new Date().getFullYear()} Revora Digital.
             All rights reserved.
           </span>
 
           <div className={styles.socialRow}>
-            {[
-              {
-                icon: <FaFacebookF />,
-                label: "Facebook",
-              },
-              {
-                icon: <FaInstagram />,
-                label: "Instagram",
-              },
-              {
-                icon: <FaLinkedinIn />,
-                label: "LinkedIn",
-              },
-              {
-                icon: <FaTwitter />,
-                label: "Twitter",
-              },
-            ].map(({ icon, label }) => (
-              <button
-                key={label}
+
+            {SOCIAL_LINKS.map((item) => (
+              <a
+                key={item.label}
+                href={item.url}
+                target="_blank"
+                rel="noreferrer"
                 className={styles.socialBtn}
-                aria-label={label}
-                title={label}
+                aria-label={item.label}
+                title={item.label}
               >
-                {icon}
-              </button>
+                {item.icon}
+              </a>
             ))}
+
           </div>
         </div>
       </div>
