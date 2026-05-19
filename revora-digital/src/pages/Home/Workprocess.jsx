@@ -110,11 +110,11 @@ export default function WorkProcess() {
       </div>
 
       <div className={styles.btnWrapper}>
-        <button className={styles.button}>
-          Start Your Journey
-          <HiArrowLongRight />
-        </button>
-      </div>
+  <a href="/contact" className={styles.button}>
+    Start Your Journey
+    <HiArrowLongRight />
+  </a>
+</div>
     </section>
   );
 }

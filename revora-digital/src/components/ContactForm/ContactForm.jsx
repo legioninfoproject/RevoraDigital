@@ -1,159 +1,54 @@
-import { useState } from "react";
-import { FaArrowRight, FaCheck } from "react-icons/fa";
-import { HiArrowUpRight } from "react-icons/hi2";
+import React from "react";
 import styles from "./ContactForm.module.css";
+import { HiArrowRight } from "react-icons/hi2";
 
 const ContactForm = () => {
-  const [form, setForm] = useState({
-    company: "", firstName: "", lastName: "",
-    email: "", phone: "", message: "",
-  });
-  const [submitted, setSubmitted] = useState(false);
-
-  const handleChange = (e) =>
-    setForm((f) => ({ ...f, [e.target.name]: e.target.value }));
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    setSubmitted(true);
-  };
-
   return (
     <section className={styles.section}>
-      {/* dashed arrow decoration */}
-      <div className={styles.arrowDeco}>
-        <svg viewBox="0 0 90 90">
-          <path d="M10 80 Q50 10 80 10 M65 10 L80 10 L80 25" />
-        </svg>
-      </div>
+      <div className={styles.container}>
 
-      <div className={styles.inner}>
-        {/* ── LEFT ── */}
+        {/* LEFT CONTENT */}
         <div className={styles.left}>
-          <span className={styles.eyebrow}>let's talk</span>
+          <span className={styles.tag}>
+            TURN CLICKS INTO CUSTOMERS
+          </span>
 
-          <h1 className={styles.heading}>
-            Turn Every Conversation to{" "}
-            <span className={styles.headingAccent}>Skyrocket</span>{" "}
-            Your Business Growth
+          <h1 className={styles.title}>
+            Free Consultation –{" "}
+            <span className={styles.highlight}>
+              Grow Your Business
+            </span>{" "}
+            With Revora Digital Marketing
           </h1>
 
           <p className={styles.desc}>
-            Book a Free consultation with our marketing experts. Uncover
-            strategies that suit Your Business and boost your sales.
+            Revora Digital helps businesses build a strong online presence
+            through result-driven digital marketing services. Our team
+            specializes in SEO, social media marketing, Google Ads,
+            branding, and lead generation strategies designed to increase
+            visibility, attract potential customers, and drive business
+            growth.
           </p>
 
-          <div className={styles.btnRow}>
-            <button className={styles.btnPrimary}>
-              Get in Touch
-              <span className={styles.btnIcon}>
-                <FaArrowRight size={10} />
-              </span>
-            </button>
-
-            <button className={styles.btnLink}>
-              Or &nbsp; View our Services
-              <HiArrowUpRight size={14} />
-            </button>
-          </div>
+          {/* BUTTON */}
+          <a href="/contact" className={styles.btn}>
+            Get Free Marketing Consultation 
+            <HiArrowRight className={styles.icon} />
+          </a>
         </div>
 
-        {/* ── RIGHT — FORM CARD ── */}
-        <div className={styles.formCard}>
-          <h2 className={styles.formTitle}>
-            Get A Free Consultation With<br />Marketing Our Expert
-          </h2>
-
-          {submitted ? (
-            <div className={styles.success}>
-              <div className={styles.successIcon}>
-                <FaCheck />
-              </div>
-              <div className={styles.successTitle}>Message Sent!</div>
-              <p className={styles.successMsg}>
-                We'll get back to you within 24 hours. Looking forward to
-                speaking with you.
-              </p>
-            </div>
-          ) : (
-            <div className={styles.formBody}>
-              {/* Company */}
-              <div className={styles.fieldFull}>
-                <input
-                  className={styles.input}
-                  type="text"
-                  name="company"
-                  placeholder="Company Name"
-                  value={form.company}
-                  onChange={handleChange}
-                />
-              </div>
-
-              {/* First / Last */}
-              <div className={styles.fieldRow}>
-                <input
-                  className={styles.input}
-                  type="text"
-                  name="firstName"
-                  placeholder="First Name*"
-                  value={form.firstName}
-                  onChange={handleChange}
-                  required
-                />
-                <input
-                  className={styles.input}
-                  type="text"
-                  name="lastName"
-                  placeholder="Last Name*"
-                  value={form.lastName}
-                  onChange={handleChange}
-                  required
-                />
-              </div>
-
-              {/* Email / Phone */}
-              <div className={styles.fieldRow}>
-                <input
-                  className={styles.input}
-                  type="email"
-                  name="email"
-                  placeholder="Email Address*"
-                  value={form.email}
-                  onChange={handleChange}
-                  required
-                />
-                <input
-                  className={styles.input}
-                  type="tel"
-                  name="phone"
-                  placeholder="Phone Number*"
-                  value={form.phone}
-                  onChange={handleChange}
-                  required
-                />
-              </div>
-
-              {/* Message */}
-              <div className={styles.fieldFull}>
-                <textarea
-                  className={styles.textarea}
-                  name="message"
-                  placeholder="Message"
-                  value={form.message}
-                  onChange={handleChange}
-                />
-              </div>
-
-              {/* Submit */}
-              <button className={styles.submitBtn} onClick={handleSubmit}>
-                Submit
-                <span className={styles.submitIcon}>
-                  <FaArrowRight size={10} />
-                </span>
-              </button>
-            </div>
-          )}
+        {/* RIGHT MAP */}
+        <div className={styles.right}>
+          <iframe
+            className={styles.map}
+            title="Revora Digital Marketing Location"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3916.383729240039!2d76.9991125744758!3d11.009809054846704!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xeacc50b89fc2301%3A0x4ecce8734868ac27!2sLegion%20Info!5e0!3m2!1sen!2sin!4v1779169596825!5m2!1sen!2sin"
+            allowFullScreen
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+          ></iframe>
         </div>
+
       </div>
     </section>
   );

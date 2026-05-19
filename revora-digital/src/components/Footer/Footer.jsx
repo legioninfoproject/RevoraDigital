@@ -1,12 +1,14 @@
-import { useState } from "react";
+import { React } from "react";
 import {
   FaFacebookF,
   FaInstagram,
   FaLinkedinIn,
   FaTwitter,
-  FaCheck,
+  FaMapMarkerAlt,
+  FaEnvelope,
+  FaPhoneAlt,
+  FaClock,
 } from "react-icons/fa";
-import { HiArrowRight } from "react-icons/hi2";
 
 import styles from "./Footer.module.css";
 import image from "../../assets/logo.png";
@@ -20,18 +22,11 @@ const NAV = {
 
 /* ─── COMPONENT ──────────────────────────────────────── */
 const Footer = ({ variant = "dark" }) => {
-  const [email, setEmail] = useState("");
-  const [subscribed, setSubscribed] = useState(false);
 
-  const handleSubscribe = () => {
-    if (email.trim()) {
-      setSubscribed(true);
-    }
-  };
-
-  const themeClass = variant === "light"
-    ? styles.light
-    : styles.dark;
+  const themeClass =
+    variant === "light"
+      ? styles.light
+      : styles.dark;
 
   return (
     <footer className={`${styles.footer} ${themeClass}`}>
@@ -54,8 +49,10 @@ const Footer = ({ variant = "dark" }) => {
           </a>
 
           <p className={styles.desc}>
-            Optimize your success with our ROI-driven
-            digital marketing agency.
+            Revora Digital is a performance-focused digital
+            marketing agency helping businesses grow through
+            SEO, paid advertising, social media marketing,
+            branding, and website optimization.
           </p>
         </div>
 
@@ -78,52 +75,54 @@ const Footer = ({ variant = "dark" }) => {
           </div>
         ))}
 
-        {/* ── NEWSLETTER ── */}
-        <div className={styles.newsCol}>
-          <div className={styles.newsTitle}>
-            Join our Newsletter
+        {/* ── ADDRESS ── */}
+        <div className={styles.contactCol}>
+          <div className={styles.colTitle}>
+            Contact Info
           </div>
 
-          {subscribed ? (
-            <div className={styles.successBox}>
-              <FaCheck className={styles.tickIcon} />
+          <div className={styles.contactItem}>
+            <FaMapMarkerAlt className={styles.contactIcon} />
 
-              <p className={styles.successText}>
-                You're subscribed! Thanks for joining.
-              </p>
-            </div>
-          ) : (
-            <>
-              <div className={styles.newsInputRow}>
-                <input
-                  className={styles.newsInput}
-                  type="email"
-                  placeholder="Enter your email"
-                  value={email}
-                  onChange={(e) =>
-                    setEmail(e.target.value)
-                  }
-                  onKeyDown={(e) =>
-                    e.key === "Enter" &&
-                    handleSubscribe()
-                  }
-                />
+            <p>
+              Hanudev Info Tech Park, Regus, Unit No,
+              Block C, 6th Floor, SF No. 558/2,
+              Udayampalayam Road, Nava India,
+              Coimbatore – 641028
+            </p>
+          </div>
 
-                <button
-                  className={styles.newsBtn}
-                  onClick={handleSubscribe}
-                  aria-label="Subscribe"
-                >
-                  <HiArrowRight />
-                </button>
-              </div>
+          <div className={styles.contactItem}>
+            <FaEnvelope className={styles.contactIcon} />
 
-              <p className={styles.newsDesc}>
-                We will send you weekly updates
-                for your better product management.
-              </p>
-            </>
-          )}
+            <a
+              href="mailto:revoradigital.info@gmail.com"
+              className={styles.contactLink}
+            >
+              revoradigital.info@gmail.com
+            </a>
+          </div>
+
+          <div className={styles.contactItem}>
+            <FaPhoneAlt className={styles.contactIcon} />
+
+            <a
+              href="tel:04226738215"
+              className={styles.contactLink}
+            >
+              04226738215
+            </a>
+          </div>
+
+          <div className={styles.contactItem}>
+            <FaClock className={styles.contactIcon} />
+
+            <p>
+              Mon - Fri: 10:00 - 19:00
+              <br />
+              Closed on Weekends
+            </p>
+          </div>
         </div>
       </div>
 
