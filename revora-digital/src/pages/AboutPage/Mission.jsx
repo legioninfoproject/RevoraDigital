@@ -106,11 +106,11 @@ const Mission = () => {
           Who We Are
         </span>
 
-        <h1 className={styles.mvvHeroTitle}>
+        <h2 className={styles.mvvHeroTitle}>
           Built on <span>Purpose</span>,
           <br />
           Driven by Impact
-        </h1>
+        </h2>
 
         <p className={styles.mvvHeroText}>
           Our mission, vision, and values shape every strategy
