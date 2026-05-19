@@ -11,19 +11,19 @@ const services = [
   {
     id: "01",
     title: "Brand Marketing",
-    desc: "Build a powerful identity that connects with your audience and creates lasting impressions.",
+    desc: "Strong branding helps businesses build trust, recognition, and customer loyalty. Revora Digital creates professional and memorable brand identities that help businesses stand out in competitive markets.",
     icon: <FiLayers />,
   },
   {
     id: "02",
     title: "Digital Marketing",
-    desc: "Creative campaigns and smart strategies that help your business grow online faster.",
+    desc: "Our digital marketing services help businesses strengthen their online presence, improve brand visibility, and connect with potential customers through targeted and performance driven strategies.",
     icon: <FiTrendingUp />,
   },
   {
     id: "03",
     title: "Ecommerce Marketing",
-    desc: "Boost online sales with performance-driven strategies designed for modern ecommerce brands.",
+    desc: "Growing an online store requires more than listing products. Our ecommerce marketing services are designed to improve product visibility, customer engagement, and online sales performance through strategic marketing solutions.",
     icon: <FiShoppingBag />,
   },
 ];
@@ -73,28 +73,28 @@ const WhatWeDo = () => {
                 inView ? style.visible : ""
               }`}
             >
-              Content that
+              Digital Marketing Solutions
               <br />
-              <em>commands</em> attention
+             <span className={style.highlight}>Designed for Growth</span>
             </h2>
           </div>
-
           <p
             className={`${style.sub} ${
               inView ? style.visible : ""
             }`}
           >
-            We blend strategic thinking with sharp creative execution —
-            turning ideas into content that actually does something.
+          At Revora Digital, we provide complete digital marketing solutions designed to help businesses improve online visibility, attract the right audience, and grow revenue. Our services focus on solving common business challenges such as low website traffic, poor brand recognition, weak customer engagement, and low conversion rates.
+We combine creativity, technology, and performance analytics to create marketing strategies that deliver measurable business results and long term growth.
+
           </p>
         </div>
 
         {/* Divider */}
-        <div
+        {/* <div
           className={`${style.divider} ${
             inView ? style.visible : ""
           }`}
-        />
+        /> */}
 
         {/* Cards */}
         {/* Cards */}

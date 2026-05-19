@@ -1,0 +1,340 @@
+/* =========================
+   SECTION
+========================= */
+
+.section {
+  width: 100%;
+  background: #ffffff;
+  padding: 100px 6%;
+  overflow: hidden;
+}
+
+/* =========================
+   CONTAINER
+========================= */
+
+.container {
+  max-width: 1400px;
+  margin: auto;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 70px;
+  align-items: center;
+}
+
+/* =========================
+   LEFT SIDE
+========================= */
+
+.left {
+  animation: fadeLeft 1s ease;
+}
+
+.tag {
+  display: inline-block;
+  color: #0f766e;
+  padding: 10px 18px;
+  border-radius: 50px;
+  font-size: 14px;
+  font-weight: 700;
+   letter-spacing: 0.18em;
+  margin-bottom: 22px;
+}
+
+.title {
+ font-size: clamp(42px, 5.5vw, 62px);
+   line-height: 1.08;
+  font-weight: 800;
+  color: #111827;
+  margin-bottom: 28px;
+  letter-spacing: -1.5px;
+  width: 100%;
+
+}
+.title span {
+  color: #0a6e70;
+}
+
+.highlight {
+  position: relative;
+  display: inline;
+  z-index: 1;
+  white-space: nowrap;
+}
+
+.highlight::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 12px;
+
+  width: 100%;
+  height: 14px;
+
+  background: #f5c800;
+
+  z-index: -1;
+  border-radius: 2px;
+
+  transition: all 0.3s ease;
+}
+.description {
+  font-size: 17px;
+  line-height: 1.9;
+  color: #4b5563;
+  margin-bottom: 20px;
+}
+
+.bottomContent {
+  display: flex;
+  align-items: flex-start;
+  gap: 18px;
+  margin-top: 35px;
+}
+
+.line {
+  width: 5px;
+  min-width: 5px;
+  height: 90px;
+  border-radius: 30px;
+  background: linear-gradient(to bottom, #14b8a6, #0f766e);
+}
+
+.bottomContent p {
+  font-size: 16px;
+  line-height: 1.9;
+  color: #374151;
+  font-weight: 500;
+}
+
+/* =========================
+   RIGHT SIDE
+========================= */
+
+.right {
+  animation: fadeUp 1s ease;
+}
+
+.cardWrapper {
+  background: #f8fffe;
+  border: 1px solid #dff7f4;
+  border-radius: 32px;
+  padding: 25px;
+  box-shadow: 0 20px 60px rgba(15, 118, 110, 0.08);
+  position: relative;
+  overflow: hidden;
+}
+
+.cardWrapper::before {
+  content: "";
+  position: absolute;
+  width: 250px;
+  height: 250px;
+  background: rgba(20, 184, 166, 0.08);
+  border-radius: 50%;
+  top: -100px;
+  right: -100px;
+}
+
+.cardTitle {
+  font-size: 28px;
+  color: #111827;
+  margin-bottom: 35px;
+  font-weight: 800;
+  position: relative;
+  z-index: 2;
+}
+
+/* =========================
+   GRID
+========================= */
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 22px;
+  position: relative;
+  z-index: 2;
+}
+
+.card {
+  background: #ffffff;
+  border-radius: 24px;
+  padding: 16px 12px;
+  transition: 0.4s ease;
+  border: 1px solid #ecfdf5;
+
+  animation: cardAnim 0.8s ease forwards;
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 18px 35px rgba(13, 148, 136, 0.15);
+  border-color: #14b8a6;
+}
+
+.icon {
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(135deg, #14b8a6, #0f766e);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 18px;
+  font-size: 26px;
+  margin-bottom: 18px;
+}
+
+.card h4 {
+  font-size: 17px;
+  line-height: 1.6;
+  color: #1f2937;
+  font-weight: 700;
+}
+
+/* =========================
+   HIGHLIGHT BOX
+========================= */
+
+.highlightBox {
+  margin-top: 35px;
+  background: linear-gradient(135deg, #14b8a6, #0f766e);
+  padding: 28px;
+  border-radius: 24px;
+  position: relative;
+  z-index: 2;
+}
+
+.highlightBox p {
+  color: white;
+  font-size: 16px;
+  line-height: 1.8;
+  font-weight: 500;
+}
+
+/* =========================
+   ANIMATIONS
+========================= */
+
+@keyframes fadeLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-60px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(60px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes cardAnim {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 992px) {
+  .container {
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+
+  .title {
+    font-size: 48px;
+  }
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 768px) {
+  .section {
+    padding: 80px 5%;
+  }
+
+  .title {
+    font-size: 38px;
+    line-height: 1.15;
+  }
+
+  .description {
+    font-size: 15px;
+  }
+
+  .cardWrapper {
+    padding: 28px 20px;
+    border-radius: 24px;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .card {
+    padding: 24px 20px;
+  }
+
+  .cardTitle {
+    font-size: 24px;
+  }
+
+  .bottomContent {
+    gap: 14px;
+  }
+
+  .line {
+    height: 100px;
+  }
+}
+
+/* =========================
+   SMALL MOBILE
+========================= */
+
+@media (max-width: 480px) {
+  .title {
+    font-size: 32px;
+  }
+
+  .tag {
+    font-size: 11px;
+    padding: 8px 14px;
+  }
+
+  .icon {
+    width: 54px;
+    height: 54px;
+    font-size: 22px;
+  }
+
+  .card h4 {
+    font-size: 15px;
+  }
+
+  .highlightBox {
+    padding: 22px;
+  }
+}
