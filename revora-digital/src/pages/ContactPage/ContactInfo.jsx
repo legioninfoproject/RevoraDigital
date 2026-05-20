@@ -35,7 +35,7 @@ const contactItems = [
   {
     icon: <FiClock />,
     label: "Working Hours",
-    value: "Mon – Fri: 9:00 AM – 6:00 PM\nSat – : 9:00 AM – 2:00 PM\nSun: Closed",
+    value: "Mon – Fri: 9:00 AM – 6:00 PM\nSat – Sun: Closed",
     delay: "0.66s",
   },
 ];

@@ -88,9 +88,9 @@ const Footer = ({ variant = "dark" }) => {
               />
             </div>
 
-            <span className={styles.heading}>
+            {/* <span className={styles.heading}>
               Revora Digital
-            </span>
+            </span> */}
           </Link>
 
           <p className={styles.desc}>
