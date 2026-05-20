@@ -4,56 +4,56 @@ import styles from "./Faq.module.css";
 const faqData = {
   General: [
     {
-      q: "What sets Marketi apart from other digital marketing agencies?",
-      a: "We prioritize a personalized approach, combining strategic insights with creativity. Our dedicated team is committed to understanding your business and delivering customized solutions that drive tangible results.",
+      q: "What services does Revora Digital offer?",
+      a: "We provide SEO services, Google Ads management, social media marketing, branding, and website development to help businesses grow online and generate qualified leads.",
     },
     {
-      q: "What services does Marketi offer?",
-      a: "We offer a full spectrum of digital marketing services including SEO, paid advertising, social media management, content strategy, email marketing, and conversion rate optimization — all tailored to your specific goals.",
+      q: "How can digital marketing help my business?",
+      a: "Digital marketing improves your online visibility, attracts targeted customers, increases brand awareness, and helps generate consistent business leads.",
     },
     {
-      q: "How long does it take to see results from digital marketing efforts?",
-      a: "The timeline varies based on your industry, goals, and chosen strategies. While some changes can be immediate, significant improvements typically become noticeable within 3–6 months of consistent effort.",
+      q: "Do you work with all types of businesses?",
+      a: "Yes, we work with startups, SMEs, and large enterprises across multiple industries with customized growth strategies.",
     },
     {
-      q: "How can digital marketing benefit my business?",
-      a: "Digital marketing enhances your online presence, increases brand visibility, drives targeted traffic, and is a cost-effective way to reach potential customers and build long-term relationships.",
+      q: "How long does it take to see results?",
+      a: "Paid advertising can show quick results, while SEO and organic strategies typically take a few months for sustainable growth and strong rankings.",
     },
   ],
   Support: [
     {
-      q: "How do I reach the support team?",
-      a: "You can reach our support team via email at hello@marketi.com, through the live chat on our website, or by calling +1 (555) 123-4567 during business hours.",
+      q: "How can I contact your support team?",
+      a: "You can reach us through email, phone, or the contact form. Our team is available during business hours to assist you quickly.",
     },
     {
-      q: "What are your support hours?",
-      a: "Our support team is available Monday through Friday, 9:00 AM to 6:00 PM (PST). For urgent matters outside these hours, we have an emergency escalation process.",
+      q: "What is your average response time?",
+      a: "We usually respond within 24 hours on business days depending on the request type.",
     },
     {
-      q: "Do you offer onboarding assistance for new clients?",
-      a: "Absolutely. Every new client is assigned a dedicated onboarding specialist who guides them through account setup, strategy kickoff, and the first 30 days of campaign management.",
+      q: "Do you provide ongoing support after project completion?",
+      a: "Yes, we provide continuous support, optimization, and performance monitoring even after project delivery.",
     },
     {
       q: "Can I switch my plan after signing up?",
-      a: "Yes, you can upgrade or downgrade your plan at any time. Changes take effect at the start of the next billing cycle with no hidden fees or penalties.",
+      a: "Yes, we offer revisions and updates based on feedback and project scope to ensure the best results.",
     },
   ],
   Payment: [
     {
       q: "What payment methods do you accept?",
-      a: "We accept all major credit and debit cards (Visa, Mastercard, Amex), bank transfers, and PayPal. Enterprise clients may also request invoice-based billing.",
+      a: "We accept secure business payment methods such as bank transfer and other mutually agreed digital payment options.",
     },
     {
-      q: "Is there a contract or minimum commitment?",
-      a: "We offer both month-to-month and annual plans. Annual plans come with a discount. There is no long-term lock-in on our standard monthly plans.",
+      q: "Do you require advance payments?",
+      a: "Yes, most projects require an initial advance payment before starting work, based on project scope and agreement.",
     },
     {
-      q: "Do you offer refunds?",
-      a: "We offer a 14-day money-back guarantee on all new subscriptions. If you're not satisfied within the first two weeks, we'll issue a full refund — no questions asked.",
+      q: "Are there any hidden charges?",
+      a: "No, we follow complete transparency. All costs are clearly discussed and approved before project initiation.",
     },
     {
       q: "Are there any hidden fees?",
-      a: "No hidden fees ever. The price you see is the price you pay. Any optional add-ons are clearly listed and require your explicit confirmation before being charged.",
+      a: "Refund policies depend on the service type and project stage. All terms are clearly defined before starting any engagement.",
     },
   ],
 };
