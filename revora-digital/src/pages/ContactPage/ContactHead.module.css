@@ -240,9 +240,6 @@
     gap: 12px;
   }
 
-  .featureItem {
-    flex: 1 1 100%;
-  }
 }
 
 /* =========================
@@ -294,7 +291,7 @@
   }
 
   .featureItem {
-    width: 100%;
+    /* width: 100%; */
     padding: 13px 14px;
 
     border-radius: 12px;

@@ -34,7 +34,7 @@ const faqData = {
       a: "Yes, we provide continuous support, optimization, and performance monitoring even after project delivery.",
     },
     {
-      q: "Can I switch my plan after signing up?",
+      q: "Can I request changes during the project?",
       a: "Yes, we offer revisions and updates based on feedback and project scope to ensure the best results.",
     },
   ],

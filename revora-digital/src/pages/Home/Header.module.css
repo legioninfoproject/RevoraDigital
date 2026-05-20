@@ -142,7 +142,8 @@
   font-size: 16px;
   color: var(--rv-muted);
   line-height: 1.75;
-  max-width: 480px;
+  /* max-width: 480px; */
+  /* align-content: center; */
   margin: 0 0 36px;
   animation: fadeInUp 0.7s 0.15s ease both;
 }
