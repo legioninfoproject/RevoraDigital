@@ -236,6 +236,13 @@
   .heading span {
     font-size: 48px;
   }
+    .features {
+    gap: 12px;
+  }
+
+  .featureItem {
+    flex: 1 1 100%;
+  }
 }
 
 /* =========================
@@ -283,11 +290,26 @@
   }
 
   .features {
-    flex-direction: column;
+    gap: 10px;
   }
 
   .featureItem {
     width: 100%;
+    padding: 13px 14px;
+
+    border-radius: 12px;
+  }
+
+  .featureIcon {
+    width: 36px;
+    height: 36px;
+
+    font-size: 16px;
+  }
+
+  .featureItem span {
+    font-size: 12.5px;
+    line-height: 1.35;
   }
 }
 
@@ -312,14 +334,23 @@
     line-height: 1.7;
   }
 
+  .features {
+    gap: 9px;
+  }
+
   .featureItem {
-    padding: 12px 14px;
+    padding: 12px;
+    gap: 10px;
   }
 
   .featureIcon {
-    width: 36px;
-    height: 36px;
+    width: 34px;
+    height: 34px;
 
-    font-size: 16px;
+    font-size: 15px;
+  }
+
+  .featureItem span {
+    font-size: 12px;
   }
 }

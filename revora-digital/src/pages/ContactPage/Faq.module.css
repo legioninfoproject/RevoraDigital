@@ -63,23 +63,26 @@
 }
 
 .eyebrow {
-  font-size: 11px;
+  font-size: 14px;
   font-weight: 700;
-  letter-spacing: 3.5px;
+    letter-spacing: 0.18em;
   text-transform: uppercase;
   /* color: var(--green-mid); */
   color: var(--green);
   margin: 0 0 12px;
 }
 
+
 .heading {
   /* font-family: 'Syne', sans-serif; */
-  font-size: clamp(32px, 4.5vw, 58px);
+  font-size: clamp(42px, 5.5vw, 62px);
   font-weight: 800;
   /* color: var(--text); */
   line-height: 1.08;
+  letter-spacing: -1.5px;
   margin: 0;
 }
+
 
 /* Yellow highlight bar under "Answer" */
 .highlight {
@@ -120,7 +123,6 @@
 }
 
 .tab {
-  /* font-family: 'DM Sans', sans-serif; */
   font-size: 14px;
   font-weight: 600;
   color: var(--muted);
@@ -131,6 +133,7 @@
   cursor: pointer;
   transition: color 0.22s ease, background 0.22s ease, box-shadow 0.22s ease;
   white-space: nowrap;
+    font-family: "Poppins", sans-serif;
 }
 
 .tab:hover {
@@ -141,6 +144,7 @@
   background: var(--green);
   color: #ffffff !important;
   box-shadow: 0 4px 14px rgba(26, 92, 74, 0.30);
+  
 }
 
 /* ══════════════════════════

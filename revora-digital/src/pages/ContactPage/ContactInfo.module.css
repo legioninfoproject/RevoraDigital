@@ -69,14 +69,14 @@
 }
 
 .eyebrow {
-  font-size: 11px;
+  display: inline-block;
+  font-size: 14px;
   font-weight: 700;
-  letter-spacing: 3.5px;
+  letter-spacing: 0.18em;
   text-transform: uppercase;
-  color: var(--green-dark);
-  margin: 0 0 16px;
+  color: #0a6e70;
+  margin-bottom: 22px;
 }
-
 .heading {
   /* font-family: 'Syne', sans-serif; */
   font-size: clamp(30px, 3.5vw, 44px);
@@ -85,6 +85,7 @@
   line-height: 1.1;
   margin: 0 0 16px;
 }
+
 
 .sub {
   font-size: 15px;

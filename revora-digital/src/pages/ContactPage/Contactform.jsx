@@ -54,11 +54,13 @@ const ContactSection = () => {
           </h2>
 
           <p className={styles.body}>
-            Have a project in mind or just want to say hello?
-            <br />
-            We'd love to hear from you. Fill out the form or
-            <br />
-            use the contact details below.
+             Grow your business faster with data driven digital marketing strategies 
+             designed to deliver real and measurable results. At Revora Digital, we focus on 
+             attracting the right audience, improving your online visibility, 
+             and converting traffic into qualified leads that help your business scale effectively.
+
+From SEO and Google Ads to social media marketing and website optimization, 
+every strategy is built to increase performance, boost engagement, and maximize your return on investment.
           </p>
 
           <ul className={styles.features}>
@@ -80,87 +82,118 @@ const ContactSection = () => {
         </div>
 
         {/* ── RIGHT: FORM ── */}
-        <div className={styles.right}>
-          <div className={styles.formCard}>
-            <div className={styles.formHeader}>
-              <span className={styles.iconWrap}>
-                <FiSend />
-              </span>
-              <div>
-                <h3 className={styles.formTitle}>Send Us a Message</h3>
-                <p className={styles.formSub}>
-                  Fill out the form below and we'll get back to you shortly.
-                </p>
-              </div>
-            </div>
+       <div className={styles.right}>
+  <div className={styles.formCard}>
+    <div className={styles.formHeader}>
+      <span className={styles.iconWrap}>
+        <FiSend />
+      </span>
 
-            <form className={styles.form} onSubmit={handleSubmit}>
-              <div className={styles.row}>
-                <div className={styles.field}>
-                  <input
-                    className={styles.input}
-                    type="text"
-                    name="name"
-                    placeholder="Your Name"
-                    value={form.name}
-                    onChange={handleChange}
-                    required
-                  />
-                </div>
-                <div className={styles.field}>
-                  <input
-                    className={styles.input}
-                    type="email"
-                    name="email"
-                    placeholder="Your Email"
-                    value={form.email}
-                    onChange={handleChange}
-                    required
-                  />
-                </div>
-              </div>
+      <div>
+        <h3 className={styles.formTitle}>Send Us a Message</h3>
+        <p className={styles.formSub}>
+          Fill out the form below and we'll get back to you shortly.
+        </p>
+      </div>
+    </div>
 
-              <div className={styles.field}>
-                <input
-                  className={styles.input}
-                  type="text"
-                  name="subject"
-                  placeholder="Subject"
-                  value={form.subject}
-                  onChange={handleChange}
-                  required
-                />
-              </div>
-
-              <div className={styles.field}>
-                <textarea
-                  className={`${styles.input} ${styles.textarea}`}
-                  name="message"
-                  placeholder="Your Message"
-                  rows={5}
-                  value={form.message}
-                  onChange={handleChange}
-                  required
-                />
-              </div>
-
-              <button
-                className={`${styles.btn} ${sent ? styles.btnSent : ""}`}
-                type="submit"
-              >
-                {sent ? (
-                  <>
-                    <FiCheck strokeWidth={3} /> Message Sent!
-                  </>
-                ) : (
-                  <>
-                    Send Message &nbsp;→
-                  </>
-                )}
-              </button>
-            </form>
-          </div>
+    <form className={styles.form} onSubmit={handleSubmit}>
+      {/* NAME + ORGANIZATION */}
+      <div className={styles.row}>
+        <div className={styles.field}>
+          <input
+            className={styles.input}
+            type="text"
+            name="name"
+            placeholder="Your Name"
+            value={form.name}
+            onChange={handleChange}
+            required
+          />
         </div>
+
+        <div className={styles.field}>
+          <input
+            className={styles.input}
+            type="text"
+            name="organization"
+            placeholder="Organization Name"
+            value={form.organization}
+            onChange={handleChange}
+          />
+        </div>
+      </div>
+
+      {/* EMAIL + PHONE */}
+      <div className={styles.row}>
+        <div className={styles.field}>
+          <input
+            className={styles.input}
+            type="email"
+            name="email"
+            placeholder="Your Email"
+            value={form.email}
+            onChange={handleChange}
+            required
+          />
+        </div>
+
+        <div className={styles.field}>
+          <input
+            className={styles.input}
+            type="tel"
+            name="phone"
+            placeholder="Phone Number"
+            value={form.phone}
+            onChange={handleChange}
+            required
+          />
+        </div>
+      </div>
+
+      {/* SUBJECT */}
+      <div className={styles.field}>
+        <input
+          className={styles.input}
+          type="text"
+          name="subject"
+          placeholder="Subject"
+          value={form.subject}
+          onChange={handleChange}
+          required
+        />
+      </div>
+
+      {/* MESSAGE */}
+      <div className={styles.field}>
+        <textarea
+          className={`${styles.input} ${styles.textarea}`}
+          name="message"
+          placeholder="Your Message"
+          rows={5}
+          value={form.message}
+          onChange={handleChange}
+          required
+        />
+      </div>
+
+      <button
+        className={`${styles.btn} ${sent ? styles.btnSent : ""}`}
+        type="submit"
+      >
+        {sent ? (
+          <>
+            <FiCheck strokeWidth={3} /> Message Sent!
+          </>
+        ) : (
+          <>
+            Send Message &nbsp;→
+          </>
+        )}
+      </button>
+    </form>
+  </div>
+</div>
       </div>
     </section>
   );

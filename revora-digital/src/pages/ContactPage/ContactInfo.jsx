@@ -17,25 +17,25 @@ const contactItems = [
   {
     icon: <FiPhone />,
     label: "Phone",
-    value: "+1 (555) 123-4567",
+    value: "04226738215",
     delay: "0.3s",
   },
   {
     icon: <FiMail />,
     label: "Email",
-    value: "hello@marketi.com",
+    value: "revoradigital.info@gmail.com",
     delay: "0.42s",
   },
   {
     icon: <FiMapPin />,
     label: "Address",
-    value: "123 Market Street, Suite 100\nSan Francisco, CA 94103, USA",
+    value: "Hanudev Info Tech Park, Regus, Unit No, Block C, 6th Floor, SF No. 558/2, Udayampalayam Road, Nava India, Coimbatore – 641028",
     delay: "0.54s",
   },
   {
     icon: <FiClock />,
     label: "Working Hours",
-    value: "Mon – Fri: 9:00 AM – 6:00 PM\nSat – Sun: Closed",
+    value: "Mon – Fri: 9:00 AM – 6:00 PM\nSat – : 9:00 AM – 2:00 PM\nSun: Closed",
     delay: "0.66s",
   },
 ];
