@@ -3,11 +3,11 @@ import {
   FiSearch,
   FiTrendingUp,
   FiTarget,
-  FiDollarSign,
+  // FiDollarSign,
   FiAward,
   FiBarChart2,
 } from "react-icons/fi";
-
+import { FaRupeeSign } from "react-icons/fa";
 import styles from "./WhyChoose.module.css";
 
 const challenges = [
@@ -24,7 +24,7 @@ const challenges = [
     title: "Inconsistent Lead Generation",
   },
   {
-    icon: <FiDollarSign />,
+    icon:<FaRupeeSign />,
     title: "High Advertising Costs with Low ROI",
   },
   {
