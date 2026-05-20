@@ -16,12 +16,13 @@ const ContactHead = () => {
       <div className={styles.content}>
 
         {/* Label */}
-        <span className={styles.label}>Contact Us</span>
+        <span className={styles.label}>Contact Revora Digital</span>
 
         {/* Heading */}
         <h1 className={styles.heading}>
           <span>
-            Get In <strong>Touch</strong>
+           Leading <strong>Digital Marketing  </strong>
+            Agency in Coimbatore
           </span>
         </h1>
 
@@ -30,9 +31,12 @@ const ContactHead = () => {
 
         {/* Description */}
         <p className={styles.desc}>
-          We'd love to hear from you.
-          <br />
-          Fill out the form or use the details below.
+          Get in touch with Revora Digital, a performance driven digital marketing agency 
+          in Coimbatore offering SEO services, Google Ads management, social media marketing, 
+          branding, and website development.
+          We help businesses improve Google rankings, generate qualified leads, 
+          and grow online with result focused digital marketing strategies.
+
         </p>
 
         {/* Features */}

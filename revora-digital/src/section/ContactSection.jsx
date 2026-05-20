@@ -12,7 +12,7 @@ const ContactSection = () => {
             <Contactform />
             <ContactInfo />
             <Faq />
-            <Footer variant="Dark" />
+            <Footer variant="light" />
         </div>
     )
 };
