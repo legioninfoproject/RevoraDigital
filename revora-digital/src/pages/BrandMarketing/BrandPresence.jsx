@@ -7,33 +7,35 @@ import {
   FiMessageCircle,
   FiUsers,
 } from "react-icons/fi";
+import { IoIosArrowRoundForward } from "react-icons/io";
 
 const BrandWaveSection = () => {
   return (
     <section className={styles.brandSection}>
       {/* LEFT CONTENT */}
       <div className={styles.left}>
-        <span className={styles.tag}>Brand Marketing</span>
-
+        <span className={styles.tag}>Brand Growth</span>
         <h2 className={styles.heading}>
           Create a Strong
           <span> Brand Presence</span>
+          in Competitive Markets
         </h2>
 
         <p className={styles.desc}>
-          A strong brand helps businesses stand out, build credibility,
-          and create long-term customer relationships in competitive markets.
+         A strong brand helps businesses stand out, build credibility,
+          and create lasting customer relationships. In today’s digital landscape, 
+          businesses need consistent branding and clear communication to attract and retain customers.
         </p>
 
         <p className={styles.desc}>
-          Revora Digital helps businesses improve visibility, strengthen
-          positioning, and create consistent communication across all digital
-          platforms.
+          Our branding strategies focus on creating a professional 
+          and memorable business presence across digital platforms.
         </p>
 
-        <button className={styles.btn}>
-          Explore Branding
-        </button>
+       <button className={styles.btn}>
+  <span>Explore Branding</span>
+  <IoIosArrowRoundForward className={styles.arrow} />
+</button>
       </div>
 
       {/* RIGHT TIMELINE */}
