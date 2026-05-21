@@ -1,9 +1,9 @@
 import { useEffect, useRef } from "react";
 import {
-  FiEye,
-  FiTarget,
-  FiBarChart2,
-  FiDollarSign,
+  FiSearch,
+  FiClipboard,
+  FiSettings,
+  FiActivity,
   FiTrendingUp,
 } from "react-icons/fi";
 import styles from "./DigitalMarketingpurpose.module.css";
@@ -11,29 +11,29 @@ import styles from "./DigitalMarketingpurpose.module.css";
 /* ─── Data ─── */
 const features = [
   {
-    icon: FiEye,
-    title: "More Visibility",
-    desc: "Be seen by the right people at the right time on the right platforms.",
+    icon: FiSearch,
+    title: "Business Understanding",
+    desc: "We analyze your goals, audience, competitors, and current online presence.",
   },
   {
-    icon: FiTarget,
-    title: "Targeted Reach",
-    desc: "Reach your ideal audience with precision and relevant messaging.",
+    icon: FiClipboard,
+    title: "Strategy Planning",
+    desc: "A customized digital marketing roadmap is created for your business growth.",
   },
   {
-    icon: FiBarChart2,
-    title: "Measurable Results",
-    desc: "Track performance in real-time and optimize for better outcomes.",
+    icon: FiSettings,
+    title: "Campaign Execution",
+    desc: "We launch SEO, social media, content, and paid marketing campaigns effectively.",
   },
   {
-    icon: FiDollarSign,
-    title: "Cost Effective",
-    desc: "Get better ROI with data-driven strategies and smart budget allocation.",
+    icon: FiActivity,
+    title: "Optimization & Monitoring",
+    desc: "Performance tracking and real-time analytics help improve campaign results.",
   },
   {
     icon: FiTrendingUp,
-    title: "Business Growth",
-    desc: "Generate leads, increase conversions, and grow your brand consistently.",
+    title: "Reporting & Growth",
+    desc: "Transparent reporting and continuous scaling strategies drive long-term growth.",
   },
 ];
 
@@ -68,7 +68,7 @@ function useScrollReveal(cardSelector, threshold = 0.18) {
 }
 
 /* ─── Component ─── */
-const DigitalMarketingpurpose= () => {
+const DigitalMarketingpurpose = () => {
   const sectionRef = useScrollReveal(`.${styles.card}`);
 
   return (
@@ -76,12 +76,12 @@ const DigitalMarketingpurpose= () => {
       
       {/* ─── Header ─── */}
       <header className={styles.header}>
-        <p className={styles.tag}>Why Digital Marketing?</p>
+        <p className={styles.tag}>Work Process</p>
 
         <h2 className={styles.title}>
-          Smarter Marketing.{" "}
+          Our Digital Marketing{" "}
           <span className={styles.highlight}>
-            Stronger Results.
+            Process
           </span>
         </h2>
 

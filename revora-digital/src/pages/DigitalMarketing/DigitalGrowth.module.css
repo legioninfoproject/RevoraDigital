@@ -1,0 +1,250 @@
+/* =========================
+   DIGITAL GROWTH SECTION
+========================= */
+
+.growthSection {
+  width: 100%;
+  background: #ffffff;
+  padding: 100px 0;
+}
+
+.container {
+  width: 90%;
+  max-width: 1300px;
+  margin: auto;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+/* =========================
+   LEFT CONTENT
+========================= */
+
+.leftContent {
+  display: flex;
+  flex-direction: column;
+}
+
+.tag {
+  width: fit-content;
+  padding: 10px 18px;
+  color: teal;
+  font-size: 14px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.heading {
+  font-size: clamp(42px, 5.5vw, 62px);
+  line-height: 1.08;
+  font-weight: 800;
+  letter-spacing: -1.5px;
+  color: #111827;
+  margin-bottom: 24px;
+}
+
+.heading span {
+  position: relative;
+  color: teal;
+  display: inline-block;
+  z-index: 1;
+}
+
+.heading span::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 6px;
+
+  width: 100%;
+  height: 12px;
+
+  background: #f5c800;
+
+  z-index: -1;
+  border-radius: 4px;
+}
+.description {
+  font-size: 16px;
+   line-height: 1.75;
+
+  color:#6b7280;
+
+  margin-bottom: 20px;
+}
+
+/* =========================
+   CHALLENGE BOX
+========================= */
+
+.challengeBox {
+  margin-top: 20px;
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+}
+
+.challengeItem {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  padding: 18px;
+
+  border: 1px solid #e5e7eb;
+  border-radius: 16px;
+
+  background: #fff;
+
+  transition: 0.3s ease;
+}
+
+.challengeItem:hover {
+  transform: translateY(-4px);
+
+  border-color: teal;
+
+  box-shadow: 0 10px 25px rgba(0, 128, 128, 0.08);
+}
+
+.challengeItem svg {
+  color: teal;
+  font-size: 20px;
+}
+
+.challengeItem span {
+  font-size: 15px;
+  font-weight: 500;
+  color: #333;
+}
+
+/* =========================
+   RIGHT CARDS
+========================= */
+
+.cardsGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+.card {
+  background: #ffffff;
+
+  border: 1px solid #e5e7eb;
+  border-radius: 22px;
+
+  padding: 30px;
+
+  transition: 0.3s ease;
+
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.04);
+}
+
+.card:hover {
+  transform: translateY(-6px);
+
+  border-color: teal;
+
+  box-shadow: 0 14px 35px rgba(0, 128, 128, 0.12);
+}
+
+.iconWrap {
+  width: 65px;
+  height: 65px;
+
+  border-radius: 18px;
+
+  background: rgba(0, 128, 128, 0.1);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 22px;
+}
+
+.iconWrap svg {
+  color: teal;
+  font-size: 30px;
+}
+
+.card h3 {
+  font-size: 22px;
+  font-weight: 700;
+
+  color: #111827;
+
+  margin-bottom: 14px;
+}
+
+.card p {
+  font-size: 15px;
+  line-height: 1.8;
+
+  color: #666;
+}
+
+.fullCard {
+  grid-column: span 2;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 992px) {
+  .container {
+    grid-template-columns: 1fr;
+  }
+
+  .heading {
+    font-size: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .growthSection {
+    padding: 80px 0;
+  }
+
+  .heading {
+    font-size: 32px;
+  }
+
+  .cardsGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .fullCard {
+    grid-column: span 1;
+  }
+
+  .challengeBox {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    width: 92%;
+  }
+
+  .heading {
+    font-size: 28px;
+  }
+
+  .card {
+    padding: 24px;
+  }
+
+  .challengeItem {
+    padding: 16px;
+  }
+}
