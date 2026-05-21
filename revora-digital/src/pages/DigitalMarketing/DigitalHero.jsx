@@ -33,7 +33,7 @@ const SERVICES = [
   {
     id: "ppc",
     Icon: FiDollarSign,
-    label: "PPC Advertising",
+    label: "Paid Ads",
     angle: -40,
     yellow: true,
   },
@@ -54,7 +54,7 @@ const SERVICES = [
   {
     id: "analytics",
     Icon: FiBarChart2,
-    label: "Analytics & Reporting",
+    label: "Analytics",
     angle: 145,
     yellow: true,
   },
@@ -130,6 +130,17 @@ const DigitalHero = () => {
     return () => el.removeEventListener("mousemove", onMove);
   }, []);
 
+  /* Smooth Scroll */
+  const handleExploreClick = () => {
+    const nextSection = document.getElementById("digital-services");
+
+    if (nextSection) {
+      nextSection.scrollIntoView({
+        behavior: "smooth",
+      });
+    }
+  };
+
   return (
     <section className={styles.hero} ref={heroRef}>
       {/* Background Shape */}
@@ -149,27 +160,33 @@ const DigitalHero = () => {
         </span>
 
         <h1 className={styles.headline}>
-          Digital Strategies.
+          Results-Driven
           <br />
           <span className={styles.accentGreen}>
-            Real Results.
+            Digital Marketing
           </span>
+           Solutions
         </h1>
 
         <p className={styles.body}>
-          We help businesses grow online with
-          result-driven digital marketing solutions
-          tailored to your goals.
+          Grow your visibility, generate more leads,
+          and scale your brand online with customized
+          SEO strategies, social media marketing,
+          paid advertising, and performance-driven
+          digital campaigns tailored to your business goals.
         </p>
 
         <div className={styles.ctaRow}>
-          <button className={styles.btnPrimary}>
+          <button
+            className={styles.btnPrimary}
+            onClick={handleExploreClick}
+          >
             Explore Services
             <FiArrowRight size={18} />
           </button>
 
           <button className={styles.btnOutline}>
-            Contact Us
+            Get Free Consultation
             <FiArrowRight size={18} />
           </button>
         </div>
