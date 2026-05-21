@@ -17,7 +17,6 @@ const BrandHeader = () => {
           <span className={styles.tagDot}></span>
           BRAND MARKETING
         </span>
-
        <h1 className={styles.title}>
   Build Your <span className={styles.brandText}>Brand.</span>
   <br />
@@ -25,8 +24,11 @@ const BrandHeader = () => {
 </h1>
 
         <p className={styles.description}>
-          We create powerful branding and marketing strategies that help
-          businesses connect, engage, and grow faster in the digital world.
+          Revora Digital provides strategic brand marketing services that help businesses improve visibility,
+           strengthen customer trust, and create a strong market presence. We help businesses build professional brand
+            identities and marketing strategies that connect with the right audience and support long-term business growth.
+From brand strategy and visual identity to digital campaigns and market positioning, our solutions are designed to create meaningful customer engagement and measurable business impact.
+
         </p>
 
         <div className={styles.buttonGroup}>
