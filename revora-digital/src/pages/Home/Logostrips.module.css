@@ -58,11 +58,10 @@
 }
 
 .logoImage {
-  height: 20vh;
+  height: 15vh;
   width: auto;
   object-fit: contain;
   display: block;
-  filter: grayscale(100%);
 }
 
 /* PAGINATION DOTS */

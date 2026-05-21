@@ -8,7 +8,7 @@ const BlogSection = () => {
         <div>
             <BlogHeader />
             <BlogListing />
-            <Footer  variant="Dark"/>
+            <Footer  variant="light"/>
         </div>
     )
 };
