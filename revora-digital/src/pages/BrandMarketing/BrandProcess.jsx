@@ -4,7 +4,7 @@ import {
   FiCompass,
   FiPenTool,
   FiMessageSquare,
-  FiZap,
+  // FiZap,
   FiTrendingUp,
 } from "react-icons/fi";
 import styles from "./BrandProcess.module.css";
@@ -42,48 +42,40 @@ const useScrollReveal = (selector) => {
 const STEPS = [
   {
     number: "01",
-    label: "Research",
+    label: "Research & Discovery",
     icon: FiSearch,
     color: "#0d7a7a",
-    desc: "We analyse your market, audience, and competitors.",
+    desc: "We analyze your business, audience behavior, competitors, and industry trends to identify branding opportunities and growth strategies.",
   },
   {
     number: "02",
-    label: "Strategy",
+    label: "Strategy Planning",
     icon: FiCompass,
     color: "#0a5f5f",
-    desc: "We define your brand strategy and positioning.",
+    desc: "Our team develops a customized branding roadmap aligned with your business objectives and target audience.",
   },
   {
     number: "03",
-    label: "Identity",
+    label: "Brand Development",
     icon: FiPenTool,
     color: "#0d7a7a",
-    desc: "We design your brand identity and assets.",
+    desc: "We create visual identity systems, messaging frameworks, and branding assets that represent your business professionally.",
   },
   {
     number: "04",
-    label: "Messaging",
+    label: "Campaign Execution",
     icon: FiMessageSquare,
     color: "#0a5f5f",
-    desc: "We craft your brand voice and key messages.",
+    desc: "We implement branding strategies across digital channels to improve visibility, engagement, and audience reach.",
   },
   {
     number: "05",
-    label: "Launch",
-    icon: FiZap,
-    color: "#0d7a7a",
-    desc: "We launch campaigns to introduce your brand.",
-  },
-  {
-    number: "06",
-    label: "Growth",
+    label: "Performance Optimization",
     icon: FiTrendingUp,
-    color: "#0a5f5f",
-    desc: "We optimise and grow your brand over time.",
+    color: "#0d7a7a",
+    desc: "We continuously monitor brand performance and optimize strategies to support long-term business growth.",
   },
 ];
-
 // ── Main Component ────────────────────────────────────────────────────────────
 const BrandProcess = () => {
   const sectionRef = useScrollReveal(`.${styles.card}`);
@@ -91,16 +83,19 @@ const BrandProcess = () => {
   return (
     <section className={styles.section} ref={sectionRef}>
       {/* Header */}
-      <header className={styles.header}>
-        <div className={styles.titleRow}>
-          <span className={`${styles.line} ${styles.left}`} />
-          <h2 className={styles.title}>Our Brand Marketing Process</h2>
-          <span className={`${styles.line} ${styles.right}`} />
-        </div>
-        <p className={styles.subtitle}>
-          A proven process to build strong brands that drive real results.
-        </p>
-      </header>
+     <header className={styles.header}>
+  <h3 className={styles.eyebrow}>Work Process</h3>
+
+  <div className={styles.titleRow}>
+    <span className={`${styles.line} ${styles.left}`} />
+    <h2 className={styles.title}>Our <span className={styles.highlight}>Brand Marketing </span>Process</h2>
+    <span className={`${styles.line} ${styles.right}`} />
+  </div>
+
+  <p className={styles.subtitle}>
+    A proven process to build strong brands that drive real results.
+  </p>
+</header>
 
       {/* Steps */}
       <div className={styles.track}>
@@ -130,7 +125,7 @@ const BrandProcess = () => {
               {/* Content */}
               <div className={styles.cardBody}>
                 <h3 className={styles.stepLabel}>{step.label}</h3>
-                <p className={styles.stepDesc}>{step.desc}</p>
+                {/* <p className={styles.stepDesc}>{step.desc}</p> */}
               </div>
 
               {/* Arrow connector (not on last) */}
