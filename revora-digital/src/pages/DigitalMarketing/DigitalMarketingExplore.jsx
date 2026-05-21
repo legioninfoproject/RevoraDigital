@@ -1,61 +1,54 @@
 import { useEffect, useRef } from "react";
-import {
-  FiSearch,
-  FiThumbsUp,
-  FiMousePointer,
-  FiFileText,
-  FiMail,
-  FiBarChart2,
-  FiRefreshCw,
-  FiShield,
-} from "react-icons/fi";
 
 import styles from "./DigitalMarketingExplore.module.css";
+
+import {
+  FiSearch,
+  FiInstagram,
+  FiTarget,
+  FiPenTool,
+  FiBarChart2,
+  FiMapPin,
+} from "react-icons/fi";
 
 /* ─── Data ─── */
 const solutions = [
   {
     icon: FiSearch,
-    title: "Search Engine Optimization (SEO)",
-    desc: "Improve your rankings and drive organic traffic with proven SEO strategies.",
+    title: "SEO Optimization",
+    desc: "Boost rankings, improve website performance, and increase organic traffic with advanced SEO strategies.",
   },
+
   {
-    icon: FiThumbsUp,
-    title: "Social Media Marketing (SMM)",
-    desc: "Engage your audience and build your brand across all major social platforms.",
+    icon: FiInstagram,
+    title: "Social Media Branding",
+    desc: "Build engaging social media profiles that strengthen your brand identity and audience connection.",
   },
+
   {
-    icon: FiMousePointer,
-    title: "Pay-Per-Click Advertising (PPC)",
-    desc: "Run high-converting ad campaigns that deliver instant traffic and leads.",
+    icon: FiTarget,
+    title: "Paid Advertising Campaigns",
+    desc: "Generate instant traffic and quality leads through optimized Google Ads and Meta Ads campaigns.",
   },
+
   {
-    icon: FiFileText,
-    title: "Content Marketing",
-    desc: "Create valuable content that attracts, engages, and converts your target audience.",
+    icon: FiPenTool,
+    title: "Content & Creative Design",
+    desc: "Professional posters, flyers, ad creatives, and marketing visuals designed to capture attention and improve engagement.",
   },
-  {
-    icon: FiMail,
-    title: "Email Marketing",
-    desc: "Nurture leads and retain customers with targeted email campaigns.",
-  },
+
   {
     icon: FiBarChart2,
-    title: "Web Analytics & Reporting",
-    desc: "Track performance, measure results, and make data-driven decisions.",
+    title: "Analytics & Performance Tracking",
+    desc: "Measure growth, monitor campaign performance, and make smarter business decisions with detailed reporting.",
   },
+
   {
-    icon: FiRefreshCw,
-    title: "Conversion Rate Optimization (CRO)",
-    desc: "Optimize your website and funnels to turn more visitors into paying customers.",
-  },
-  {
-    icon: FiShield,
-    title: "Online Reputation Management",
-    desc: "Build trust and credibility with positive reviews and brand reputation management.",
+    icon: FiMapPin,
+    title: "Local Business Marketing",
+    desc: "Strengthen your presence in Coimbatore, Tamil Nadu, and across India with targeted local SEO and regional marketing strategies.",
   },
 ];
-
 /* ─── Floating Particles ─── */
 const particles = [
   { size: 60, top: "12%", left: "8%", duration: "9s", delay: "0s" },

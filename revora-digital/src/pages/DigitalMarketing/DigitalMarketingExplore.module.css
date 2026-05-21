@@ -85,35 +85,38 @@
 
 .tag {
   display: inline-block;
-  font-size: 0.75rem;
+    font-size: 14px;
   font-weight: 700;
-  letter-spacing: 2.5px;
-  text-transform: uppercase;
-  color: var(--gold-light);
-  margin-bottom: 0.65rem;
+    font-weight: 700;
+  letter-spacing: 0.18em;
+  color: #ffffff;
+  margin-bottom: 22px;
 
   opacity: 0;
   animation: fadeDown 0.6s ease 0.1s forwards;
 }
 
+
 .title {
   /* font-family: 'Clash Display', sans-serif; */
-  font-size: clamp(1.8rem, 3.5vw, 2.5rem);
-  font-weight: 700;
+  font-size: clamp(42px, 5.5vw, 62px);
+  font-weight: 800;
   color: var(--white);
-  line-height: 1.2;
+    line-height: 1.08;
+  letter-spacing: -1.5px;
   margin-bottom: 0.9rem;
 
   opacity: 0;
   animation: fadeUp 0.7s ease 0.2s forwards;
 }
 
+
 .highlight {
   color: var(--gold-light);
   position: relative;
 }
 
-.highlight::after {
+/* .highlight::after {
   content: '';
   position: absolute;
   bottom: -3px;
@@ -134,11 +137,11 @@
   transform-origin: left;
 
   animation: underline 0.6s ease 0.9s forwards;
-}
+} */
 
 .subtitle {
   color: var(--text-muted);
-  font-size: 1rem;
+  font-size: 16px;
   line-height: 1.75;
   max-width: 540px;
   margin: 0 auto;
@@ -147,24 +150,7 @@
   animation: fadeUp 0.7s ease 0.35s forwards;
 }
 
-.divider {
-  width: 50px;
-  height: 3px;
 
-  background: linear-gradient(
-    90deg,
-    var(--gold),
-    var(--gold-light)
-  );
-
-  border-radius: 2px;
-  margin: 0.85rem auto 0;
-
-  opacity: 0;
-  transform: scaleX(0);
-
-  animation: scaleX 0.6s ease 0.5s forwards;
-}
 
 /* ─── Grid ─── */
 .grid {
