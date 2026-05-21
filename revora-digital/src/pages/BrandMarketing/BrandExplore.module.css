@@ -79,9 +79,17 @@
 
   animation: fadeDown 0.7s ease both;
 }
+.eyebrow{
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: white;
+  margin-bottom: 22px;
+}
 
-
-.line {
+/* .line {
   flex: 0 0 60px;
   height: 3px;
   border-radius: 2px;
@@ -103,19 +111,20 @@
     var(--gold),
     transparent
   );
-}
+} */
 
 .title {
   /* font-family: "Clash Display", sans-serif; */
-  font-size: clamp(1.6rem, 3vw, 2.2rem);
-  font-weight: 700;
+  font-size: clamp(42px, 5.5vw, 62px);
+  font-weight: 800;
+  line-height: 1.08;
+  letter-spacing: -1.5px;
   color: var(--white);
-  letter-spacing: -0.3px;
 }
 
 .subtitle {
   color: rgba(255, 255, 255, 0.78);
-  font-size: 1rem;
+   font-size: 16px;
   line-height: 1.75;
   max-width: 520px;
   margin: 0 auto;
@@ -123,6 +132,9 @@
   animation: fadeUp 0.7s ease 0.15s both;
 }
 
+.highlight {
+  color:  #f5c800;
+}
 /* ─── Grid ─── */
 .grid {
   display: grid;

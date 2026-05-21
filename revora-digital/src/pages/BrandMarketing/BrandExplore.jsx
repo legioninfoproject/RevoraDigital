@@ -1,10 +1,10 @@
 import React, { useEffect, useRef } from "react";
 import {
-  FiSearch,
-  FiPenTool,
-  FiMessageSquare,
-  FiUsers,
-  FiBarChart2,
+  FiTarget,
+  FiLayers,
+  FiMessageCircle,
+  FiCompass,
+  FiZap,
   FiTrendingUp,
 } from "react-icons/fi";
 
@@ -13,34 +13,34 @@ import styles from "./BrandExplore.module.css";
 /* ─── Data ─── */
 const services = [
   {
-    icon: FiSearch,
+    icon: FiTarget,
     title: "Brand Strategy",
-    desc: "We research, analyze, and craft strategies that define your brand purpose and direction.",
+    desc: "We create strategic branding plans that align with your business goals, audience, and market position.",
   },
   {
-    icon: FiPenTool,
+    icon: FiLayers,
     title: "Brand Identity",
-    desc: "We design unique logos, color palettes, typography, and visual identities.",
+    desc: "We design professional visual identities that create consistency across digital and marketing platforms.",
   },
   {
-    icon: FiMessageSquare,
+    icon: FiMessageCircle,
     title: "Brand Messaging",
-    desc: "We create powerful messages that communicate your brand's value.",
+    desc: "We develop clear and customer-focused messaging that communicates your brand value effectively.",
   },
   {
-    icon: FiUsers,
+    icon: FiCompass,
     title: "Market Positioning",
-    desc: "We position your brand to stand out from competitors and attract the right audience.",
+    desc: "We position your brand to stand out in competitive markets and connect with the right audience.",
   },
   {
-    icon: FiBarChart2,
+    icon: FiZap,
     title: "Campaign Development",
-    desc: "We plan and execute impactful campaigns that drive brand awareness.",
+    desc: "We create impactful marketing campaigns that improve brand awareness and audience engagement.",
   },
   {
     icon: FiTrendingUp,
     title: "Brand Growth",
-    desc: "We help you build loyalty and grow your brand consistently.",
+    desc: "We help businesses strengthen brand presence, build loyalty, and support long-term business growth.",
   },
 ];
 
@@ -82,21 +82,26 @@ const BrandExplore = () => {
     <section className={styles.section} ref={sectionRef}>
       {/* Header */}
       <header className={styles.header}>
+        
+        {/* Eyebrow */}
+        <span className={styles.eyebrow}>
+          Work We Do
+        </span>
+
         <div className={styles.titleRow}>
           <span className={`${styles.line} ${styles.left}`} />
 
           <h2 className={styles.title}>
-            What We Do in Brand Marketing
+            What We Do in <span className={styles.highlight}>Brand Marketing</span>
           </h2>
 
           <span className={`${styles.line} ${styles.right}`} />
         </div>
 
         <p className={styles.subtitle}>
-          From strategy to storytelling, we help you build a brand
-          that stands out
-          {/* <span className={styles.goldDot} /> */}
-          and stays in the minds of your audience.
+          From strategy to storytelling, we help businesses build a
+          brand that improves visibility, strengthens customer trust,
+          and supports long-term growth.
         </p>
       </header>
 

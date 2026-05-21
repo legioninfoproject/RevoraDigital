@@ -3,6 +3,7 @@ import BrandHeader from "../pages/BrandMarketing/BrandHeader";
 import BrandPresence from "../pages/BrandMarketing/BrandPresence";
 import BrandExplore from "../pages/BrandMarketing/BrandExplore";
 import BrandProcess from "../pages/BrandMarketing/BrandProcess";
+import CtaSection from "../pages/AboutPage/CtaSection";
 import Footer from "../components/Footer/Footer";
 
 const BrandMarketing = () => {
@@ -12,6 +13,7 @@ const BrandMarketing = () => {
             <BrandPresence />
             <BrandExplore />
             <BrandProcess />
+            <CtaSection />
             <Footer variant="light" />
         </div>
     );
