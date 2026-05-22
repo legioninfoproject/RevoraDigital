@@ -31,7 +31,7 @@
   align-items: center;
   gap: 10px;
   color: #0a6e70;
-  padding: 10px 0;
+  padding: 25px 0;
   font-size: 15px;
   font-weight: 700;
   width: fit-content;
@@ -46,28 +46,33 @@
 /* ================= TITLE ================= */
 
 .heroTitle {
-  font-size: 70px;
+   font-size: clamp(42px, 5.5vw, 62px);
   line-height: 1.1;
   font-weight: 800;
-  color: #0a6e70;
+  color: #111827;
+  line-height: 1.08;
+  letter-spacing: -1.5px;
 }
+
+
 
 .heroTitle span {
   position: relative;
   display: inline-block;
   z-index: 1;
+  color: #0a6e70;
 }
 
 .heroTitle span::after {
   content: "";
   position: absolute;
   left: 0;
-  bottom: 8px;
+  bottom: 4px;
   width: 100%;
-  height: 12px;
-  background: #facc15;
-  border-radius: 20px;
+  height: 14px;
+  background: var(--rv-yellow);
   z-index: -1;
+  border-radius: 3px;
 }
 
 /* ================= SUBTITLE ================= */
@@ -87,9 +92,11 @@
 .heroDescription {
   max-width: 550px;
   line-height: 1.8;
-  color: #5d7c78;
+  color: #6b7280;
   font-size: 16px;
+   line-height: 1.75;
 }
+
 
 /* ================= BUTTONS ================= */
 
@@ -114,6 +121,7 @@
   font-size: 15px;
   font-weight: 600;
   transition: all 0.3s ease;
+  font-family: "Poppins", sans-serif;
 }
 
 .btnPrimary:hover {

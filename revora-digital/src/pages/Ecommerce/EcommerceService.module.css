@@ -48,10 +48,10 @@
 
 /* "WHAT WE DO" eyebrow */
 .eyebrow {
-  display: inline-flex;
+  display: inline-block;
   align-items: center;
   gap: 10px;
-  font-size: 0.72rem;
+    font-size: 14px;
   font-weight: 700;
   letter-spacing: 0.18em;
   text-transform: uppercase;
@@ -73,31 +73,49 @@
 /* Heading */
 .heading {
   /* font-family: 'Syne', sans-serif; */
-  font-size: clamp(1.9rem, 3.8vw, 3rem);
+   font-size: clamp(42px, 5.5vw, 62px);
   font-weight: 800;
   color: var(--text-dark);
-  line-height: 1.12;
+   line-height: 1.08;
+  letter-spacing: -1.5px;
   margin-bottom: 20px;
   animation: fadeUp 0.65s 0.2s both;
 }
-
-/* yellow highlighted word */
-.tagHighlight {
-  /* color: var(--yellow); */
+.Highlight{
+  color:#0a6e70;
   position: relative;
   display: inline-block;
 }
-
-.tagHighlight::after {
-  content: '';
+.Highlight::after{
+  content: "";
   position: absolute;
   left: 0;
-  bottom: -3px;
+  bottom: 4px;
   width: 100%;
-  height: 4px;
-  /* background: linear-gradient(90deg, var(--yellow), var(--yellow-dark)); */
-  border-radius: 99px;
-  transform-origin: left;
+  height: 14px;
+  background:  #f5c800;
+  z-index: -1;
+  border-radius: 3px;
+  animation: lineGrow 0.8s 0.9s cubic-bezier(0.22,1,0.36,1) both;
+}
+/* yellow highlighted word */
+.Highlight {
+  color: #0a6e70;
+  position: relative;
+  display: inline;
+  z-index: 1;
+}
+
+.Highlight::after {
+   content: "";
+  position: absolute;
+  left: 0;
+  bottom: 4px;
+  width: 100%;
+  height: 14px;
+  background:  #f5c800;
+  z-index: -1;
+  border-radius: 3px;
   animation: lineGrow 0.8s 0.9s cubic-bezier(0.22,1,0.36,1) both;
 }
 
@@ -162,6 +180,17 @@
   /* staggered entrance */
   opacity: 0;
   animation: cardReveal 0.65s cubic-bezier(0.22,1,0.36,1) both;
+}
+.subText {
+  max-width: 850px;
+  margin: 0 auto 28px;
+  font-size: 1rem;
+  line-height: 1.9;
+    font-size: 16px;
+  color: #6b7280;
+  line-height: 1.75;
+  text-align: center;
+  animation: fadeUp 0.7s 0.3s both;
 }
 
 .card:nth-child(1) { animation-delay: 0.35s; }
@@ -302,4 +331,18 @@
 @media (max-width: 560px) {
   .grid { grid-template-columns: 1fr; }
   .section { padding: 60px 5vw 70px; }
+  .subText {
+    font-size: 0.92rem;
+    line-height: 1.8;
+  }
+    .heading {
+    font-size: clamp(34px, 10vw, 48px);
+    line-height: 1.15;
+    letter-spacing: -1px;
+  }
+
+  .Highlight::after {
+    height: 0.18em;
+    bottom: 0.05em;
+  }
 }

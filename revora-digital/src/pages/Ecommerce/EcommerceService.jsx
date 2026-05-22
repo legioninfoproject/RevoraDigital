@@ -6,7 +6,7 @@ import {
   FiGlobe,
   FiBarChart2,
   FiTrendingUp,
-//   FiArrowRight,
+  // FiArrowRight,
 } from "react-icons/fi";
 import styles from "./EcommerceService.module.css";
 
@@ -14,56 +14,69 @@ import styles from "./EcommerceService.module.css";
 const SERVICES = [
   {
     icon: <FiMonitor />,
-    title: "Optimize Your Website",
-    desc: "Improve speed, UX, and conversions for a seamless shopping experience.",
+    title: "Increase Website Traffic",
+    desc: "Drive targeted traffic from search engines, paid campaigns, and digital marketing channels to reach high-intent customers.",
   },
   {
     icon: <FiSearch />,
-    title: "E-commerce SEO",
-    desc: "Rank higher on search engines and drive high-intent organic traffic.",
+    title: "Improve Customer Trust",
+    desc: "Create professional and consistent shopping experiences that build credibility and encourage repeat purchases.",
   },
   {
     icon: <FiMapPin />,
-    title: "Google My Business",
-    desc: "Enhance your local presence and attract more nearby customers.",
+    title: "Optimize Product Visibility",
+    desc: "Improve product rankings and discoverability through advanced e-commerce SEO strategies.",
   },
   {
     icon: <FiGlobe />,
-    title: "Google Search",
-    desc: "Capture high-intent customers actively searching for your products.",
+    title: "Strengthen Customer Engagement",
+    desc: "Connect with your audience through personalized marketing campaigns and customer-focused communication.",
   },
   {
     icon: <FiBarChart2 />,
-    title: "Console Google Analytics",
-    desc: "Track user behavior and measure what truly drives sales.",
+    title: "Performance Analytics",
+    desc: "Track customer behavior, measure campaign performance, and identify opportunities for continuous growth.",
   },
   {
     icon: <FiTrendingUp />,
-    title: "CRO Optimization",
-    desc: "Increase conversions with data-driven testing and smart optimization.",
+    title: "Maximize Sales Performance",
+    desc: "Use analytics, CRO optimization, and performance marketing to improve conversions and revenue growth.",
   },
 ];
 
-const EcommerceServices = ()=> {
+const EcommerceServices = () => {
   return (
     <section className={styles.section}>
       {/* ── HEADER ── */}
       <div className={styles.header}>
         {/* eyebrow */}
-        <div className={styles.eyebrow}>What We Do</div>
+        <div className={styles.eyebrow}>E-COMMERCE GROWTH</div>
 
-        {/* heading — using the exact structure you requested */}
+        {/* heading */}
         <h2 className={styles.heading}>
           <div className={styles.heroTag}>
             <span>
-              Our{" "}
-              <span className={styles.tagHighlight}>E-commerce</span>
-              {" "}Marketing Services
+              Build a <span className={styles.Highlight}>Strong Online Presence</span> for{" "}
+              <span className={styles.tagHighlight}>
+                Sustainable Growth
+              </span>
             </span>
           </div>
         </h2>
 
-        {/* Yellow separator line */}
+        {/* paragraph */}
+        <p className={styles.subText}>
+          In today’s competitive digital market, e-commerce businesses need more
+          than just an online store. They need visibility, trust, and strategic
+          marketing to attract customers and drive sales consistently.
+          <br />
+          <br />
+          Our e-commerce marketing strategies focus on improving search
+          visibility, customer experience, and conversion performance to help
+          brands grow successfully online.
+        </p>
+
+        {/* divider */}
         <div className={styles.divider}>
           <div className={styles.dividerLine} />
           <div className={styles.dividerDot} />
@@ -94,6 +107,6 @@ const EcommerceServices = ()=> {
       </div>
     </section>
   );
-}
+};
 
-export default EcommerceServices
+export default EcommerceServices;

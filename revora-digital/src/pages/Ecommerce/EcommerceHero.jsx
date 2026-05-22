@@ -1,7 +1,5 @@
 import React from "react";
-import {
-  FiArrowRight,
-} from "react-icons/fi";
+import { FiArrowRight } from "react-icons/fi";
 
 import styles from "./EcommerceHero.module.css";
 import heroImage from "../../assets/ecommerce.avif";
@@ -16,29 +14,38 @@ const EcommerceHero = () => {
       <div className={styles.heroContainer}>
         {/* LEFT CONTENT */}
         <div className={styles.heroContent}>
-          
+
           {/* Tag */}
           <div className={styles.heroTag}>
-            <span><span>E-commerce</span> Marketing</span>
+            <span>
+              <span>E-commerce</span> Growth Solutions
+            </span>
           </div>
 
           {/* Title */}
           <h1 className={styles.heroTitle}>
-            E-commerce <br />
-            <span>Marketing</span>
+            Grow Your <br />
+            <span>Online Store</span>
           </h1>
 
           {/* Subtitle */}
           <p className={styles.heroSubtitle}>
-            More Traffic. More Sales.{" "}
-            <strong>More Growth.</strong>
+            Increase Sales &{" "}
+            <strong>Customer Engagement</strong>
           </p>
 
           {/* Description */}
           <p className={styles.heroDescription}>
-            We help e-commerce businesses grow with
-            data-driven strategies that increase traffic,
-            boost conversions, and maximize revenue.
+            Revora Digital helps e-commerce businesses scale faster
+            with performance-driven marketing strategies designed to
+            increase traffic, improve conversions, and maximize
+            online revenue.
+            <br />
+            <br />
+            From SEO and paid advertising to analytics and conversion
+            optimization, we create data-driven e-commerce marketing
+            solutions that help online brands attract the right
+            audience and achieve measurable growth.
           </p>
 
           {/* Buttons */}
@@ -55,7 +62,7 @@ const EcommerceHero = () => {
           <div className={styles.imageWrapper}>
             <img
               src={heroImage}
-              alt="Ecommerce Marketing"
+              alt="E-commerce Marketing"
               className={styles.heroImage}
             />
           </div>
