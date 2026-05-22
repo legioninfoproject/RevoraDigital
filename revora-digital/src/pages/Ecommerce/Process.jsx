@@ -2,7 +2,7 @@ import React from "react";
 import {
   FiSearch,
   FiTarget,
-  FiZap,
+  FiTrendingUp,
   FiBarChart2,
   FiAward,
 } from "react-icons/fi";
@@ -13,54 +13,61 @@ const STEPS = [
   {
     num: "01",
     icon: <FiSearch />,
-    title: "Research",
-    desc: "We analyze your niche, competitors, and customers.",
+    title: "SEO Research",
+    desc: "We analyze keywords, competitors, search trends, and website performance to identify SEO growth opportunities.",
   },
   {
     num: "02",
     icon: <FiTarget />,
-    title: "Strategy",
-    desc: "We create a customized marketing strategy.",
+    title: "SEO Strategy",
+    desc: "Our team creates customized SEO strategies focused on rankings, organic traffic, and audience targeting.",
   },
   {
     num: "03",
-    icon: <FiZap />,
-    title: "Execute",
-    desc: "We implement campaigns to drive quality traffic.",
+    icon: <FiTrendingUp />,
+    title: "SEO Execution",
+    desc: "We implement on-page SEO, technical SEO, content optimization, and link-building strategies for better visibility.",
   },
   {
     num: "04",
     icon: <FiBarChart2 />,
-    title: "Optimize",
-    desc: "We analyze results and optimize for better ROI.",
+    title: "SEO Optimization",
+    desc: "Using analytics and search performance data, we continuously optimize campaigns to improve rankings and conversions.",
   },
   {
     num: "05",
     icon: <FiAward />,
-    title: "Grow",
-    desc: "We scale what works and maximize your growth.",
+    title: "SEO Growth",
+    desc: "We scale successful SEO strategies to increase organic traffic, customer engagement, and long-term business growth.",
   },
 ];
 
-const Process=()=>{
+const Process = () => {
   return (
     <section className={styles.section}>
       {/* ── HEADER ── */}
       <div className={styles.header}>
-        <div className={styles.eyebrow}>Our Proven Process</div>
+        <div className={styles.eyebrow}>WORK PROCESS</div>
 
-        {/* ── heading using your exact code structure ── */}
-        <div className={styles.heroTag}>
-          <span>
-            <h2 className={styles.heading}>
-              How We{" "}
-              <span className={styles.tagHighlight}>Drive Results</span>
-              {" "}For You
-            </h2>
-          </span>
-        </div>
+        {/* ── heading ── */}
+       <div className={styles.heroTag}>
+  <h2 className={styles.heading}>
+    Our{" "}
+    <span className={styles.titleHighlight}>
+      E-commerce Marketing
+    </span>{" "}
+    Process
+  </h2>
+</div>
 
-        {/* yellow separator */}
+        {/* description */}
+        <p className={styles.subText}>
+          A proven process designed to help online businesses improve
+          visibility, increase conversions, and achieve long-term digital
+          growth.
+        </p>
+
+        {/* divider */}
         <div className={styles.divider}>
           <div className={styles.dividerLine} />
           <div className={styles.dividerDot} />
@@ -76,10 +83,8 @@ const Process=()=>{
             <div className={styles.step}>
               <div className={styles.stepNum}>{step.num}</div>
 
-              {/* Icon ring — data-num feeds the CSS ::after yellow badge */}
               <div
                 className={styles.iconRing}
-                style={{ "--badge": `"${step.num}"` }}
                 data-num={step.num}
               >
                 {step.icon}
@@ -91,7 +96,7 @@ const Process=()=>{
               </div>
             </div>
 
-            {/* CONNECTOR between steps (not after last) */}
+            {/* CONNECTOR */}
             {i < STEPS.length - 1 && (
               <div className={styles.connector}>
                 <div className={styles.connectorInner} />
@@ -103,6 +108,6 @@ const Process=()=>{
       </div>
     </section>
   );
-}
+};
 
 export default Process;
