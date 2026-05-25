@@ -43,7 +43,23 @@
 
   padding: 80px 40px;
 }
+.inputError {
+  border: 1.5px solid #ef4444 !important;
+  background: #fff5f5;
+}
 
+.inputError:focus {
+  border-color: #ef4444 !important;
+  box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.15);
+}
+
+.errorText {
+  color: #ef4444;
+  font-size: 12px;
+  margin-top: 6px;
+  padding-left: 4px;
+  font-weight: 500;
+}
 
 .inner {
   position: relative;

@@ -22,10 +22,9 @@ const COUNTRIES = [
 ];
 
 const SERVICES = [
-  "Safe Plus",
-  "Cyber Security",
-  "Digital Transformation",
-  "Cloud Solutions",
+    "Digital Marketing",
+    "Ecommerce Marketing",
+    "Brand Marketing"
 ];
 
 const RevoraContact = () => {
