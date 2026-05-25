@@ -96,11 +96,11 @@ const Navbar = () => {
             </div>
           </li>
 
-          <li className={styles.navItem}>
+          {/* <li className={styles.navItem}>
             <a href="/blog" className={styles.navLink}>
               Blog
             </a>
-          </li>
+          </li> */}
 
           <li className={styles.navItem}>
             <a href="/contact" className={styles.navLink}>
@@ -209,7 +209,7 @@ const Navbar = () => {
             )}
           </li>
 
-          <li>
+          {/* <li>
             <a
               href="/blog"
               className={styles.mobileNavLink}
@@ -217,7 +217,7 @@ const Navbar = () => {
             >
               Blog
             </a>
-          </li>
+          </li> */}
 
           <li>
             <a
