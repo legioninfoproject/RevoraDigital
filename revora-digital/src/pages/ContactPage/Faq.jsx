@@ -121,7 +121,7 @@ const FAQ = () => {
   const right = items.slice(2);
 
   return (
-    <section ref={ref} className={`${styles.section} ${visible ? styles.visible : ""}`}>
+    <section ref={ref} id ="faq" className={`${styles.section} ${visible ? styles.visible : ""}`}>
       {/* Background mesh */}
       <div className={styles.mesh} aria-hidden />
 
