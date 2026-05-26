@@ -99,46 +99,155 @@
   }
 }
 
-/* tablet */
-@media (max-width: 768px) {
+/* ===== LARGE LAPTOP (1440px) ===== */
+@media (max-width: 1440px) {
+
+  .wrapper {
+    margin-top: 70px;
+    padding: 24px 0;
+  }
+
   .header {
-    padding: 0 20px;
+    padding: 0 50px;
+    gap: 18px;
+  }
+
+  .label {
+    font-size: 20px;
+    letter-spacing: 3px;
   }
 
   .track {
-    gap: 35px;
+    gap: 55px;
   }
 
   .logoImage {
-    height: 30px;
+    height: 85px;
   }
 }
 
-/* mobile */
-@media (max-width: 576px) {
-  .label {
-    font-size: 9px;
-    letter-spacing: 2px;
+/* ===== NORMAL LAPTOP (1200px) ===== */
+@media (max-width: 1200px) {
+
+  .header {
+    padding: 0 40px;
   }
 
-  .logoImage {
-    height: 34px;
+  .label {
+    font-size: 18px;
+    letter-spacing: 2.5px;
   }
 
   .track {
-    gap: 24px;
+    gap: 45px;
+  }
+
+  .logoImage {
+    height: 75px;
+  }
+}
+
+/* ===== SMALL LAPTOP (1024px) ===== */
+@media (max-width: 1024px) {
+
+  .wrapper {
+    margin-top: 55px;
+  }
+
+  .header {
+    padding: 0 32px;
+  }
+
+  .label {
+    font-size: 17px;
+    letter-spacing: 2px;
+  }
+
+  .track {
+    gap: 38px;
+    animation: scroll 18s linear infinite;
+  }
+
+  .logoImage {
+    height: 65px;
+  }
+}
+
+/* ===== TABLET ===== */
+@media (max-width: 768px) {
+
+  .header {
+    padding: 0 22px;
+    gap: 12px;
+  }
+
+  /* Increased heading size */
+  .label {
+    font-size: 15px;
+    letter-spacing: 2px;
+  }
+
+  .track {
+    gap: 32px;
+  }
+
+  .logoImage {
+    height: 52px;
+  }
+}
+
+/* ===== MOBILE ===== */
+@media (max-width: 576px) {
+
+  .wrapper {
+    margin-top: 40px;
+    padding: 16px 0;
+  }
+
+  .header {
+    padding: 0 16px;
+    margin-bottom: 18px;
+  }
+
+  /* Heading size increased */
+  .label {
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 2.2px;
+  }
+
+  .dividerLine {
+    height: 1px;
+  }
+
+  .track {
+    gap: 26px;
+    animation: scroll 15s linear infinite;
+  }
+
+  .logoImage {
+    height: 44px;
   }
 
   .pagination {
-    margin-top: 16px;
+    margin-top: 14px;
+  }
+}
+
+/* ===== SMALL MOBILE ===== */
+@media (max-width: 480px) {
+
+  /* Mobile heading bigger */
+  .label {
+    font-size: 13px;
+    letter-spacing: 2px;
   }
 
-  .dot {
-    width: 8px;
-    height: 8px;
+  .track {
+    gap: 22px;
   }
 
-  .activeDot {
-    width: 24px;
+  .logoImage {
+    height: 60px;
   }
 }

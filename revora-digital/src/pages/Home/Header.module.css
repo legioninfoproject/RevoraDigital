@@ -374,18 +374,71 @@
   margin-top: 2px;
 }
 
-/* ===== RESPONSIVE ===== */
+/* ===== LARGE LAPTOP ===== */
+@media (max-width: 1440px) {
+  .heroContainer {
+    max-width: 1280px;
+    padding: 90px 50px 50px;
+    gap: 40px;
+  }
+
+  .heroTitle {
+    font-size: 58px;
+  }
+
+  .heroDesc {
+    font-size: 15px;
+    line-height: 1.8;
+  }
+
+  .heroLeft {
+    max-width: 620px;
+  }
+
+  .heroRight {
+    min-height: 500px;
+  }
+}
+
+/* ===== SMALL LAPTOP ===== */
+@media (max-width: 1200px) {
+  .heroContainer {
+    padding: 85px 40px 45px;
+    gap: 30px;
+  }
+
+  .heroTitle {
+    font-size: 52px;
+  }
+
+  .heroDesc {
+    font-size: 15px;
+    max-width: 100%;
+  }
+
+  .heroImg {
+    max-width: 420px;
+  }
+
+  .heroRight {
+    min-height: 430px;
+  }
+
+  .bannerInfo {
+    width: 200px;
+  }
+}
+
+/* ===== TABLET ===== */
 @media (max-width: 960px) {
   .heroContainer {
     flex-direction: column;
-    padding: 60px 24px 40px;
     text-align: center;
+    padding: 60px 24px 40px;
   }
 
   .heroLeft {
     max-width: 100%;
-    display: flex;
-    flex-direction: column;
     align-items: center;
   }
 
@@ -395,172 +448,123 @@
 
   .heroCtas {
     justify-content: center;
-  }
-
-  .heroStats {
-    justify-content: center;
+    margin-top: 20px;
   }
 
   .heroRight {
     width: 100%;
-    min-height: 360px;
+    min-height: 320px;
+    margin-top: 20px;
   }
 
-  .bannerInfo {
-    width: 180px;
-    top: 10px;
-    right: 0;
-  }
-
-  .badgeTopLeft {
-    left: 0;
-    top: 20px;
-  }
-
-  .badgeBottomRight {
-    right: 0;
-    bottom: 20px;
+  .heroImg {
+    max-width: 320px;
   }
 }
+
+/* ===== MOBILE ===== */
 @media (max-width: 768px) {
-    
+
+  /* reduce navbar-heading gap */
+  .heroSection {
+    min-height: auto;
+    padding-top: 70px;
+    padding-bottom: 50px;
+
+    /* mobile image fix */
+    background-size: cover;
+    background-position: center top;
+    background-repeat: no-repeat;
+  }
 
   .heroContainer {
-    padding: 40px 20px;
+    padding: 20px 18px 30px;
   }
 
   .heroTitle {
-    font-size: 42px;
+    font-size: 38px;
     line-height: 1.15;
-  }
-
-  .heroDesc {
-    font-size: 15px;
-    line-height: 1.7;
-  }
-
-  .heroCtas {
-    flex-direction: column;
-    width: 100%;
-    gap: 18px;
-  }
-
- 
-}
-
-@media (max-width: 480px) {
-    .heroSection {
-    min-height: auto;
-    padding-top: 100px;
-    padding-bottom: 60px;
-
-    background-size: cover;
-    background-position: center;
-  }
-  .heroTitle {
-    font-size: 32px;
-  }
-
-  .titleStar {
-    width: 34px;
-    height: 34px;
+    margin-bottom: 18px;
   }
 
   .heroDesc {
     font-size: 14px;
-  }
-}
-/* ===== LAPTOP RESPONSIVE ===== */
-
-@media (max-width: 1200px) {
-  .heroContainer {
-    max-width: 100%;
-    padding: 80px 40px 50px;
-    gap: 30px;
-  }
-
-  .heroLeft {
-    max-width: 560px;
-  }
-
-  .heroTitle {
-    font-size: 54px;
-    line-height: 1.1;
-  }
-
-  .heroDesc {
-    font-size: 15px;
     line-height: 1.7;
-    max-width: 520px;
+    margin-bottom: 26px;
   }
 
-  .heroRight {
-    min-height: 480px;
-  }
-
-  .heroImg {
-    max-width: 420px;
-  }
-
-  .bannerInfo {
-    width: 220px;
-  }
-
-  .badgeTopLeft {
-    top: 40px;
-    left: 0;
-  }
-
-  .badgeBottomRight {
-    right: 0;
-    bottom: 40px;
-  }
-}
-
-/* ===== SMALL LAPTOP ===== */
-
-@media (max-width: 1024px) {
-  .heroContainer {
-    padding: 90px 32px 50px;
-    gap: 24px;
-  }
-
-  .heroTitle {
-    font-size: 48px;
-  }
-
-  .heroDesc {
-    font-size: 15px;
-    max-width: 100%;
-  }
-
-  .heroCtas {
-    gap: 18px;
+  /* Explore service button slightly down */
+   .heroCtas {
+    flex-direction: column;
+    align-items: center;
+    gap: 28px;      /* increase gap between buttons */
+    margin-top: 35px; /* move entire button section down */
+    width: 100%;
   }
 
   .btnPrimary {
-    padding: 12px 24px;
-    font-size: 14px;
+    width: 100%;
+    max-width: 340px;
+    justify-content: center;
+    padding: 14px 22px;
   }
 
   .btnSecondary {
-    font-size: 14px;
+    margin-top: 8px;   /* move Explore Services slightly down */
+    font-size: 16px;
   }
 
   .heroRight {
-    min-height: 420px;
+    min-height: 260px;
+    margin-top: 25px;
   }
 
   .heroImg {
-    max-width: 360px;
+    max-width: 280px;
+  }
+}
+
+/* ===== SMALL MOBILE ===== */
+@media (max-width: 480px) {
+
+  .heroSection {
+    padding-top: 60px; /* less navbar gap */
+    padding-bottom: 40px;
+
+    /* better image view */
+    background-size: cover;
+    background-position: center center;
   }
 
-  .bannerInfo {
-    width: 190px;
+  .heroTitle {
+    font-size: 30px;
   }
 
-  .badgeTopLeft,
-  .badgeBottomRight {
-    transform: scale(0.9);
+  .titleStar {
+    width: 28px;
+    height: 28px;
+  }
+
+  .heroDesc {
+    font-size: 13px;
+    line-height: 1.65;
+  }
+
+  .heroImg {
+    max-width: 240px;
+  }
+
+  /* button spacing */
+   .heroCtas {
+    gap: 32px;         /* more space on small mobile */
+    margin-top: 40px;
+  }
+
+  .btnSecondary {
+    margin-top: 12px;
+  }
+
+  .btnSecondary {
+    margin-top: 8px;
   }
 }
