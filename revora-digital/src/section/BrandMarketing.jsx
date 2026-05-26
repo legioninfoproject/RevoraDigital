@@ -4,7 +4,7 @@ import BrandPresence from "../pages/BrandMarketing/BrandPresence";
 import BrandExplore from "../pages/BrandMarketing/BrandExplore";
 import BrandProcess from "../pages/BrandMarketing/BrandProcess";
 import CtaSection from "../pages/AboutPage/CtaSection";
-import Footer from "../components/Footer/Footer";
+// import Footer from "../components/Footer/Footer";
 
 const BrandMarketing = () => {
     return (
@@ -14,7 +14,7 @@ const BrandMarketing = () => {
             <BrandExplore />
             <BrandProcess />
             <CtaSection />
-            <Footer variant="light" />
+            {/* <Footer variant="light" /> */}
         </div>
     );
 };

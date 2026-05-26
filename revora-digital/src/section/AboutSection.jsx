@@ -6,7 +6,7 @@ import ChooseRevora from "../pages/AboutPage/ChooseRevora";
 import ApproachSection from "../pages/AboutPage/Approach";
 import WhyChoose from "../pages/AboutPage/WhyChoose";
 import CtaSection from "../pages/AboutPage/CtaSection";
-import Footer from "../components/Footer/Footer";
+// import Footer from "../components/Footer/Footer";
 import WhatWeDo from "../pages/AboutPage/WhatWeDo";
 
 
@@ -22,7 +22,7 @@ const AboutSection = () => {
             <ApproachSection />
             <CtaSection />
             {/* <TeamSection /> */}
-            <Footer variant="light" />
+            {/* <Footer variant="light" /> */}
 
         </div>
     );

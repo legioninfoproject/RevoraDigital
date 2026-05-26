@@ -7,7 +7,7 @@ import Workprocess from "../pages/Home/Workprocess";
 // import TeamSection from "../components/TeamSection/TeamSection";
 import Testimonial from "../components/Testimonial/Testimonial";
 import ContactForm from "../components/ContactForm/ContactForm";
-import Footer from "../components/Footer/Footer";
+// import Footer from "../components/Footer/Footer";
 
 const Section = () => {
     return (
@@ -20,7 +20,7 @@ const Section = () => {
             {/* <TeamSection /> */}
             <Testimonial />
             <ContactForm />
-            <Footer variant="light"/>
+            {/* <Footer variant="light"/> */}
         </div>
     );
 };

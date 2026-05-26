@@ -10,6 +10,8 @@ import RevoraFormSection from "./section/RevoraFormSection";
 import BrandMarketing from "./section/BrandMarketing";
 import DigitalSection from "./section/DigitalSection";
 import EcommerceMarketing from "./section/EcommerceMarketing";
+import PrivacyPolicy from "./section/Privacypolicy";
+import  Footer from "./components/Footer/Footer";
 
 function App() {
   return (
@@ -25,7 +27,10 @@ function App() {
         <Route path="/brandmarketing" element={<BrandMarketing />} />
         <Route path="/digital" element={<DigitalSection />} />
         <Route path="/ecommerce" element={<EcommerceMarketing />} />
+        <Route path="PrivacyPolicy" element={<PrivacyPolicy />} />
       </Routes>
+
+      <Footer variant="light"/>
     </div>
   );
 }

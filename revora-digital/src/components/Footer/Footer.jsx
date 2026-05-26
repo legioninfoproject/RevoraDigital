@@ -28,14 +28,14 @@ const NAV = {
   Support: [
     { name: "Contact Us", path: "/revoraform" },
     { name: "FAQ", path: "/contact" },
-    { name: "Customer Service", path: "/customer-service" },
-    { name: "Terms Conditions", path: "/terms-and-conditions" },
+    { name: "Customer Service", path: "/PrivacyPolicy" },
+    { name: "Terms Conditions", path: "/PrivacyPolicy" },
   ],
 
   Legal: [
-    { name: "Privacy Policy", path: "/privacy-policy" },
-    { name: "Cookie Policy", path: "/cookie-policy" },
-    { name: "Copyright", path: "/copyright" },
+    { name: "Privacy Policy", path: "/PrivacyPolicy" },
+    { name: "Cookie Policy", path: "/PrivacyPolicy" },
+    { name: "Copyright", path: "/PrivacyPolicy" },
   ],
 };
 

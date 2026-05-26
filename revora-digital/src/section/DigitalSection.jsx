@@ -5,7 +5,7 @@ import DigitalMarketingExplore from "../pages/DigitalMarketing/DigitalMarketingE
 import Services from "../pages/DigitalMarketing/Services";
 import DigitalGrowth from "../pages/DigitalMarketing/DigitalGrowth";
 import CtaSection from "../pages/AboutPage/CtaSection";
-import Footer from "../components/Footer/Footer";
+// import Footer from "../components/Footer/Footer";
 
 const DigitalSection = () => {
     return (
@@ -16,7 +16,7 @@ const DigitalSection = () => {
              <DigitalMarketingExplore />
              <DigitalGrowth />
              <CtaSection />
-             <Footer variant="light" />
+             {/* <Footer variant="light" /> */}
         </section>
     );
 };
