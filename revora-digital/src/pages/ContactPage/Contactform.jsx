@@ -140,7 +140,7 @@ const ContactSection = () => {
   };
 
   return (
-    <section
+    <section id="contact"
       ref={sectionRef}
       className={`${styles.section} ${
         visible ? styles.visible : ""

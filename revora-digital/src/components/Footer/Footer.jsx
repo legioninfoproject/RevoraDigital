@@ -19,15 +19,16 @@ import image from "../../assets/logo.png";
 
 const NAV = {
   Company: [
+    { name: "Home", path: "/" },
     { name: "About Us", path: "/about" },
     { name: "Services", path: "/brandmarketing" },
-    { name: "Blog", path: "/blog" },
+    // { name: "Blog", path: "/blog" },
     { name: "Contact", path: "/contact" },
   ],
 
   Support: [
-    { name: "Contact Us", path: "/revoraform" },
-    { name: "FAQ", path: "/contact" },
+    { name: "Contact Us", path: "/contact#contact" },
+    { name: "FAQ", path: "/contact#faq" },
     { name: "Customer Service", path: "/PrivacyPolicy" },
     { name: "Terms Conditions", path: "/PrivacyPolicy" },
   ],

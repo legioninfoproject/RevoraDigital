@@ -12,12 +12,13 @@ import DigitalSection from "./section/DigitalSection";
 import EcommerceMarketing from "./section/EcommerceMarketing";
 import PrivacyPolicy from "./section/Privacypolicy";
 import  Footer from "./components/Footer/Footer";
+import ScrollTop from "./components/Scrolltop/Scrolltop";
 
 function App() {
   return (
     <div className="App">
       <Navbar />
-
+     <ScrollTop />
       <Routes>
         <Route path="/" element={<Section />} />
         <Route path="/contact" element={<ContactSection />} />
