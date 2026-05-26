@@ -5,7 +5,7 @@ import { MdCampaign } from "react-icons/md";
 
 const Services = () => {
   return (
-    <section className={styles.servicesSection}>
+    <section className={styles.servicesSection} id="services">
       <div className={styles.container}>
         
         {/* TOP CONTENT */}

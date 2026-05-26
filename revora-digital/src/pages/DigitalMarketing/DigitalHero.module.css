@@ -177,6 +177,7 @@
   letter-spacing: 0.04em;
   box-shadow: 0 4px 20px rgba(15,31,31,0.18);
   transition: background 0.25s, transform 0.2s, box-shadow 0.25s;
+  text-decoration: none;
 }
 
 .btnPrimary:hover {
@@ -203,6 +204,7 @@
   letter-spacing: 0.04em;
   /* transition: border-color 0.25s, color 0.25s, transform 0.2s; */
   border-color: #0d7a7a;
+  text-decoration: none;
 }
 .btnOutline:hover {
   border-color: #0d7a7a;

@@ -87,7 +87,7 @@ const Ecommerceabout = () => {
   const [active, setActive] = useState(0);
 
   return (
-    <section className={styles.section}>
+    <section className={styles.section} id="ecommerce-about">
       <div className={styles.container}>
         <span className={styles.tag}>WORK WE DO</span>
 

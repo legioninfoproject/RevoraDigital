@@ -2,6 +2,7 @@ import React from "react";
 import styles from "./BrandHeader.module.css";
 import heroImage from "../../assets/brandMarketting.avif"
 import { IoIosArrowRoundForward } from "react-icons/io";
+import { Link } from "react-router-dom";
 
 
 const BrandHeader = () => {
@@ -32,13 +33,16 @@ From brand strategy and visual identity to digital campaigns and market position
         </p>
 
         <div className={styles.buttonGroup}>
-         <button className={styles.primaryBtn}>
- Start Your Brand Journey
+<Link
+  to="/brandmarketing#brand-presence"
+  className={styles.primaryBtn}
+>
+  Start Your Brand Journey
 
   <span className={styles.arrowIcon}>
     <IoIosArrowRoundForward />
   </span>
-</button>
+</Link>
 
           {/* <button className={styles.secondaryBtn}>
             Watch Story

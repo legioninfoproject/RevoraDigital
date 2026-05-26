@@ -8,10 +8,11 @@ import {
   FiUsers,
 } from "react-icons/fi";
 import { IoIosArrowRoundForward } from "react-icons/io";
+import { Link } from "react-router-dom";
 
 const BrandWaveSection = () => {
   return (
-    <section className={styles.brandSection}>
+    <section className={styles.brandSection} id="brand-presence">
       {/* LEFT CONTENT */}
       <div className={styles.left}>
         <span className={styles.tag}>Brand Growth</span>
@@ -32,10 +33,13 @@ const BrandWaveSection = () => {
           and memorable business presence across digital platforms.
         </p>
 
-       <button className={styles.btn}>
+     <Link
+  to="/brandmarketing#brand-explore"
+  className={styles.btn}
+>
   <span>Explore Branding</span>
   <IoIosArrowRoundForward className={styles.arrow} />
-</button>
+</Link>
       </div>
 
       {/* RIGHT TIMELINE */}

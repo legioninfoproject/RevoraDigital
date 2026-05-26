@@ -79,7 +79,7 @@ const BrandExplore = () => {
   const sectionRef = useScrollReveal(`.${styles.card}`);
 
   return (
-    <section className={styles.section} ref={sectionRef}>
+    <section className={styles.section} ref={sectionRef} id="brand-explore">
       {/* Header */}
       <header className={styles.header}>
         

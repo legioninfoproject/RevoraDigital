@@ -11,7 +11,7 @@ import {
 
 import styles from "./DigitalHero.module.css";
 import image from "../../assets/digitalMarketing.png";
-
+import { Link } from "react-router-dom";
 /* ─────────────────────────────────────────────
    Orbital Services
 ───────────────────────────────────────────── */
@@ -131,15 +131,15 @@ const DigitalHero = () => {
   }, []);
 
   /* Smooth Scroll */
-  const handleExploreClick = () => {
-    const nextSection = document.getElementById("digital-services");
+  // const handleExploreClick = () => {
+  //   const nextSection = document.getElementById("digital-services");
 
-    if (nextSection) {
-      nextSection.scrollIntoView({
-        behavior: "smooth",
-      });
-    }
-  };
+  //   if (nextSection) {
+  //     nextSection.scrollIntoView({
+  //       behavior: "smooth",
+  //     });
+  //   }
+  // };
 
   return (
     <section className={styles.hero} ref={heroRef}>
@@ -177,18 +177,21 @@ const DigitalHero = () => {
         </p>
 
         <div className={styles.ctaRow}>
-          <button
-            className={styles.btnPrimary}
-            onClick={handleExploreClick}
-          >
-            Explore Services
-            <FiArrowRight size={18} />
-          </button>
+              <Link
+        to="/digital#services"
+        className={styles.btnPrimary}
+      >
+        Explore Services
+        <FiArrowRight size={18} />
+      </Link>
 
-          <button className={styles.btnOutline}>
-            Get Free Consultation
-            <FiArrowRight size={18} />
-          </button>
+          <Link
+  to="/revoraform"
+  className={styles.btnOutline}
+>
+  Get Free Consultation
+  <FiArrowRight size={18} />
+</Link>
         </div>
       </div>
 

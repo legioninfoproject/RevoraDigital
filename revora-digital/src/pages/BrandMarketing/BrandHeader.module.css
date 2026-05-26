@@ -592,6 +592,7 @@
   cursor: pointer;
   transition: 0.3s;
  font-family: "Poppins", sans-serif;
+text-decoration: none;
 }
 
 .primaryBtn:hover {

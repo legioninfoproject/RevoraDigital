@@ -3,6 +3,7 @@ import { FiArrowRight } from "react-icons/fi";
 
 import styles from "./EcommerceHero.module.css";
 import heroImage from "../../assets/ecommerce.avif";
+import { Link } from "react-router-dom";
 
 const EcommerceHero = () => {
   return (
@@ -47,13 +48,15 @@ const EcommerceHero = () => {
             solutions that help online brands attract the right
             audience and achieve measurable growth.
           </p>
-
           {/* Buttons */}
           <div className={styles.ctaRow}>
-            <button className={styles.btnPrimary}>
-              Explore Services
-              <FiArrowRight size={18} />
-            </button>
+          <Link
+  to="/ecommerce#ecommerce-about"
+  className={styles.btnPrimary}
+>
+  Explore Services
+  <FiArrowRight size={18} />
+</Link>
           </div>
         </div>
 

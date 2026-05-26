@@ -99,6 +99,7 @@
 
   box-shadow: 0 12px 30px rgba(10, 110, 112, 0.18);
   font-family: "Poppins", sans-serif;
+  text-decoration: none;
 }
 
 .btn:hover {
