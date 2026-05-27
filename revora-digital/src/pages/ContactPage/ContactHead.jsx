@@ -2,9 +2,27 @@ import React from "react";
 import styles from "./ContactHead.module.css";
 import contactBg from "../../assets/contactbanner.png";
 import { FiZap, FiHeadphones, FiStar } from "react-icons/fi";
+import { Helmet } from "react-helmet-async";
 
 const ContactHead = () => {
   return (
+    <>
+     <Helmet>
+          <title>
+              Contact Revora Digital | Digital Marketing Agency
+              </title>
+         
+                 <meta
+                   name="description"
+                   content=" Contact Revora Digital in Coimbatore for SEO, Google Ads, branding, social media marketing, and business growth solutions."
+                 />
+         
+                 <meta
+                   name="keywords"
+                   content="Contact Revora Digital,Digital Marketing Agency , SEO Services Coimbatore , Google Ads Agency , Social Media Marketing,Branding Services,Business Growth Solutions"
+                 />
+               </Helmet>
+  
     <section
       className={styles.ch2Hero}
       style={{ backgroundImage: `url(${contactBg})` }}
@@ -79,6 +97,7 @@ const ContactHead = () => {
         </div>
       </div>
     </section>
+    </>
   );
 };
 

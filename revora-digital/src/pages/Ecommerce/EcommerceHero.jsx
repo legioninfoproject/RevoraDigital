@@ -4,9 +4,26 @@ import { FiArrowRight } from "react-icons/fi";
 import styles from "./EcommerceHero.module.css";
 import heroImage from "../../assets/ecommerce.avif";
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 
 const EcommerceHero = () => {
   return (
+    <>
+      <Helmet>
+             <title>
+               E-commerce Marketing Services | Revora Digital
+             </title>
+     
+             <meta
+               name="description"
+               content="Revora Digital provides e-commerce marketing services including SEO, paid ads, CRO, and analytics to increase traffic, sales, and growth."
+             />
+     
+             <meta
+               name="keywords"
+               content="E-commerce Marketing Services,Ecommerce SEO,Conversion Rate Optimization,Online Store Growth,Ecommerce Advertising,Ecommerce Analytics,Sales Growth Strategy"
+             />
+           </Helmet>
     <section className={styles.hero}>
       {/* Background */}
       <div className={styles.heroBlobOne}></div>
@@ -72,7 +89,9 @@ const EcommerceHero = () => {
         </div>
       </div>
     </section>
+    </>
   );
+
 };
 
 export default EcommerceHero;
