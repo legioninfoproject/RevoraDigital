@@ -159,15 +159,15 @@ const DigitalHero = () => {
           DIGITAL MARKETING
         </span>
 
-        <h1 className={styles.headline}>
-          Results-Driven
-          <br />
-          <span className={styles.accentGreen}>
-            Digital Marketing
-          </span>
-           Solutions
-        </h1>
-
+      <h1 className={styles.headline}>
+  Results-Driven
+  <br />
+  <span className={styles.accentGreen}>
+    Digital Marketing
+  </span>
+  <br />
+  Solutions
+</h1>
         <p className={styles.body}>
           Grow your visibility, generate more leads,
           and scale your brand online with customized
