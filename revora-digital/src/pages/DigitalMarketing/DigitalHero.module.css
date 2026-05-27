@@ -424,16 +424,121 @@
   letter-spacing: 0.04em;
 }
 
-/* ─── Responsive ──────────────────────────────────────────────────────────── */
+/* ==============================
+   LARGE LAPTOP (1440px+)
+============================== */
+@media (min-width: 1440px) {
+  .hero {
+    padding: 5rem 7vw;
+    gap: 4rem;
+  }
 
-@media (max-width: 960px) {
+  .headline {
+    font-size: 72px;
+  }
+
+  .right {
+    min-height: 650px;
+  }
+
+  .orbitRing {
+    width: 480px;
+    height: 480px;
+  }
+
+  .orbitRingInner {
+    width: 340px;
+    height: 340px;
+  }
+
+  .laptopImage {
+    max-width: 470px;
+  }
+
+  .orbPill {
+    transform: scale(1);
+  }
+}
+
+/* ==============================
+   LAPTOP / DESKTOP
+============================== */
+@media (max-width: 1200px) {
+  .hero {
+    gap: 2rem;
+    padding: 4rem 5vw;
+  }
+
+  .headline {
+    font-size: 58px;
+  }
+
+  .orbitRing {
+    width: 380px;
+    height: 380px;
+  }
+
+  .orbitRingInner {
+    width: 280px;
+    height: 280px;
+  }
+
+  .laptopImage {
+    max-width: 330px;
+  }
+}
+
+/* ==============================
+   SMALL LAPTOP
+============================== */
+@media (max-width: 1024px) {
+  .hero {
+    gap: 2rem;
+    padding: 3.5rem 4vw;
+  }
+
+  .headline {
+    font-size: 48px;
+    line-height: 1.1;
+  }
+
+  .body {
+    font-size: 15px;
+  }
+
+  .right {
+    min-height: 470px;
+  }
+
+  .orbitRing {
+    width: 320px;
+    height: 320px;
+  }
+
+  .orbitRingInner {
+    width: 230px;
+    height: 230px;
+  }
+
+  .laptopImage {
+    max-width: 260px;
+  }
+
+  .orbPill {
+    transform: scale(.85);
+  }
+}
+
+/* ==============================
+   TABLET
+============================== */
+@media (max-width: 768px) {
 
   .hero {
     flex-direction: column;
     text-align: center;
+    padding: 3rem 1.5rem;
     gap: 3rem;
-    min-height: auto;
-    padding: 4rem 5vw;
   }
 
   .left {
@@ -442,52 +547,60 @@
 
   .body {
     max-width: 100%;
-    margin-inline: auto;
+    margin: auto;
   }
 
   .ctaRow {
     justify-content: center;
+    flex-wrap: wrap;
   }
 
   .right {
     width: 100%;
-    min-height: 500px;
+    min-height: 420px;
     transform: none !important;
   }
 
+  .headline {
+    font-size: 42px;
+  }
+
   .orbitRing {
-    width: 340px;
-    height: 340px;
+    width: 300px;
+    height: 300px;
   }
 
   .orbitRingInner {
-    width: 240px;
-    height: 240px;
+    width: 210px;
+    height: 210px;
   }
 
   .laptopImage {
-    max-width: 270px;
+    max-width: 240px;
+  }
+
+  .orbPill {
+    transform: scale(.75);
   }
 }
 
-/* ─────────────────────────────────────
+/* ==============================
    MOBILE
-───────────────────────────────────── */
-
+============================== */
 @media (max-width: 580px) {
 
   .hero {
-    padding: 2.5rem 1rem 4rem;
-    overflow: hidden;
+    padding: 2rem 1rem 3rem;
   }
 
   .headline {
-    font-size: 2rem;
-    line-height: 1.2;
+    font-size: 34px;
+    line-height: 1.15;
   }
 
   .body {
-    font-size: 0.92rem;
+    font-size: 14px;
+    line-height: 1.7;
   }
 
   .ctaRow {
@@ -502,41 +615,71 @@
   }
 
   .right {
-    min-height: 420px;
-    margin-top: 1rem;
+    min-height: 340px;
   }
 
   .orbitRing {
-    width: 260px;
-    height: 260px;
+    width: 240px;
+    height: 240px;
   }
 
   .orbitRingInner {
-    width: 180px;
-    height: 180px;
+    width: 170px;
+    height: 170px;
   }
 
   .laptopImage {
-    max-width: 180px;
+    max-width: 170px;
   }
 
   .orbPill {
-    transform: scale(0.82);
+    transform: scale(.58);
+    padding: 4px 8px;
+  }
+
+  .orbLabel {
+    font-size: 10px;
+  }
+
+  .orbIcon {
+    width: 22px;
+    height: 22px;
   }
 
   .cornerAccent {
-    width: 110px;
-    height: 110px;
+    width: 100px;
+    height: 100px;
   }
 
   .cornerDots {
-    left: 20px;
-    bottom: 20px;
+    display: none;
   }
 }
 
-@media (max-width: 580px) {
-  .orbitRing  { width: 300px; height: 300px; }
-  .orbitRingInner { width: 210px; height: 210px; }
-  .cornerAccent { width: 130px; height: 130px; }
+/* ==============================
+   SMALL MOBILE
+============================== */
+@media (max-width: 380px) {
+
+  .headline {
+    font-size: 28px;
+  }
+
+  .laptopImage {
+    max-width: 140px;
+  }
+
+  .orbitRing {
+    width: 210px;
+    height: 210px;
+  }
+
+  .orbitRingInner {
+    width: 140px;
+    height: 140px;
+  }
+
+  .orbPill {
+    transform: scale(.48);
+  }
 }
