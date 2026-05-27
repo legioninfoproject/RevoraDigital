@@ -18,16 +18,17 @@ import image4 from "../../assets/testimonial-image4.png";
 const TESTIMONIALS = [
   {
     id: 1,
-    quote:"“Working with Revora Digital has significantly improved our online presence and lead generation. Their digital marketing strategies delivered measurable growth and valuable business insights.”",
+    quote:
+      "Working with Revora Digital transformed our online presence. Their SEO and marketing strategies increased our website traffic, generated qualified leads, and helped us achieve measurable business growth.",
     name: "Kawser Ahmed",
     role: "Chief Executive Officer",
     avatar: image1,
-    rating: 4,
+    rating: 5,
   },
   {
     id: 2,
     quote:
-      "Marketi transformed our brand presence completely. Their creative team understood our vision instantly and delivered campaigns that resonated deeply with our audience — beyond anything we imagined.",
+      "Revora Digital understood our brand vision perfectly and delivered creative marketing campaigns that connected with our audience. Their team is professional, innovative, and results-driven.",
     name: "Priya Nair",
     role: "Head of Strategy",
     avatar: image2,
@@ -36,7 +37,7 @@ const TESTIMONIALS = [
   {
     id: 3,
     quote:
-      "The results speak for themselves — 3x organic traffic in just 4 months. Marketi's SEO and content team are exceptional. They treat your business like it's their own, and that makes all the difference.",
+      "We saw remarkable improvement in search rankings and customer engagement after partnering with Revora Digital. Their SEO, content, and social media strategies delivered real business impact.",
     name: "Marcus Haven",
     role: "Creative Director",
     avatar: image3,
@@ -45,7 +46,7 @@ const TESTIMONIALS = [
   {
     id: 4,
     quote:
-      "From strategy to execution, Marketi's team is top-tier. They identified growth opportunities we'd completely overlooked and built a roadmap that delivered real, measurable results within weeks.",
+      "Revora Digital helped us identify new growth opportunities and build a strong digital presence. Their transparent communication and performance-focused marketing approach exceeded expectations.",
     name: "Olivia Riday",
     role: "Client Relations Manager",
     avatar: image4,
@@ -132,13 +133,13 @@ const Testimonial = () => {
            what Clients
            <br />
             Say About{" "}
-            Our Marketing
+           Revora Digital
          <span className={styles.underline}>  Services</span>
           </h2>
 
           <p className={styles.desc}>
-            Our clients trust Revora Digital for transparent communication, 
-            measurable growth, and marketing strategies that generate real business results.
+            Our clients trust Revora Digital for innovative marketing strategies, transparent communication,
+             and measurable results that help businesses grow online.
           </p>
 
           <button className={styles.ctaBtn}>
@@ -158,8 +159,8 @@ const Testimonial = () => {
               <span className={styles.badge5k}>5k+</span>
             </div>
             <div className={styles.clientLabel}>
-              <strong>Satisfied clients</strong>
-              of Marketi
+              <strong>Satisfied Clients</strong>
+of Revora Digital
             </div>
           </div>
         </div>
