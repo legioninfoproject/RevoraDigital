@@ -70,7 +70,7 @@ const services = [
     title: "Ecommerce Marketing",
     body:
       "Increase ecommerce sales through conversion-focused campaigns, SEO optimization, paid advertising, and retention strategies.",
-    link: "/ecommerce",
+    link: "/ecommerce-marketing-services",
   },
 ];
 const BrandSection = () => {

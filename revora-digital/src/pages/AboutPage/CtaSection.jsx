@@ -25,7 +25,7 @@ const CtaSection = () => {
       success.
     </p>
 
-    <a href="/contact" className={styles.ctaBtn}>
+    <a href="/contact-revora-digital" className={styles.ctaBtn}>
   <span>Contact Us</span>
   <IoIosArrowRoundForward className={styles.arrowIcon} />
 </a>

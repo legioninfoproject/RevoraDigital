@@ -21,13 +21,13 @@ function App() {
      <ScrollTop />
       <Routes>
         <Route path="/" element={<Section />} />
-        <Route path="/contact" element={<ContactSection />} />
+        <Route path="/contact-revora-digital" element={<ContactSection />} />
         <Route path="/about" element={<AboutSection />} />
         {/* <Route path="/blog" element={<BlogSection />} /> */}
         <Route path="/revoraform" element={<RevoraFormSection />} />
         <Route path="/brandmarketing" element={<BrandMarketing />} />
         <Route path="/digital" element={<DigitalSection />} />
-        <Route path="/ecommerce" element={<EcommerceMarketing />} />
+        <Route path="/ecommerce-marketing-services" element={<EcommerceMarketing />} />
         <Route path="PrivacyPolicy" element={<PrivacyPolicy />} />
       </Routes>
 

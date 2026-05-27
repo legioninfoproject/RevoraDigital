@@ -88,7 +88,7 @@ const Navbar = () => {
               </a>
 
               <a
-                href="/ecommerce"
+                href="/ecommerce-marketing-services"
                 className={styles.dropdownItem}
               >
                 Ecommerce Marketing
@@ -103,7 +103,7 @@ const Navbar = () => {
           </li> */}
 
           <li className={styles.navItem}>
-            <a href="/contact" className={styles.navLink}>
+            <a href="/contact-revora-digital" className={styles.navLink}>
               Contact
             </a>
           </li>
@@ -200,7 +200,7 @@ const Navbar = () => {
                 </a>
 
                 <a
-                  href="/ecommerce"
+                  href="/ecommerce-marketing-services"
                   className={styles.mobileDropdownItem}
                 >
                   Ecommerce Marketing
@@ -221,7 +221,7 @@ const Navbar = () => {
 
           <li>
             <a
-              href="/contact"
+              href="/contact-revora-digital"
               className={styles.mobileNavLink}
               onClick={() => setMobileOpen(false)}
             >

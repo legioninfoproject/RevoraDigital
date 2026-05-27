@@ -68,7 +68,7 @@ const EcommerceHero = () => {
           {/* Buttons */}
           <div className={styles.ctaRow}>
           <Link
-  to="/ecommerce#ecommerce-about"
+  to="/ecommerce-marketing-services#ecommerce-about"
   className={styles.btnPrimary}
 >
   Explore Services

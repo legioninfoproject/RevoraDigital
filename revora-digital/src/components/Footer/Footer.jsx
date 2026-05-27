@@ -23,12 +23,12 @@ const NAV = {
     { name: "About Us", path: "/about" },
     { name: "Services", path: "/brandmarketing" },
     // { name: "Blog", path: "/blog" },
-    { name: "Contact", path: "/contact" },
+    { name: "Contact", path: "/contact-revora-digital" },
   ],
 
   Support: [
-    { name: "Contact Us", path: "/contact#contact" },
-    { name: "FAQ", path: "/contact#faq" },
+    { name: "Contact Us", path: "/contact-revora-digital#contact" },
+    { name: "FAQ", path: "/contact-revora-digital#faq" },
     { name: "Customer Service", path: "/PrivacyPolicy" },
     { name: "Terms Conditions", path: "/PrivacyPolicy" },
   ],

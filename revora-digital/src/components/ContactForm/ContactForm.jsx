@@ -31,7 +31,7 @@ const ContactForm = () => {
           </p>
 
           {/* BUTTON */}
-          <a href="/contact" className={styles.btn}>
+          <a href="/contact-revora-digital" className={styles.btn}>
             Get Free Marketing Consultation 
             <HiArrowRight className={styles.icon} />
           </a>

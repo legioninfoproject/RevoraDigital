@@ -13,7 +13,7 @@ import image1 from "../../assets/testimonial-image1.png";
 import image2 from "../../assets/testimonial-image2.png";
 import image3 from "../../assets/testimonial-image3.png";
 import image4 from "../../assets/testimonial-image4.png";
-
+import { Link } from "react-router-dom";
 // ─── DATA ──────────────────────────────────────────────────────────────────────
 const TESTIMONIALS = [
   {
@@ -142,12 +142,13 @@ const Testimonial = () => {
              and measurable results that help businesses grow online.
           </p>
 
-          <button className={styles.ctaBtn}>
-            Try it Now
-            <span className={styles.ctaBtnIcon}>
-              <FaArrowRight size={10} />
-            </span>
-          </button>
+         
+<Link to="/contact-revora-digital" className={styles.ctaBtn}>
+  Try it Now
+  <span className={styles.ctaBtnIcon}>
+    <FaArrowRight size={10} />
+  </span>
+</Link>
 
           <div className={styles.divider} />
 

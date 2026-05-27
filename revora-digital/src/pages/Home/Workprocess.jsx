@@ -110,7 +110,7 @@ export default function WorkProcess() {
       </div>
 
       <div className={styles.btnWrapper}>
-  <a href="/contact" className={styles.button}>
+  <a href="/contact-revora-digital" className={styles.button}>
     Start Your Journey
     <HiArrowLongRight />
   </a>
