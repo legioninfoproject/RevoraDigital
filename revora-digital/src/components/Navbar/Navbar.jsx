@@ -42,7 +42,7 @@ const Navbar = () => {
           </li>
 
           <li className={styles.navItem}>
-            <a href="/about" className={styles.navLink}>
+            <a href="/about-revora-digital" className={styles.navLink}>
               About Us
             </a>
           </li>
@@ -160,7 +160,7 @@ const Navbar = () => {
 
           <li>
             <a
-              href="/about"
+              href="/about-revora-digital"
               className={styles.mobileNavLink}
               onClick={() => setMobileOpen(false)}
             >

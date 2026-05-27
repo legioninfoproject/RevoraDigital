@@ -22,7 +22,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Section />} />
         <Route path="/contact-revora-digital" element={<ContactSection />} />
-        <Route path="/about" element={<AboutSection />} />
+        <Route path="/about-revora-digital" element={<AboutSection />} />
         {/* <Route path="/blog" element={<BlogSection />} /> */}
         <Route path="/revoraform" element={<RevoraFormSection />} />
         <Route path="/brand-marketing-services" element={<BrandMarketing />} />

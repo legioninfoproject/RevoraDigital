@@ -20,7 +20,7 @@ import image from "../../assets/logo.png";
 const NAV = {
   Company: [
     { name: "Home", path: "/" },
-    { name: "About Us", path: "/about" },
+    { name: "About Us", path: "/about-revora-digital" },
     { name: "Services", path: "/brand-marketing-services" },
     // { name: "Blog", path: "/blog" },
     { name: "Contact", path: "/contact-revora-digital" },

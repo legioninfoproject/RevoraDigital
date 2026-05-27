@@ -65,7 +65,7 @@ const Header = () => {
                 <HiArrowRight className={styles.btnIcon} />
               </a>
 
-              <a href="/about" className={styles.btnSecondary}>
+              <a href="/about-revora-digital" className={styles.btnSecondary}>
                 Explore Services
                 <HiArrowUpRight className={styles.btnSecIcon} />
               </a>

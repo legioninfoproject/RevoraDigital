@@ -97,7 +97,7 @@ const About = () => {
            and weak online engagement. Our team focuses on SEO-driven digital marketing,
             audience-focused strategies, and conversion optimization to help businesses 
             achieve sustainable growth and stronger ROI.{" "}
-          <a href="/about" className={styles.readMore}>
+          <a href="/about-revora-digital" className={styles.readMore}>
             Read More
           </a>
         </p>
