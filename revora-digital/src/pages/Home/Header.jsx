@@ -60,7 +60,7 @@ const Header = () => {
             </p>
 
             <div className={styles.heroCtas}>
-              <a href="/revoraform" className={styles.btnPrimary}>
+              <a href="/revora-consultation-form" className={styles.btnPrimary}>
                 Get Started
                 <HiArrowRight className={styles.btnIcon} />
               </a>

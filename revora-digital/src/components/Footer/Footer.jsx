@@ -19,7 +19,7 @@ import image from "../../assets/logo.png";
 
 const NAV = {
   Company: [
-    { name: "Home", path: "/" },
+    { name: "Home", path: "/digital-marketing-growth" },
     { name: "About Us", path: "/about-revora-digital" },
     { name: "Services", path: "/brand-marketing-services" },
     // { name: "Blog", path: "/blog" },
@@ -29,14 +29,14 @@ const NAV = {
   Support: [
     { name: "Contact Us", path: "/contact-revora-digital#contact" },
     { name: "FAQ", path: "/contact-revora-digital#faq" },
-    { name: "Customer Service", path: "/PrivacyPolicy" },
-    { name: "Terms Conditions", path: "/PrivacyPolicy" },
+    { name: "Customer Service", path: "/legal-policies" },
+    { name: "Terms Conditions", path: "/legal-policies" },
   ],
 
   Legal: [
-    { name: "Privacy Policy", path: "/PrivacyPolicy" },
-    { name: "Cookie Policy", path: "/PrivacyPolicy" },
-    { name: "Copyright", path: "/PrivacyPolicy" },
+    { name: "Privacy Policy", path: "/legal-policies" },
+    { name: "Cookie Policy", path: "/legal-policies" },
+    { name: "Copyright", path: "/legal-policies" },
   ],
 };
 
@@ -80,7 +80,7 @@ const Footer = ({ variant = "dark" }) => {
 
         {/* ── BRAND ───────────────────────── */}
         <div className={styles.brand}>
-          <Link className={styles.logoRow} to="/">
+          <Link className={styles.logoRow} to="/digital-marketing-growth">
             <div className={styles.logoIcon}>
               <img
                 src={image}

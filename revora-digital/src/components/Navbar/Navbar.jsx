@@ -29,14 +29,14 @@ const Navbar = () => {
       <div className={styles.container}>
         
         {/* LOGO */}
-        <a href="/" className={styles.logo}>
+        <a href="/digital-marketing-growth" className={styles.logo}>
           <img src={logo} alt="Revora Digital" className={styles.logoImg} />
         </a>
 
         {/* DESKTOP MENU */}
         <ul className={styles.navLinks}>
           <li className={styles.navItem}>
-            <a href="/" className={styles.navLink}>
+            <a href="/digital-marketing-growth" className={styles.navLink}>
               Home
             </a>
           </li>
@@ -110,7 +110,7 @@ const Navbar = () => {
         </ul>
 
         {/* CTA BUTTON */}
-        <a href="/revoraform" className={styles.ctaButton}>
+        <a href="/revora-consultation-form" className={styles.ctaButton}>
           Get in Touch
           <IoIosArrowRoundForward className={styles.ctaArrow} />
         </a>
@@ -150,7 +150,7 @@ const Navbar = () => {
         <ul className={styles.mobileNavLinks}>
           <li>
             <a
-              href="/"
+              href="/digital-marketing-growth"
               className={styles.mobileNavLink}
               onClick={() => setMobileOpen(false)}
             >
@@ -230,7 +230,7 @@ const Navbar = () => {
           </li>
 
           <li>
-            <a href="/revoraform" className={styles.mobileCtaButton}>
+            <a href="/revora-consultation-form" className={styles.mobileCtaButton}>
               Get in Touch
               <IoIosArrowRoundForward />
             </a>

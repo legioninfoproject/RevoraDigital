@@ -206,7 +206,7 @@ const DigitalHero = () => {
       </Link>
 
           <Link
-  to="/revoraform"
+  to="/revora-consultation-form"
   className={styles.btnOutline}
 >
   Get Free Consultation

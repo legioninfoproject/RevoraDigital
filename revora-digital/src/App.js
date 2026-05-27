@@ -20,15 +20,15 @@ function App() {
       <Navbar />
      <ScrollTop />
       <Routes>
-        <Route path="/" element={<Section />} />
+        <Route path="/digital-marketing-growth" element={<Section />} />
         <Route path="/contact-revora-digital" element={<ContactSection />} />
         <Route path="/about-revora-digital" element={<AboutSection />} />
         {/* <Route path="/blog" element={<BlogSection />} /> */}
-        <Route path="/revoraform" element={<RevoraFormSection />} />
+        <Route path="/revora-consultation-form" element={<RevoraFormSection />} />
         <Route path="/brand-marketing-services" element={<BrandMarketing />} />
         <Route path="/digital-marketing-services" element={<DigitalSection />} />
         <Route path="/ecommerce-marketing-services" element={<EcommerceMarketing />} />
-        <Route path="PrivacyPolicy" element={<PrivacyPolicy />} />
+        <Route path="/legal-policies" element={<PrivacyPolicy />} />
       </Routes>
 
       <Footer variant="light"/>
