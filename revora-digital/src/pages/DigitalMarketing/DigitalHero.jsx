@@ -12,6 +12,7 @@ import {
 import styles from "./DigitalHero.module.css";
 import image from "../../assets/digitalMarketing.png";
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 /* ─────────────────────────────────────────────
    Orbital Services
 ───────────────────────────────────────────── */
@@ -142,6 +143,25 @@ const DigitalHero = () => {
   // };
 
   return (
+    <>
+     <Helmet>
+            <title>
+                Digital Marketing Services | Revora Digital
+            </title>
+    
+            <meta
+              name="description"
+              content=" Explore Revora Digital’s SEO, social media, Google Ads, branding, and digital marketing services designed to grow your business online."
+            />
+    
+            <meta
+              name="keywords"
+              content="Digital Marketing Services , SEO Services , Social Media Marketing , Google Ads , Branding Services , Lead Generation ,Online Business Growth"
+            />
+          </Helmet>
+
+
+
     <section className={styles.hero} ref={heroRef}>
       {/* Background Shape */}
       <div className={styles.cornerAccent}></div>
@@ -216,6 +236,7 @@ const DigitalHero = () => {
         ))}
       </div>
     </section>
+    </>
   );
 };
 
