@@ -34,7 +34,7 @@ const BrandWaveSection = () => {
         </p>
 
      <Link
-  to="/brandmarketing#brand-explore"
+  to="/brand-marketing-services#brand-explore"
   className={styles.btn}
 >
   <span>Explore Branding</span>

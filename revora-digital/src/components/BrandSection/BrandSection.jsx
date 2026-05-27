@@ -54,7 +54,7 @@ const services = [
     icon: <FaBullhorn />,
     title: "Brand Marketing",
     body:"Build a strong and memorable brand identity through strategic positioning, content, and audience-focused marketing solutions.",
-    link: "/brandmarketing",
+    link: "/brand-marketing-services",
   },
 
   {
@@ -62,7 +62,7 @@ const services = [
     title: "Digital Marketing",
     body:
       "Grow your online presence with SEO, Google Ads, social media marketing, content strategy, and lead generation campaigns.",
-    link: "/digital",
+    link: "/digital-marketing-services",
   },
 
   {

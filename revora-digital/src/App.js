@@ -25,8 +25,8 @@ function App() {
         <Route path="/about" element={<AboutSection />} />
         {/* <Route path="/blog" element={<BlogSection />} /> */}
         <Route path="/revoraform" element={<RevoraFormSection />} />
-        <Route path="/brandmarketing" element={<BrandMarketing />} />
-        <Route path="/digital" element={<DigitalSection />} />
+        <Route path="/brand-marketing-services" element={<BrandMarketing />} />
+        <Route path="/digital-marketing-services" element={<DigitalSection />} />
         <Route path="/ecommerce-marketing-services" element={<EcommerceMarketing />} />
         <Route path="PrivacyPolicy" element={<PrivacyPolicy />} />
       </Routes>

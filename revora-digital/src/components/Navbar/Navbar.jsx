@@ -74,14 +74,14 @@ const Navbar = () => {
               }`}
             >
               <a
-                href="/digital"
+                href="/digital-marketing-services"
                 className={styles.dropdownItem}
               >
                 Digital Marketing
               </a>
 
               <a
-                href="/brandmarketing"
+                href="/brand-marketing-services"
                 className={styles.dropdownItem}
               >
                 Brand Marketing
@@ -186,14 +186,14 @@ const Navbar = () => {
             {serviceOpen && (
               <div className={styles.mobileDropdown}>
                 <a
-                  href="/digital"
+                  href=" /digital-marketing-services"
                   className={styles.mobileDropdownItem}
                 >
                   Digital Marketing
                 </a>
 
                 <a
-                  href="/brandmarketing"
+                  href="/brand-marketing-services"
                   className={styles.mobileDropdownItem}
                 >
                   Brand Marketing

@@ -21,7 +21,7 @@ const NAV = {
   Company: [
     { name: "Home", path: "/" },
     { name: "About Us", path: "/about" },
-    { name: "Services", path: "/brandmarketing" },
+    { name: "Services", path: "/brand-marketing-services" },
     // { name: "Blog", path: "/blog" },
     { name: "Contact", path: "/contact-revora-digital" },
   ],

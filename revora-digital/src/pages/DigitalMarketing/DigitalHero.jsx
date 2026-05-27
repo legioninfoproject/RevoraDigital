@@ -198,7 +198,7 @@ const DigitalHero = () => {
 
         <div className={styles.ctaRow}>
               <Link
-        to="/digital#services"
+        to="/digital-marketing-services#services"
         className={styles.btnPrimary}
       >
         Explore Services

@@ -59,7 +59,7 @@ const BrandHeader = () => {
 
           <div className={styles.buttonGroup}>
             <Link
-              to="/brandmarketing#brand-presence"
+              to="/brand-marketing-services#brand-presence"
               className={styles.primaryBtn}
             >
               Start Your Brand Journey
