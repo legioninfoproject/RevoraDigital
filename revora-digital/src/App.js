@@ -20,6 +20,7 @@ function App() {
       <Navbar />
      <ScrollTop />
       <Routes>
+        <Route path="/" element={<Section />} />
         <Route path="/digital-marketing-growth" element={<Section />} />
         <Route path="/contact-revora-digital" element={<ContactSection />} />
         <Route path="/about-revora-digital" element={<AboutSection />} />
