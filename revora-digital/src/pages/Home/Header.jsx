@@ -4,7 +4,7 @@ import { Helmet } from "react-helmet-async";
 
 import { HiArrowRight } from "react-icons/hi2";
 import { HiArrowUpRight } from "react-icons/hi2";
-import mainImage from "../../assets/ImageBackgound.jpg";
+import mainImage from "../../assets/main.jpg";
 
 const Header = () => {
   return (
