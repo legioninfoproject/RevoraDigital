@@ -467,14 +467,11 @@
 
   /* reduce navbar-heading gap */
   .heroSection {
+  
+    background: #ffffff;      /* white background */
     min-height: auto;
     padding-top: 70px;
     padding-bottom: 50px;
-
-    /* mobile image fix */
-    background-size: cover;
-    background-position: center top;
-    background-repeat: no-repeat;
   }
 
   .heroContainer {
@@ -527,14 +524,14 @@
 /* ===== SMALL MOBILE ===== */
 @media (max-width: 480px) {
 
+ 
   .heroSection {
-    padding-top: 60px; /* less navbar gap */
+    background-image: none;   /* no image */
+    background: #ffffff;      /* white background */
+    padding-top: 60px;
     padding-bottom: 40px;
-
-    /* better image view */
-    background-size: cover;
-    background-position: center center;
   }
+
 
   .heroTitle {
     font-size: 30px;
