@@ -183,21 +183,23 @@ background-image:
 }
 
 .btnSecondary {
-  display: inline-flex;
+ display: inline-flex;
   align-items: center;
-  gap: 6px;
+  gap: 10px;
+  padding: 14px 48px;
+  background: var(--rv-teal);
+  color: #fff;
   /* font-family: "Poppins", sans-serif; */
   font-size: 15px;
   font-weight: 600;
-  color:#0a6e70;
+  border-radius: 50px;
   text-decoration: none;
-  border-bottom: 2px solid #0a6e70;
-  padding-bottom: 10px;
-  transition: color 0.2s ease, border-color 0.2s ease;
+  transition: background 0.25s ease, transform 0.2s ease, box-shadow 0.25s ease;
+  box-shadow: 0 4px 20px rgba(10, 110, 112, 0.35);
 }
 
 .btnSecondary:hover {
-  color: var(--rv-teal);
+  color: #fff;
   border-color: var(--rv-teal);
 }
 
