@@ -82,7 +82,7 @@ background-image:
   color: var(--rv-dark);
   line-height: 1.08;
   letter-spacing: -1.5px;
-  margin: 0 0 24px;
+  margin: 50px 0 24px 0px;
   display: flex;
   flex-direction: column;
   gap: 2px;
